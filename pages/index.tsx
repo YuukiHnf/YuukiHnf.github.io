@@ -14,7 +14,7 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <>
-      <main className={styles.main}>
+      <main>
         {/* トップタイトル */}
         <TopTitle />
         {/* 自己紹介 */}

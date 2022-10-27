@@ -1,3 +1,4 @@
+import { MaxWidth } from "@/styles/GlobalTheme";
 import { Box } from "@mui/system";
 import React from "react";
 import { ReactNode } from "react";
@@ -14,9 +15,9 @@ type Props = {
 const WidthHandler = ({ children }: Props) => {
   return (
     <Box
-      width={"940px"}
+      width={`100%`}
       height={"auto"}
-      maxWidth={940}
+      maxWidth={MaxWidth}
       margin={"0 auto"}
       bgcolor="red"
       overflow={"hidden"}

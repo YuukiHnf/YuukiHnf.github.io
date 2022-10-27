@@ -1,3 +1,4 @@
+import { MaxWidth } from "@/styles/GlobalTheme";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import WidthHandler from "../Demons/WidthHandler";
@@ -12,7 +13,7 @@ const Title = ({ title }: Props) => {
   return (
     <Box
       width="100%"
-      height={"250px"}
+      height={"240px"}
       position="relative"
       bgcolor="rgba(0,0,0,0.39)"
       mb="24px"
@@ -21,7 +22,7 @@ const Title = ({ title }: Props) => {
       <Box
         width={"100%"}
         height={"228px"}
-        maxWidth={992}
+        maxWidth={MaxWidth}
         margin={"0 auto"}
         position="relative"
         overflow={"hidden"}

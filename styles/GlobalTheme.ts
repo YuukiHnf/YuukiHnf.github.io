@@ -1,7 +1,12 @@
 import { createTheme } from "@mui/material/styles";
 
 /**
- * ここを変えると色が変わります
+ * 最大横幅
+ */
+export const MaxWidth = 992;
+
+/**
+ * ここを変えるとテーマとか変えれます
  */
 const theme = createTheme({
   palette: {
