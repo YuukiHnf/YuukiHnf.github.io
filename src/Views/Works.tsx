@@ -52,7 +52,11 @@ const Works = () => {
     >
       {/* 自己紹介イメージ付き */}
       {values.map((value, index) => (
-        <ImageText value={value} imageIsLeft={index % 2 === 0} />
+        <ImageText
+          key={value.title}
+          value={value}
+          imageIsLeft={index % 2 === 0}
+        />
       ))}
     </Box>
   );

@@ -19,7 +19,7 @@ const WidthHandler = ({ children }: Props) => {
       height={"auto"}
       maxWidth={MaxWidth}
       margin={"0 auto"}
-      bgcolor="red"
+      // bgcolor="red"
       overflow={"hidden"}
     >
       {children}
