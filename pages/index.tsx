@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <DefaultImageText />
 
         {/* 作品一覧 */}
-        <Title title="Works" />
+        <Title title="Works" url="/WorkImage.png" />
         <Works />
 
         {/* キャリア一覧 */}
