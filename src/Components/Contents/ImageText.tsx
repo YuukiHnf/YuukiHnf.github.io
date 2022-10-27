@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import { WorkType } from "src/Views/Works";
 import WidthHandler from "../Demons/WidthHandler";
+import BaseImageText from "./BaseImageText";
 
 type Props = {
   value?: WorkType;
@@ -14,90 +15,56 @@ type Props = {
  * 画像とテキスト
  * @returns
  */
-const ImageText = ({ value, imageIsLeft = true }: Props) => {
+const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
   return (
-    <WidthHandler>
-      <Box
-        height={330}
-        width="100%"
-        maxWidth={MaxWidth}
-        bgcolor="blue"
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          gap: "112px",
-          justifyContent: "space-between",
-        }}
-        p="8px 32px"
-      >
-        {/* 画像を右に置く場合 */}
-        {!imageIsLeft && (
-          <>
-            {/* 文章 */}
-            <Box
-              bgcolor="gray"
-              height="328px"
-              width="100%"
-              maxWidth={"100vw"}
-              //   paddingRight="56px"
-            >
-              <Typography width="100%">
-                {value ? value.title : "学校 北海道大学"}
-              </Typography>
-              <Typography width="100%">
-                {value ? value.subTitle : "学校 北海道大学"}
-              </Typography>
-              <Typography width="100%">
-                {value ? value.description : "学校 北海道大学"}
-              </Typography>
-            </Box>
-            {/* 画像 */}
-            <Box>
-              <Box
-                component={"img"}
-                sx={{ display: "block", height: "328px", overflow: "hidden" }}
-                src={value ? value.imageUrl : "/NoImage.png"}
-                alt={value ? value.description : "自己紹介写真"}
-              ></Box>
-            </Box>
-          </>
-        )}
-        {/* 画像を左に置く場合 */}
-        {imageIsLeft && (
-          <>
-            {/* 画像 */}
-            <Box>
-              <Box
-                component={"img"}
-                sx={{ display: "block", height: "328px", overflow: "hidden" }}
-                src={value ? value.imageUrl : "/NoImage.png"}
-                alt={value ? value.description : "自己紹介写真"}
-              ></Box>
-            </Box>
-            {/* 文章 */}
-            <Box
-              bgcolor="gray"
-              height="328px"
-              width="100%"
-              maxWidth={"100vw"}
-              //   paddingLeft="56px"
-            >
-              <Typography width="100%">
-                {value ? value.title : "学校 北海道大学"}
-              </Typography>
-              <Typography width="100%">
-                {value ? value.subTitle : "学校 北海道大学"}
-              </Typography>
-              <Typography width="100%">
-                {value ? value.description : "学校 北海道大学"}
-              </Typography>
-            </Box>
-          </>
-        )}
-      </Box>
-    </WidthHandler>
+    <BaseImageText
+      Image={
+        <>
+          <Box
+            component={"img"}
+            sx={{ display: "block", height: "328px", overflow: "hidden" }}
+            src={value ? value.imageUrl : "/NoImage.png"}
+            alt={value ? value.description : "自己紹介写真"}
+          ></Box>
+        </>
+      }
+      Content={
+        <Box
+          color="text.secondary"
+          alignItems={"center"}
+          height="264px"
+          padding="32px 0px"
+        >
+          <Typography width="100%" fontWeight={"bold"}>
+            {"学 校 名"}
+          </Typography>
+          <Typography width="100%">{"北海道大学 大学院情報科学院"}</Typography>
+          <br />
+          <Typography width="100%" fontWeight={"bold"}>
+            {"専攻・課程"}
+          </Typography>
+          <Typography width="100%">
+            {"情報科学専攻　修士課程　情報理工学コース"}
+          </Typography>
+          <br />
+
+          <Typography width="100%" fontWeight={"bold"}>
+            {"学　　　年"}
+          </Typography>
+          <Typography width="100%">{"1年次"}</Typography>
+          <br />
+
+          <Typography width="100%" fontWeight={"bold"}>
+            {"研　究　室"}
+          </Typography>
+          <Typography width="100%">
+            {"ヒューマンコンピュータインタラクション研究室"}
+          </Typography>
+        </Box>
+      }
+      imageIsLeft={imageIsLeft}
+    />
   );
 };
 
-export default ImageText;
+export default DefaultImageText;

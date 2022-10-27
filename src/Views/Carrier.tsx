@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import ImageText from "src/Components/Contents/ImageText";
+import DefaultImageText from "src/Components/Contents/ImageText";
 import WidthHandler from "src/Components/Demons/WidthHandler";
 
 type CarrierType = {
@@ -46,6 +46,7 @@ const Carrier = () => {
           flexDirection: "column",
           gap: "16px",
           p: "32px 32px",
+          pt: "0px",
           //     フォント系
           fontFamily: "Raleway",
           fontStyle: "normal",

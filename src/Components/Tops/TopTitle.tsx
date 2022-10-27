@@ -57,7 +57,7 @@ const TopTitle = () => {
             WebkitTextStrokeWidth: "0.75px",
           }}
         >
-          {"Master Student @Hokkaido Univ. CS"}
+          {"Master Student @ Hokkaido Univ. CS"}
         </Typography>
       </Box>
     </Box>

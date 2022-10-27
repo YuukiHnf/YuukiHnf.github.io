@@ -2,7 +2,7 @@ import { Button, Stack } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import ImageText from "src/Components/Contents/ImageText";
+import DefaultImageText from "src/Components/Contents/ImageText";
 import TextContent from "src/Components/Contents/TextContent";
 import Title from "src/Components/Tops/Title";
 import TopTitle from "src/Components/Tops/TopTitle";
@@ -17,21 +17,22 @@ const Home: NextPage = () => {
       <main>
         {/* トップタイトル */}
         <TopTitle />
+
         {/* 自己紹介 */}
         <TextContent />
-        {/* 自己紹介イメージ付き */}
-        <ImageText />
+        {/* 顔画像付き自己詳細 */}
+        <DefaultImageText />
+
         {/* 作品一覧 */}
         <Title title="Works" />
         <Works />
-        {/* 外部リンク */}
 
         {/* キャリア一覧 */}
-        <Title title="Carrier" />
+        <Title title="Carrier" url="/hokudai.jpg" />
         <Carrier />
 
         {/* ニュース */}
-        <Title title="News" />
+        <Title title="News" url="/NewsImage.png" />
         <News />
       </main>
     </>

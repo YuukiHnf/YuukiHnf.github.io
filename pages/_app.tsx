@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import globalTheme from "@/styles/GlobalTheme";
 import Header from "src/Fixed/Header";
 import Footer from "src/Fixed/Footer";
+import Cursor from "src/Handler/Cursor";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={globalTheme}>
         <CssBaseline />
         <Header />
+        {/* <Cursor /> */}
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
