@@ -12,7 +12,7 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: #f3f4ff;
+    background: #f3f4ff;
   }
 }

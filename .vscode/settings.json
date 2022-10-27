@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 6,
+  "editor.fontSize": 24,
+  "workbench.colorCustomizations": {
+    "tab.activeBorder": "#ff47a6",
+    "tab.unfocusedActiveBorder": "#000000",
+    "tab.activeBackground": "#666666cc"
+  },
+  "window.zoomLevel": -2
+}

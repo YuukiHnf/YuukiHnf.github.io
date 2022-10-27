@@ -1,0 +1,85 @@
+import { createTheme } from "@mui/material/styles";
+
+/**
+ * ここを変えると色が変わります
+ */
+const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#4FADB7",
+      light: "#72BDC5",
+      dark: "#377980",
+      contrastText: "#F3F3F3",
+    },
+    secondary: {
+      main: "#E87B43",
+      dark: "#A2562E",
+      light: "#EC9568",
+      contrastText: "#F3F3F3",
+    },
+    error: {
+      main: "#D32F2F",
+      dark: "#C62828",
+      light: "#EF5350",
+      contrastText: "#F3F3F3",
+    },
+    background: {
+      paper: "#FFFFF",
+      default: "#F3F4FF",
+    },
+    text: {
+      primary: "#262323",
+      secondary: "rgba(0,0,0,0.6)",
+      disabled: "rgba(0,0,0,0.4);",
+    },
+  },
+  typography: {
+    caption: {
+      color: "#00000",
+      opacity: "50%",
+      fontSize: "14px",
+    },
+    body2: {
+      color: "#00000",
+      opacity: "70%",
+      fontSize: "16px",
+    },
+    subtitle1: {
+      color: "#00000",
+      opacity: "85%",
+      fontSize: "20px",
+    },
+    subtitle2: {
+      color: "#00000",
+      opacity: "75%",
+      fontSize: "18px",
+    },
+    h6: {
+      color: "#00000",
+      fontWeight: "bolder",
+      opacity: "70%",
+      fontSize: "20px",
+    },
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#F3F4FF",
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          "& .Mui-selected:hover": {
+            backgroundColor: "white",
+          },
+        },
+      },
+    },
+  },
+});
+
+export default theme;

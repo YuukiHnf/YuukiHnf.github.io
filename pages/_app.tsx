@@ -1,8 +1,22 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme, ThemeProvider } from "@mui/material";
+import globalTheme from "@/styles/GlobalTheme";
+import Header from "src/Fixed/Header";
+import Footer from "src/Fixed/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <ThemeProvider theme={globalTheme}>
+        <CssBaseline />
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </ThemeProvider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
