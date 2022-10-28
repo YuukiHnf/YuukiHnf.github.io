@@ -28,9 +28,15 @@ const WorkContent = ({ value, imageIsLeft = true }: Props) => {
         <>
           <Box
             component={"img"}
-            sx={{ display: "block", height: "328px", overflow: "hidden" }}
+            sx={{
+              display: "block",
+              maxHeight: "328px",
+              maxWidth: "100%",
+              overflow: "hidden",
+            }}
             src={value ? value.imageUrl : "/NoImage.png"}
             alt={value ? value.description : "自己紹介写真"}
+            borderRadius={"12px"}
           ></Box>
         </>
       }
@@ -78,7 +84,8 @@ const WorkContent = ({ value, imageIsLeft = true }: Props) => {
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ position: "absolute", bottom: "0px" }}
+                // sx={{ position: "absolute", bottom: "0px" }}
+                sx={{ mt: "16px", borderRadius: "12px" }}
                 startIcon={<LaunchRoundedIcon />}
               >
                 MORE

@@ -25,7 +25,7 @@ const TopTitle = () => {
       >
         <Typography
           position="absolute"
-          bottom="200px"
+          bottom="156px"
           left="32px"
           sx={{
             fontFamily: "Montserrat",
@@ -40,24 +40,24 @@ const TopTitle = () => {
           }}
         >
           {"Yuki Abe"}
-        </Typography>
-        <Typography
-          position="absolute"
-          bottom="156px"
-          left="32px"
-          sx={{
-            fontFamily: "Montserrat",
-            fontStyle: "normal",
-            fontWeight: 700,
-            fontSize: "23.4px",
-            lineHeight: "34px",
-            color: "white",
-            WebkitTextStroke: "solid",
-            WebkitTextStrokeColor: "rgba(0, 0, 0, 0.6)",
-            WebkitTextStrokeWidth: "0.75px",
-          }}
-        >
-          {"Master Student @ Hokkaido Univ. CS"}
+          <Typography
+            // position="absolute"
+            // bottom="156px"
+            // left="32px"
+            sx={{
+              fontFamily: "Montserrat",
+              fontStyle: "normal",
+              fontWeight: 700,
+              fontSize: "23.4px",
+              lineHeight: "34px",
+              color: "white",
+              WebkitTextStroke: "solid",
+              WebkitTextStrokeColor: "rgba(0, 0, 0, 0.6)",
+              WebkitTextStrokeWidth: "0.75px",
+            }}
+          >
+            {"Master Student @ Hokkaido Univ. CS"}
+          </Typography>
         </Typography>
       </Box>
     </Box>

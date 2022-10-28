@@ -9,6 +9,15 @@ export const MaxWidth = 992;
  * ここを変えるとテーマとか変えれます
  */
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: MaxWidth,
+      lg: 1025,
+      xl: 1536,
+    },
+  },
   palette: {
     mode: "light",
     primary: {
