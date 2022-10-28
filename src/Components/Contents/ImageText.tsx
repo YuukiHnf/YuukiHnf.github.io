@@ -1,10 +1,13 @@
 import { MaxWidth } from "@/styles/GlobalTheme";
-import { Typography } from "@mui/material";
+import { IconButton, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { WorkType } from "src/Views/Works";
 import WidthHandler from "../Demons/WidthHandler";
 import BaseImageText from "./BaseImageText";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 type Props = {
   value?: WorkType;
@@ -15,7 +18,7 @@ type Props = {
  * 自己紹介
  * @returns
  */
-const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
+const ImageText = ({ value, imageIsLeft = true }: Props) => {
   return (
     <BaseImageText
       Image={
@@ -35,7 +38,7 @@ const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
           color="text.secondary"
           alignItems={"center"}
           // height="264px"
-          padding="32px 0px"
+          padding="22px 0px"
         >
           <Typography width="100%" fontWeight={"bold"}>
             {"学 校 名"}
@@ -62,6 +65,17 @@ const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
           <Typography width="100%">
             {"ヒューマンコンピュータインタラクション研究室"}
           </Typography>
+          <Stack direction={"row"} spacing={2} pt="4px">
+            <IconButton sx={{ pl: "0px" }} size="large">
+              <FacebookRoundedIcon />
+            </IconButton>
+            <IconButton size="large">
+              <TwitterIcon />
+            </IconButton>
+            <IconButton size="large">
+              <YouTubeIcon />
+            </IconButton>
+          </Stack>
         </Box>
       }
       imageIsLeft={imageIsLeft}
@@ -69,4 +83,4 @@ const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
   );
 };
 
-export default DefaultImageText;
+export default ImageText;

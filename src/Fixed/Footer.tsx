@@ -8,9 +8,9 @@ const Footer = () => {
       <Typography sx={{ position: "absolute", right: 8 }} color="text.disabled">
         Yuki Abe © 2022
       </Typography>
-      <Typography sx={{ position: "absolute", left: 8 }} color="text.disabled">
+      {/* <Typography sx={{ position: "absolute", left: 8 }} color="text.disabled">
         Contact:hnf_yuuki[at]eis.hokudai.ac.jp
-      </Typography>
+      </Typography> */}
     </footer>
   );
 };

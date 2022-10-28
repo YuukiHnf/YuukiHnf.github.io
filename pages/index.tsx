@@ -2,7 +2,7 @@ import { Button, Stack } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import DefaultImageText from "src/Components/Contents/ImageText";
+import ImageText from "src/Components/Contents/ImageText";
 import TextContent from "src/Components/Contents/TextContent";
 import Title from "src/Components/Tops/Title";
 import TopTitle from "src/Components/Tops/TopTitle";
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         {/* 自己紹介 */}
         <TextContent />
         {/* 顔画像付き自己詳細 */}
-        <DefaultImageText />
+        <ImageText />
 
         {/* 作品一覧 */}
         <Title title="Works" url="/avatar.png" />

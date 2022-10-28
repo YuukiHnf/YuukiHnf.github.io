@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import DefaultImageText from "src/Components/Contents/ImageText";
+import ImageText from "src/Components/Contents/ImageText";
 import WidthHandler from "src/Components/Demons/WidthHandler";
 
 type CarrierType = {
@@ -57,7 +57,7 @@ const Carrier = () => {
         }}
       >
         {Carriers.map((carrier) => (
-          <Box>
+          <Box key={carrier.content}>
             <Typography color={"text.disabled"}>
               {carrier.dateString}
             </Typography>

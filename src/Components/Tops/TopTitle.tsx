@@ -23,7 +23,8 @@ const TopTitle = () => {
         position="relative"
         overflow={"hidden"}
       >
-        <Typography
+        {/* <Typography */}
+        <Box
           position="absolute"
           bottom="156px"
           left="32px"
@@ -41,9 +42,6 @@ const TopTitle = () => {
         >
           {"Yuki Abe"}
           <Typography
-            // position="absolute"
-            // bottom="156px"
-            // left="32px"
             sx={{
               fontFamily: "Montserrat",
               fontStyle: "normal",
@@ -58,7 +56,7 @@ const TopTitle = () => {
           >
             {"Master Student @ Hokkaido Univ. CS"}
           </Typography>
-        </Typography>
+        </Box>
       </Box>
     </Box>
   );
