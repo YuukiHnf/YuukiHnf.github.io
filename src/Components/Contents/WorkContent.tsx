@@ -1,5 +1,5 @@
 import { MaxWidth } from "@/styles/GlobalTheme";
-import { Button, Typography } from "@mui/material";
+import { Button, Grow, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { WorkType } from "src/Views/Works";
@@ -8,6 +8,7 @@ import WidthHandler from "../Demons/WidthHandler";
 import BaseImageText from "./BaseImageText";
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 type Props = {
   value?: WorkType;
@@ -19,83 +20,101 @@ type Props = {
  * @returns
  */
 const WorkContent = ({ value, imageIsLeft = true }: Props) => {
+  const { ref, inView } = useInView({
+    initialInView: true,
+  });
+  // const inView = true;
+
   const lbToBr = (txt: string) => {
     return txt.split(/(\n)/g).map((t) => (t === "\n" ? <br /> : t));
   };
   return (
-    <BaseImageText
-      Image={
-        <>
-          <Box
-            component={"img"}
-            sx={{
-              display: "block",
-              maxHeight: "328px",
-              maxWidth: "100%",
-              overflow: "hidden",
-            }}
-            src={value ? value.imageUrl : "/NoImage.png"}
-            alt={value ? value.description : "自己紹介写真"}
-            borderRadius={"12px"}
-          ></Box>
-        </>
-      }
-      Content={
-        <Box position={"relative"} height="100%">
-          <Box sx={{ pb: "32px" }}>
-            <Typography
-              width="100%"
+    <Box ref={ref}>
+      <BaseImageText
+        Image={
+          <Grow in={inView} style={{ transformOrigin: "50% 0%" }} timeout={500}>
+            <Box
+              component={"img"}
               sx={{
-                //     フォント系
-                fontFamily: "Roboto",
-                fontStyle: "normal",
-                fontWeight: 600,
-                fontSize: "48px",
-                lineHeight: "120%",
-                color: "#111111",
+                display: "block",
+                maxHeight: "328px",
+                maxWidth: "100%",
+                overflow: "hidden",
               }}
-            >
-              {value ? value.title : "学校 北海道大学"}
-            </Typography>
-          </Box>
-          <Divider top="70px" left="0px" />
-          <Box sx={{ pb: "16px" }}>
-            <Typography
-              width="100%"
-              sx={{
-                //     フォント系
-                fontFamily: "Roboto",
-                fontStyle: "normal",
-                fontWeight: 600,
-                fontSize: "24px",
-                lineHeight: "175%",
-                color: "rgba(0, 0, 0, 0.6)",
-                letterSpacing: "0.15px",
-              }}
-            >
-              {value ? lbToBr(value.subTitle) : "学校 北海道大学"}
-            </Typography>
-          </Box>
-          <Typography width="100%" color="text.disabled">
-            {value ? lbToBr(value.description) : "学校 北海道大学"}
-          </Typography>
-          {value && (
-            <Link href={value.link} target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="contained"
-                color="primary"
-                // sx={{ position: "absolute", bottom: "0px" }}
-                sx={{ mt: "16px", borderRadius: "12px" }}
-                startIcon={<LaunchRoundedIcon />}
-              >
-                MORE
-              </Button>
-            </Link>
-          )}
-        </Box>
-      }
-      imageIsLeft={imageIsLeft}
-    />
+              src={value ? value.imageUrl : "/NoImage.png"}
+              alt={value ? value.description : "自己紹介写真"}
+              borderRadius={"12px"}
+              // ref={ref}
+            ></Box>
+          </Grow>
+        }
+        Content={
+          <Grow
+            in={inView}
+            style={{ transformOrigin: "50% 0%" }}
+            timeout={1000}
+          >
+            <Box position={"relative"} height="100%">
+              <Box sx={{ pb: "32px" }}>
+                <Typography
+                  width="100%"
+                  sx={{
+                    //     フォント系
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "48px",
+                    lineHeight: "120%",
+                    color: "#111111",
+                  }}
+                >
+                  {value ? value.title : "学校 北海道大学"}
+                </Typography>
+              </Box>
+              <Divider top="70px" left="0px" />
+              <Box sx={{ pb: "16px" }}>
+                <Typography
+                  width="100%"
+                  sx={{
+                    //     フォント系
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    lineHeight: "175%",
+                    color: "rgba(0, 0, 0, 0.6)",
+                    letterSpacing: "0.15px",
+                  }}
+                >
+                  {value ? lbToBr(value.subTitle) : "学校 北海道大学"}
+                </Typography>
+              </Box>
+              <Typography width="100%" color="text.disabled">
+                {value ? lbToBr(value.description) : "学校 北海道大学"}
+              </Typography>
+              {value && (
+                <Link
+                  href={value.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    // sx={{ position: "absolute", bottom: "0px" }}
+                    sx={{ mt: "16px", borderRadius: "12px" }}
+                    startIcon={<LaunchRoundedIcon />}
+                  >
+                    MORE
+                  </Button>
+                </Link>
+              )}
+            </Box>
+          </Grow>
+        }
+        imageIsLeft={imageIsLeft}
+      />
+    </Box>
   );
   // return (
   //   <WidthHandler>

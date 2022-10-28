@@ -10,13 +10,19 @@ type Props = {
   Image: ReactNode;
   Content: ReactNode;
   imageIsLeft?: boolean;
+  ref?: (node?: Element | null | undefined) => void;
 };
 
 /**
  * 画像とテキスト
  * @returns
  */
-const BaseImageText = ({ Image, Content, imageIsLeft }: Props) => {
+const BaseImageText: React.FC<Props> = ({
+  Image,
+  Content,
+  imageIsLeft,
+  ref,
+}: Props) => {
   return (
     <WidthHandler>
       {/* <Box
@@ -34,6 +40,7 @@ const BaseImageText = ({ Image, Content, imageIsLeft }: Props) => {
         p="8px 32px"
       > */}
       <Stack
+        ref={ref}
         height={{ xs: undefined, md: "344px" }}
         width="100%"
         maxWidth={MaxWidth}

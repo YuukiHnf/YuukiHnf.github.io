@@ -21,7 +21,7 @@ const values: WorkType[] = [
     link: "https://www.temaneki.jp/",
   },
   {
-    title: "てれこちゃ",
+    title: "てれコチャ",
     subTitle: "離れていても輪の中に入れる\nテレプレゼンスシステム",
     description:
       "動いてコミュニケーションできるビデオチャット．\n第一回北大テックガレージ採択プロジェクト.\nHL toio for Unity SDK賞．",
@@ -29,7 +29,7 @@ const values: WorkType[] = [
     link: "https://protopedia.net/prototype/2558",
   },
   {
-    title: "コメこちゃ",
+    title: "こめコチャ",
     subTitle: "配信を妨げないライブチャット\nキーボード",
     description:
       "ライブチャット専用の日本語入力キーボード.\n動画環境での入力性能を検証し考察しました.\nインタラクション2022登壇発表(採択率0.4)．",
@@ -54,7 +54,7 @@ const Works = () => {
       {/* 自己紹介イメージ付き */}
       {values.map((value, index) => (
         <WorkContent
-          key={value.title}
+          key={value.title + value.subTitle}
           value={value}
           imageIsLeft={index % 2 === 0}
         />

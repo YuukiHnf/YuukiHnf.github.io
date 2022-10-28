@@ -10,12 +10,17 @@ import {
   Grid,
   Link,
   Paper,
+  Slide,
   Typography,
 } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import WidthHandler from "src/Components/Demons/WidthHandler";
+import useOnScreen from "src/Hooks/useOnScreen";
 
 type NewsType = {
   title: string;
@@ -100,81 +105,112 @@ const Img = styled("img")({
  * @returns
  */
 const News = () => {
-  const router = useRouter();
+  // animation
+  const containerRef = React.useRef(null);
+  const { ref, inView } = useInView({
+    initialInView: true,
+  });
+  // const [isInit, setIsInit] = useState(true);
+
+  // useEffect(() => {
+  //   console.log("inView", inView);
+  //   if (isInit && inView && containerRef.current !== null) {
+  //     setIsInit(false);
+  //   }
+  // }, [inView]);
+
+  // console.log("isInit:", isInit);
 
   return (
     <WidthHandler>
-      <Stack spacing={2} alignItems="center" sx={{ p: "0px 32px", mb: "88px" }}>
-        {NewValues.map((value) => (
-          <Paper
-            key={value.title}
-            sx={{
-              p: 2,
-              margin: "auto",
-              // maxWidth: 500,
-              width: "100%",
-              flexGrow: 1,
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-              borderRadius: "12px",
-            }}
-          >
-            <Grid container spacing={2}>
-              <Grid item>
-                <ButtonBase sx={{ width: 128, height: 128 }}>
-                  <Img alt="complex" src={value.imageUrl} />
-                </ButtonBase>
-              </Grid>
-              <Grid item xs={12} sm container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
-                    <Typography
-                      gutterBottom
-                      variant="subtitle1"
-                      component="div"
-                      sx={{
-                        //     フォント系
-                        fontFamily: "Raleway",
-                        fontStyle: "normal",
-                        fontWeight: 700,
-                        fontSize: "18.5px",
-                        // lineHeight: "28px",
-                        // color: "#50555C",
-                      }}
-                    >
-                      {value.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {value.dateString}
-                    </Typography>
-                  </Grid>
+      <Box ref={containerRef}>
+        <Stack
+          spacing={2}
+          alignItems="center"
+          sx={{ p: "0px 32px", mb: "88px" }}
+          ref={ref}
+        >
+          {NewValues.map((value, index) => (
+            <Slide
+              appear
+              direction="left"
+              in={inView}
+              // in={isInit ? inView : true}
+              container={containerRef.current}
+              timeout={(index + 1) * 200}
+              key={value.title + value.dateString}
+            >
+              <Paper
+                key={value.title}
+                sx={{
+                  p: 2,
+                  margin: "auto",
+                  // maxWidth: 500,
+                  width: "100%",
+                  flexGrow: 1,
+                  backgroundColor: (theme) =>
+                    theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+                  borderRadius: "12px",
+                }}
+              >
+                <Grid container spacing={2}>
                   <Grid item>
-                    {/* <Typography sx={{ cursor: "pointer" }} variant="body2">
+                    <ButtonBase sx={{ width: 128, height: 128 }}>
+                      <Img alt="complex" src={value.imageUrl} />
+                    </ButtonBase>
+                  </Grid>
+                  <Grid item xs={12} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <Grid item xs>
+                        <Typography
+                          gutterBottom
+                          variant="subtitle1"
+                          component="div"
+                          sx={{
+                            //     フォント系
+                            fontFamily: "Raleway",
+                            fontStyle: "normal",
+                            fontWeight: 700,
+                            fontSize: "18.5px",
+                            // lineHeight: "28px",
+                            // color: "#50555C",
+                          }}
+                        >
+                          {value.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {value.dateString}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        {/* <Typography sx={{ cursor: "pointer" }} variant="body2">
                       Remove
                     </Typography> */}
-                    <Link
-                      href={value.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{ textDecoration: "none" }}
-                    >
-                      <Button
-                        // size="small"
-                        color="primary"
-                        variant="outlined"
-                        sx={{ borderRadius: "12px" }}
-                        // onClick={() => router.push(news.link)}
-                      >
-                        MORE
-                      </Button>
-                    </Link>
+                        <Link
+                          href={value.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          sx={{ textDecoration: "none" }}
+                        >
+                          <Button
+                            // size="small"
+                            color="primary"
+                            variant="outlined"
+                            sx={{ borderRadius: "12px" }}
+                            // onClick={() => router.push(news.link)}
+                          >
+                            MORE
+                          </Button>
+                        </Link>
+                      </Grid>
+                    </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
-            </Grid>
-          </Paper>
-        ))}
-      </Stack>
+              </Paper>
+            </Slide>
+          ))}
+        </Stack>
+      </Box>
     </WidthHandler>
   );
 
