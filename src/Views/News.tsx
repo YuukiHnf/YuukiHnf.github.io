@@ -162,7 +162,7 @@ const News = () => {
                         // size="small"
                         color="primary"
                         variant="outlined"
-                        // sx={{ pl: "0px" }}
+                        sx={{ borderRadius: "12px" }}
                         // onClick={() => router.push(news.link)}
                       >
                         MORE

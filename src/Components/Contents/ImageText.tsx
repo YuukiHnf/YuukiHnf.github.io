@@ -12,7 +12,7 @@ type Props = {
 };
 
 /**
- * 画像とテキスト
+ * 自己紹介
  * @returns
  */
 const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
@@ -23,8 +23,10 @@ const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
           <Box
             component={"img"}
             sx={{ display: "block", height: "328px", overflow: "hidden" }}
-            src={value ? value.imageUrl : "/NoImage.png"}
+            src={"/myphoto.png"}
+            // src={value ? "/myphoto.png" : "/NoImage.png"}
             alt={value ? value.description : "自己紹介写真"}
+            borderRadius={"12px"}
           ></Box>
         </>
       }
@@ -32,7 +34,7 @@ const DefaultImageText = ({ value, imageIsLeft = true }: Props) => {
         <Box
           color="text.secondary"
           alignItems={"center"}
-          height="264px"
+          // height="264px"
           padding="32px 0px"
         >
           <Typography width="100%" fontWeight={"bold"}>

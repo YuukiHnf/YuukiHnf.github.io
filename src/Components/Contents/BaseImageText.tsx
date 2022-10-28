@@ -1,5 +1,5 @@
 import { MaxWidth } from "@/styles/GlobalTheme";
-import { Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { ReactNode } from "react";
@@ -19,7 +19,7 @@ type Props = {
 const BaseImageText = ({ Image, Content, imageIsLeft }: Props) => {
   return (
     <WidthHandler>
-      <Box
+      {/* <Box
         height={330}
         width="100%"
         maxWidth={MaxWidth}
@@ -32,42 +32,42 @@ const BaseImageText = ({ Image, Content, imageIsLeft }: Props) => {
           justifyContent: "space-between",
         }}
         p="8px 32px"
+      > */}
+      <Stack
+        height={{ xs: undefined, md: "344px" }}
+        width="100%"
+        maxWidth={MaxWidth}
+        direction={{
+          sm: "column",
+          md: imageIsLeft ? "row" : "row-reverse",
+        }}
+        spacing={{ xs: 1, md: "112px" }}
+        justifyContent="center"
+        alignItems={"center"}
+        p="8px 32px"
       >
-        {/* 画像を右に置く場合 */}
-        {!imageIsLeft && (
-          <>
-            {/* 文章 */}
-            <Box
-              // bgcolor="gray"
-              height="328px"
-              width="100%"
-              maxWidth={"100vw"}
-              //   paddingRight="56px"
-            >
-              {Content}
-            </Box>
-            {/* 画像 */}
-            <Box>{Image}</Box>
-          </>
-        )}
-        {/* 画像を左に置く場合 */}
-        {imageIsLeft && (
-          <>
-            {/* 画像 */}
-            <Box>{Image}</Box>
-            {/* 文章 */}
-            <Box
-              // bgcolor="gray"
-              height="328px"
-              width="100%"
-              maxWidth={"100vw"}
-              //   paddingLeft="56px"
-            >
-              {Content}
-            </Box>
-          </>
-        )}
-      </Box>
+        {/* 画像 */}
+        <Box
+          maxHeight={"328px"}
+          maxWidth={"470px"}
+          width={{ xs: "calc(100%-16px)", md: "470px" }}
+          p={{ xs: "8px", md: "0px" }}
+          alignItems="center"
+        >
+          {Image}
+        </Box>
+        {/* 文章 */}
+        <Box
+          height={{ xs: undefined, md: "328px" }}
+          // maxHeight={{ xs: "328px", md: "328px" }}
+          width="470px"
+          maxWidth={"100vw"}
+          padding={{ xs: "8px 32px", md: "0px" }}
+        >
+          {Content}
+        </Box>
+      </Stack>
+      {/* </Box> */}
     </WidthHandler>
   );
 };
