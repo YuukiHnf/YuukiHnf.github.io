@@ -30,7 +30,7 @@ const values: WorkType[] = [
   },
   {
     title: "こめコチャ",
-    subTitle: "配信を妨げないライブチャット\nキーボード",
+    subTitle: "配信を妨げない\nライブチャットキーボード",
     description:
       "ライブチャット専用の日本語入力キーボード.\n動画環境での入力性能を検証し考察しました.\nインタラクション2022登壇発表(採択率0.4)．",
     imageUrl: "/commentcocha.png",

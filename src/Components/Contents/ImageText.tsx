@@ -8,6 +8,7 @@ import BaseImageText from "./BaseImageText";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import Link from "next/link";
 
 type Props = {
   value?: WorkType;
@@ -41,7 +42,7 @@ const ImageText = ({ value, imageIsLeft = true }: Props) => {
           padding="22px 0px"
         >
           <Typography width="100%" fontWeight={"bold"}>
-            {"学　校　名"}
+            {"学　校名"}
           </Typography>
           <Typography width="100%">{"北海道大学 大学院情報科学院"}</Typography>
           <br />
@@ -66,15 +67,24 @@ const ImageText = ({ value, imageIsLeft = true }: Props) => {
             {"ヒューマンコンピュータインタラクション研究室"}
           </Typography>
           <Stack direction={"row"} spacing={2} pt="4px">
-            <IconButton sx={{ pl: "0px" }} size="large">
-              <FacebookRoundedIcon />
-            </IconButton>
-            <IconButton size="large">
-              <TwitterIcon />
-            </IconButton>
-            <IconButton size="large">
-              <YouTubeIcon />
-            </IconButton>
+            <Link
+              href={"https://www.facebook.com/profile.php?id=100043165429456"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton sx={{ pl: "0px" }} size="large">
+                <FacebookRoundedIcon />
+              </IconButton>
+            </Link>
+            <Link
+              href={"https://twitter.com/YuukiHnf"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconButton size="large">
+                <TwitterIcon />
+              </IconButton>
+            </Link>
           </Stack>
         </Box>
       }

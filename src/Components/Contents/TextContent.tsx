@@ -12,7 +12,7 @@ const TextContent = () => {
     <WidthHandler>
       <Box
         sx={{
-          height: "249px",
+          // height: "249px",
           pb: "32px",
           p: "32px 32px",
           position: "relative",
@@ -30,7 +30,7 @@ const TextContent = () => {
               color: "rgba(0, 0, 0, 0.87)",
             }}
           >
-            自己紹介
+            阿部 優樹
           </Typography>
         </Box>
         <Divider top="88px" left="32px" />
