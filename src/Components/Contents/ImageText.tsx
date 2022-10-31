@@ -42,7 +42,7 @@ const ImageText = ({ value, imageIsLeft = true }: Props) => {
           padding="22px 0px"
         >
           <Typography width="100%" fontWeight={"bold"}>
-            {"学　校名"}
+            {"学　校　名"}
           </Typography>
           <Typography width="100%">{"北海道大学 大学院情報科学院"}</Typography>
           <br />

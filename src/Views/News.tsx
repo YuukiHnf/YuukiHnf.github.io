@@ -31,6 +31,13 @@ type NewsType = {
 
 const NewValues: NewsType[] = [
   {
+    title: "temanekiがJagaJagaに紹介されました",
+    dateString: "2022/10/28",
+    link: "https://hu-jagajaga.com/club/12779/",
+    imageUrl:
+      "https://hu-jagajaga.com/wp-content/uploads/2022/10/705AF27C-BBD5-4062-A498-8637F0E6B2FD.jpeg",
+  },
+  {
     title: "Dream Pitch2022でゲスト発表を行いました",
     dateString: "2022/10/20",
     link: "https://no-maps.jp/dreampitch2022/",
@@ -38,7 +45,7 @@ const NewValues: NewsType[] = [
       "https://no-maps.jp/nomaps_wp/wp-content/uploads/2022/09/20C-1300_Dream-Pitch-3.jpg",
   },
   {
-    title: "いいね! Hokudaiにtemanekiが紹介されました",
+    title: "temanekiがいいね! Hokudaiに紹介されました",
     dateString: "2022/06/27",
     link: "https://costep.open-ed.hokudai.ac.jp/like_hokudai/article/26259",
     imageUrl:
