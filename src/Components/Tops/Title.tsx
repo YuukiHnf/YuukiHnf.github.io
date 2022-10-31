@@ -54,8 +54,8 @@ const Title = ({ title, url }: Props) => {
           bottom="58px"
           left="32px"
           sx={{
-            fontFamily: "Montserrat",
-            fontStyle: "normal",
+            // fontFamily: "Montserrat",
+            // fontStyle: "normal",
             fontWeight: 400,
             fontSize: "48px",
             lineHeight: "58px",

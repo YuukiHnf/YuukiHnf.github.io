@@ -29,7 +29,7 @@ const TopTitle = () => {
           bottom="156px"
           left="32px"
           sx={{
-            fontFamily: "Montserrat",
+            // fontFamily: "Montserrat",
             fontStyle: "normal",
             fontWeight: 700,
             fontSize: "48px",
@@ -43,7 +43,7 @@ const TopTitle = () => {
           {"Yuki Abe"}
           <Typography
             sx={{
-              fontFamily: "Montserrat",
+              // fontFamily: "Montserrat",
               fontStyle: "normal",
               fontWeight: 700,
               fontSize: "23.4px",

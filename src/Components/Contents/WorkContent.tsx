@@ -60,7 +60,7 @@ const WorkContent = ({ value, imageIsLeft = true }: Props) => {
                   width="100%"
                   sx={{
                     //     フォント系
-                    fontFamily: "Roboto",
+                    // fontFamily: "Roboto",
                     fontStyle: "normal",
                     fontWeight: 600,
                     fontSize: "48px",
@@ -77,7 +77,7 @@ const WorkContent = ({ value, imageIsLeft = true }: Props) => {
                   width="100%"
                   sx={{
                     //     フォント系
-                    fontFamily: "Roboto",
+                    // fontFamily: "Roboto",
                     fontStyle: "normal",
                     fontWeight: 600,
                     fontSize: "24px",
