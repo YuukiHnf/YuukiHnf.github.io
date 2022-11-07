@@ -175,7 +175,7 @@ const News = () => {
                           component="div"
                           sx={{
                             //     フォント系
-                            fontFamily: "Raleway",
+                            // fontFamily: "Raleway",
                             fontStyle: "normal",
                             fontWeight: 700,
                             fontSize: "18.5px",

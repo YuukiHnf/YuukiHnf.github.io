@@ -22,7 +22,7 @@ const TextContent = () => {
           <Typography
             sx={{
               //     フォント系
-              fontFamily: "Montserrat",
+              // fontFamily: "Montserrat",
               fontStyle: "normal",
               fontWeight: 700,
               fontSize: "28.6px",
@@ -38,7 +38,7 @@ const TextContent = () => {
           <Typography
             sx={{
               //     フォント系
-              fontFamily: "Raleway",
+              // fontFamily: "Raleway",
               fontStyle: "normal",
               fontWeight: 700,
               fontSize: "19.5px",
@@ -51,7 +51,7 @@ const TextContent = () => {
           <Typography
             sx={{
               //     フォント系
-              fontFamily: "Raleway",
+              // fontFamily: "Raleway",
               fontStyle: "normal",
               fontWeight: 700,
               fontSize: "19.5px",
@@ -64,7 +64,7 @@ const TextContent = () => {
           <Typography
             sx={{
               //     フォント系
-              fontFamily: "Raleway",
+              // fontFamily: "Raleway",
               fontStyle: "normal",
               fontWeight: 700,
               fontSize: "19.5px",
