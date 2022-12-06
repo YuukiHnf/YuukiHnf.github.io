@@ -31,6 +31,20 @@ type NewsType = {
 
 const NewValues: NewsType[] = [
   {
+    title: "IDRユーザフォーラム2022でポスター発表を行いました",
+    dateString: "2022/12/06",
+    link: "https://www.nii.ac.jp/dsc/idr/userforum/2022.html",
+    imageUrl:
+      "https://www.nii.ac.jp/dsc/idr/userforum/images/flyer_IDR-UF2022.png",
+  },
+  {
+    title: "temanekiが北海道新聞に紹介されました",
+    dateString: "2022/12/05",
+    link: "https://www.hokkaido-np.co.jp/article/769908",
+    imageUrl:
+      "https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG4-2r1BtAZ63gU7Gx4TrQ3Rj4_gx4wOWsjGK72EQhoj3WVtQiMjSvsrDiAMjRoKIIf9NScIs9ZYd5B2Zi6JsV3CbrON8lJN_OKdGbKWMP1ONeJgfTJn6AYXOtCRwRmXl-_lZSpQAGnzxawGyms0q20eh5ZeEgiXBO2NVHRdREloSskRUBFygNldWJCtq3qqo1xyFgZEnYNMiST2VJKfD76dEggLsR9COl7IwJPf8kumcC9vlqNlbtFagmJNi2eXEFQ==/logo_ogp.png",
+  },
+  {
     title: "temanekiがJagaJagaに紹介されました",
     dateString: "2022/10/28",
     link: "https://hu-jagajaga.com/club/12779/",

@@ -5,6 +5,7 @@ import WidthHandler from "../Demons/WidthHandler";
 
 /**
  * テキストと説明文を出すところ
+ *  - 北海道大学大学院情報科学院 情報科学専攻 情報理工学コース ヒューマンコンピュータインタラクション研究室
  * @returns
  */
 const TextContent = () => {

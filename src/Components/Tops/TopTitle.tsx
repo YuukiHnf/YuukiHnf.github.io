@@ -47,7 +47,7 @@ const TopTitle = () => {
             height: "100%",
           }}
         >
-          <source src="top_base.mp4" type="video/mp4" />
+          {/* <source src="top_base.mp4" type="video/mp4" /> */}
         </video>
         <Box
           width={"100%"}
