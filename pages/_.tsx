@@ -1,7 +1,11 @@
 import BodyWrapper from "@/components/BodyWrapper";
-import TypingH1 from "@/components/TypingH1";
-import { Box, Menu, Stack, Typography } from "@mui/material";
+import SubTitle from "@/components/Title/SubTitle";
+import TypingH1, { titleFontSize } from "@/components/TypingH1";
+import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React from "react";
+import Award from "src/CMS/Award";
+import Projects from "src/CMS/Projects";
+import Publications from "src/CMS/Publications";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
@@ -10,37 +14,57 @@ const Index = () => {
   return (
     <>
       <BodyWrapper>
-        <Stack
+        <Grid
+          container
+          flexDirection={"row"}
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
+          width={{ xs: "100%", sm: "100%" }}
+          margin={"0px auto"}
         >
-          <Box>
+          <Grid item xs={3}>
             <Profile />
-          </Box>
-          <Box>
-            <Box
-              sx={{
-                width: { xs: "80%", sm: "100%" },
-                margin: "0 auto",
-              }}
-            >
-              {/* <HeaderTwo /> */}
+          </Grid>
+          <Grid item xs={9}>
+            <Box>
               <Menus />
               <Box
                 sx={{
-                  mb: "56px",
+                  mb: "16px",
                   mt: "2px",
                 }}
+                minHeight={{ xs: "120px", sm: "120px" }}
               >
                 <TypingH1 />
               </Box>
-              <Typography variant="body1" fontSize={"1em"}>
-                I am a PhD student at University of Hokkaido, advised by Daisuke
-                Sakamoto at the HCI-lab.
-              </Typography>
+              <Box mt={"16px"}>
+                <Typography variant="body1">
+                  I am a PhD student at University of Hokkaido, advised by{" "}
+                  <Link href={"https://daisukesakamoto.jp/"}>
+                    Daisuke Sakamoto
+                  </Link>{" "}
+                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>.
+                </Typography>
+                <Typography variant="body1">
+                  I'm broadly interested in social participation in content
+                  communities (KEYWORDs: Omasturi/Festival, Social Video
+                  Watching, Live Streaming, Stranger Communication).
+                  Specifically, I prototype a user interface (UI) and examine
+                  usability, how users use it, and user experience (UX), like
+                  enhancing engagement, connectedness, and social well-being in
+                  communities.
+                </Typography>
+              </Box>
+              <SubTitle title={"Projects"} />
+              <Projects />
+              <SubTitle title={"Publications"} />
+              <Publications />
+              <SubTitle title={"Award"} />
+              <Award />
+              <SubTitle title={"Contact"} />
             </Box>
-          </Box>
-        </Stack>
+          </Grid>
+        </Grid>
       </BodyWrapper>
     </>
   );

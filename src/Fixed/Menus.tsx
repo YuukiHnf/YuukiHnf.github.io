@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup } from "@mui/material";
+import { Box, Button, ButtonGroup, Grid } from "@mui/material";
 import React from "react";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
@@ -10,27 +10,45 @@ const Menus = () => {
   return (
     <Box
       width={"100%"}
-      height={"40px"}
       sx={{
         display: "flex",
         justifyContent: "flex-end",
-        alignItems: "center",
+        alignItems: { xs: "center", sm: "flex-end" },
       }}
       margin={"0px auto 32px"}
     >
       {/* 左揃えにする */}
-      <ButtonGroup
+      <Grid
+        container
+        flexDirection={"row"}
+        justifyContent={{ xs: "center", sm: "flex-end" }}
+        maxWidth={"100%"}
         variant="text"
         aria-label="text button group"
         color="inherit"
-        sx={{ color: "gray" }}
+        sx={{
+          color: "gray",
+        }}
       >
-        <Button startIcon={<InfoOutlinedIcon />}>About</Button>
-        <Button startIcon={<AttachFileOutlinedIcon />}>Projects</Button>
-        <Button startIcon={<LibraryBooksOutlinedIcon />}>Publications</Button>
-        <Button startIcon={<MilitaryTechOutlinedIcon />}>Award</Button>
-        <Button startIcon={<MarkUnreadChatAltOutlinedIcon />}>Contact</Button>
-      </ButtonGroup>
+        <Button startIcon={<InfoOutlinedIcon />} sx={{ color: "gray" }}>
+          About
+        </Button>
+        <Button startIcon={<AttachFileOutlinedIcon />} sx={{ color: "gray" }}>
+          Projects
+        </Button>
+        <Button startIcon={<LibraryBooksOutlinedIcon />} sx={{ color: "gray" }}>
+          Publications
+        </Button>
+        <Button startIcon={<MilitaryTechOutlinedIcon />} sx={{ color: "gray" }}>
+          Award
+        </Button>
+        <Button
+          startIcon={<MarkUnreadChatAltOutlinedIcon />}
+          sx={{ color: "gray" }}
+        >
+          Contact
+        </Button>
+      </Grid>
     </Box>
   );
 };

@@ -8,10 +8,11 @@ type Props = {
 const BodyWrapper = ({ children }: Props) => {
   return (
     <Box
-      maxWidth="925px"
-      margin="32px auto"
-      marginTop={"4em"}
+      margin="16px auto"
+      marginTop={{ xs: "1em", sm: "2em" }}
       marginBottom={"4em"}
+      maxWidth={"1080px"}
+      width={{ xs: "80%", sm: "90%" }}
     >
       {children}
     </Box>

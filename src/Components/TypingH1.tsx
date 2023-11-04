@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React, { use, useEffect, useState } from "react";
-
+export const titleFontSize = { xs: "1.4rem", sm: "1.563em" };
 const text =
   "hi 👋, i’m yuki—  PhD student, music🎧 / One Piece🏴‍☠️ lover, and MASTURI🏮 enthusiast.";
 const speed = 100;
@@ -65,9 +65,9 @@ const TypingH1 = () => {
 
   return (
     <Typography
+      component="h1"
       variant="h1"
-      fontSize={"1.563em"}
-      fontWeight={"bolder"}
+      fontSize={titleFontSize}
       // textの改行幅を広げる
       sx={{ whiteSpace: "pre-line", lineHeight: "1.5em" }}
     >

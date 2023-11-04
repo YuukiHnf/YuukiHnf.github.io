@@ -26,7 +26,6 @@ const Profile = () => {
       }}
     >
       <Box
-        height={"80px"}
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -51,7 +50,7 @@ const Profile = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h6" fontSize={"18px"} color="gray.100">
+        <Typography variant="h6" color="gray.100">
           Yuki Abe
         </Typography>
         <Typography variant="body2">
@@ -71,7 +70,14 @@ const Profile = () => {
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <FmdGoodIcon />
             </ListItemIcon>
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Hokkaido, Japan
             </Typography>
           </ListItem>
@@ -81,7 +87,14 @@ const Profile = () => {
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <BiotechIcon />
             </ListItemIcon>
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Research Gate
             </Typography>
           </ListItem>
@@ -91,7 +104,14 @@ const Profile = () => {
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <TwitterIcon />
             </ListItemIcon>
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Twitter
             </Typography>
           </ListItem>
@@ -101,7 +121,14 @@ const Profile = () => {
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <FacebookIcon />
             </ListItemIcon>
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Facebook
             </Typography>
           </ListItem>
@@ -111,7 +138,14 @@ const Profile = () => {
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <GitHubIcon />
             </ListItemIcon>
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Github
             </Typography>
           </ListItem>
@@ -122,7 +156,14 @@ const Profile = () => {
               <SchoolIcon />
             </ListItemIcon>
 
-            <Typography sx={{ color: "gray" }} fontSize={"14px"}>
+            <Typography
+              sx={{ color: "gray" }}
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
               Google Scholar
             </Typography>
           </ListItem>
