@@ -61,8 +61,8 @@ const theme = createTheme({
     },
     subtitle1: {
       color: "#00000",
-      opacity: "85%",
-      fontSize: "20px",
+      opacity: "90%",
+      fontSize: "24px",
     },
     subtitle2: {
       color: "#00000",

@@ -67,7 +67,7 @@ const TypingH1 = () => {
     <Typography
       component="h1"
       variant="h1"
-      fontSize={titleFontSize}
+      // fontSize={titleFontSize}
       // textの改行幅を広げる
       sx={{ whiteSpace: "pre-line", lineHeight: "1.5em" }}
     >

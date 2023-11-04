@@ -12,7 +12,7 @@ const BodyWrapper = ({ children }: Props) => {
       marginTop={{ xs: "1em", sm: "2em" }}
       marginBottom={"4em"}
       maxWidth={"1080px"}
-      width={{ xs: "80%", sm: "90%" }}
+      width={{ xs: "90%", sm: "90%" }}
     >
       {children}
     </Box>

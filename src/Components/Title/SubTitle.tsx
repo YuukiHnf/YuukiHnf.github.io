@@ -8,9 +8,7 @@ type Props = {
 const SubTitle = ({ title }: Props) => {
   return (
     <Box mt={"40px"} mb={"8px"}>
-      <Typography variant="h1" fontSize={titleFontSize}>
-        {title}
-      </Typography>
+      <Typography variant="h1">{title}</Typography>
     </Box>
   );
 };
