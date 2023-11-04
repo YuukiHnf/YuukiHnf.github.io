@@ -7,7 +7,7 @@ type Props = {
 };
 const SubTitle = ({ title }: Props) => {
   return (
-    <Box mt={"40px"} mb={"8px"}>
+    <Box mt={"56px"} id={title}>
       <Typography variant="h1">{title}</Typography>
     </Box>
   );

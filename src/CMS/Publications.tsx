@@ -67,7 +67,9 @@ const Publications = () => {
               marginTop: "0px",
             }}
           >
-            <Link href={publication.doi}>{publication.doi}</Link>
+            <Link href={publication.doi} sx={{ wordWrap: "break-word" }}>
+              {publication.doi}
+            </Link>
           </div>
         </>
       ))}
@@ -88,7 +90,9 @@ const Publications = () => {
               marginTop: "0px",
             }}
           >
-            <Link href={publication.doi}>{publication.doi}</Link>
+            <Link href={publication.doi} sx={{ wordWrap: "break-word" }}>
+              {publication.doi}
+            </Link>
           </div>
         </>
       ))}
@@ -107,9 +111,12 @@ const Publications = () => {
           <div
             style={{
               marginTop: "0px",
+              maxWidth: "100%",
             }}
           >
-            <Link href={publication.doi}>{publication.doi}</Link>
+            <Link href={publication.doi} sx={{ wordWrap: "break-word" }}>
+              {publication.doi}
+            </Link>
           </div>
         </>
       ))}

@@ -15,8 +15,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SchoolIcon from "@mui/icons-material/School";
+import { useRouter } from "next/router";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Profile = () => {
+  const router = useRouter();
   return (
     <Stack
       direction="column"
@@ -24,6 +27,7 @@ const Profile = () => {
         xs: "100%",
         md: "180px",
       }}
+      width={"100%"}
     >
       <Box
         sx={{
@@ -50,7 +54,7 @@ const Profile = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h6" color="gray.100">
+        <Typography variant="h6" color="black">
           Yuki Abe
         </Typography>
         <Typography variant="body2">
@@ -66,12 +70,16 @@ const Profile = () => {
         pt={2}
       >
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() =>
+              router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
+            }
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <FmdGoodIcon />
             </ListItemIcon>
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
@@ -83,29 +91,37 @@ const Profile = () => {
           </ListItem>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() =>
+              router.push(
+                "https://scholar.google.com/citations?user=mh82RQkAAAAJ&hl=ja"
+              )
+            }
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <BiotechIcon />
+              <SchoolIcon />
             </ListItemIcon>
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
               }}
               variant="body2"
             >
-              Research Gate
+              Google Scholar
             </Typography>
           </ListItem>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() => router.push("https://twitter.com/_yuukiAbe_")}
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <TwitterIcon />
             </ListItemIcon>
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
@@ -117,12 +133,18 @@ const Profile = () => {
           </ListItem>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() =>
+              router.push(
+                "https://www.facebook.com/profile.php?id=100043165429456"
+              )
+            }
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <FacebookIcon />
             </ListItemIcon>
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
@@ -134,12 +156,14 @@ const Profile = () => {
           </ListItem>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() => router.push("https://github.com/YuukiHnf")}
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <GitHubIcon />
             </ListItemIcon>
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
@@ -151,20 +175,25 @@ const Profile = () => {
           </ListItem>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem sx={{ pl: "0px" }}>
+          <ListItem
+            sx={{ pl: "0px" }}
+            onClick={() =>
+              router.push(
+                "https://www.youtube.com/channel/UCtFice-6qXjMEUd0IL5EBQw"
+              )
+            }
+          >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <SchoolIcon />
+              <YouTubeIcon />
             </ListItemIcon>
-
             <Typography
-              sx={{ color: "gray" }}
               display={{
                 xs: "none",
                 sm: "block",
               }}
               variant="body2"
             >
-              Google Scholar
+              YouTube
             </Typography>
           </ListItem>
         </Grid>

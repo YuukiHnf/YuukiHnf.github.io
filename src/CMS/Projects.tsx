@@ -100,7 +100,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         display: "flex",
         backgroundColor: "transparent",
         boxShadow: "none",
-        borderBottom: "2px solid #e0e0e0",
+        borderTop: "2px solid #e0e0e0",
         borderRadius: "0px",
         margin: "8px 0px",
         padding: "8px 0px",
@@ -138,7 +138,10 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             ))}
           </Typography>
           {projectLink && (
-            <Link sx={{ color: "GrayText" }} href={projectLink}>
+            <Link
+              sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+              href={projectLink}
+            >
               Project Page
             </Link>
           )}
