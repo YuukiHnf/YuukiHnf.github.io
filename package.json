@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "fordeploy": "npm run build && npm run export",
+    "check": "npx serve out"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
