@@ -46,7 +46,7 @@ const Award = () => {
   return (
     <Stack spacing={1}>
       {awards.map((award) => (
-        <div>
+        <div key={award.title + award.date + award.link}>
           <div>
             <Typography key={award.title} variant="caption">
               {award.date}

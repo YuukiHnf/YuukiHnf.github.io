@@ -54,7 +54,7 @@ const Publications = () => {
         Journal Paper
       </Typography>
       {journal_publications.map((publication) => (
-        <>
+        <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
             {publication.authors + " " + publication.year + " "}{" "}
             <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
@@ -71,13 +71,13 @@ const Publications = () => {
               {publication.doi}
             </Link>
           </div>
-        </>
+        </div>
       ))}
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
         Conference Paper (Reviewed)
       </Typography>
       {conference_publications.map((publication) => (
-        <>
+        <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
             {publication.authors + " " + publication.year + " "}{" "}
             <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
@@ -94,13 +94,13 @@ const Publications = () => {
               {publication.doi}
             </Link>
           </div>
-        </>
+        </div>
       ))}
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
         Demonstration
       </Typography>
       {demo_publications.map((publication) => (
-        <>
+        <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
             {publication.authors + " " + publication.year + " "}{" "}
             <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
@@ -118,7 +118,7 @@ const Publications = () => {
               {publication.doi}
             </Link>
           </div>
-        </>
+        </div>
       ))}
     </Stack>
   );

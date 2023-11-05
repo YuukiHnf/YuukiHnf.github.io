@@ -40,7 +40,7 @@ const projects = [
       "Temaneki: Web Application for Enhancing MATSURI festival management communities.",
     where: [
       {
-        link: "https://temaneki.jp",
+        link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
         description: "未踏' 22",
       },
     ],

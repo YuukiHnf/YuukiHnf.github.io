@@ -25,8 +25,6 @@ const Menus = () => {
         flexDirection={"row"}
         justifyContent={{ xs: "center", sm: "flex-end" }}
         maxWidth={"100%"}
-        variant="text"
-        aria-label="text button group"
         color="inherit"
         sx={{
           color: "gray",

@@ -17,6 +17,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import SchoolIcon from "@mui/icons-material/School";
 import { useRouter } from "next/router";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import NewsDesktop from "src/CMS/News";
+import SubTitle from "@/components/Title/SubTitle";
+import News from "./News";
+import { BrowserView } from "react-device-detect";
 
 const Profile = () => {
   const router = useRouter();
@@ -54,9 +58,7 @@ const Profile = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h6" color="black">
-          Yuki Abe
-        </Typography>
+        <Typography variant="h1">Yuki Abe</Typography>
         <Typography variant="body2">
           PhD Student at University of Hokkaido
         </Typography>
@@ -196,6 +198,9 @@ const Profile = () => {
               YouTube
             </Typography>
           </ListItem>
+        </Grid>
+        <Grid item width={"100%"} display={{ xs: "none", sm: "flex" }}>
+          <NewsDesktop />
         </Grid>
       </Grid>
     </Stack>

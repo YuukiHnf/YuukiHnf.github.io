@@ -4,13 +4,12 @@ import TypingH1, { titleFontSize } from "@/components/TypingH1";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React from "react";
 import Award from "src/CMS/Award";
-import News from "src/CMS/News";
+import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
-
 const Index = () => {
   return (
     <>
@@ -41,7 +40,7 @@ const Index = () => {
                   at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>.
                 </Typography>
                 <Typography variant="body1">
-                  I'm broadly interested in social participation in content
+                  I`m broadly interested in social participation in content
                   communities.
                 </Typography>
                 <Typography variant="body1">
@@ -49,8 +48,9 @@ const Index = () => {
                   Streaming, Stranger Communication.
                 </Typography>
               </Box>
-              <SubTitle title={"News"} />
-              <News />
+              <Box width={"100%"} display={{ xs: "flex", sm: "none" }}>
+                <NewsDesktop />
+              </Box>
               <SubTitle title={"Projects"} />
               <Projects />
               <SubTitle title={"Publications"} />

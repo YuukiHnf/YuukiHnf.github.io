@@ -1,7 +1,8 @@
+import SubTitle from "@/components/Title/SubTitle";
 import theme from "@/styles/GlobalTheme";
 import { Box, Link, Typography } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 
 type NewsType = {
   title: string;
@@ -44,37 +45,54 @@ const news: NewsType[] = [
   },
 ];
 
-const News = () => {
+type Props = {
+  isDisplay?: boolean;
+};
+
+const NewsDesktop = () => {
   const router = useRouter();
+  const [isExpand, setIsExpand] = useState(false);
   return (
-    <Box width={"100%"}>
-      {news.map((value) => (
-        <div>
-          <div>
-            <Typography key={value.date + value.title} variant="caption">
-              {value.date}
-            </Typography>
-          </div>
-          <Typography variant="body1">
-            {value.title}
-            {value.link && (
-              <Typography
-                variant="caption"
-                component={"a"}
-                fontWeight={"bold"}
-                onClick={() => {
-                  value.link && router.push(value.link);
-                }}
-              >
-                {" "}
-                詳しくはこちら
-              </Typography>
-            )}
-          </Typography>
-        </div>
-      ))}
+    <Box display={"flex"} flexDirection={"column"}>
+      <SubTitle title={"News"} />
+      <Box width={"100%"}>
+        {news
+          .filter((_, i) => (isExpand ? true : i < 3))
+          .map((value) => (
+            <div key={value.date + value.title}>
+              <div>
+                <Typography key={value.date + value.title} variant="caption">
+                  {value.date}
+                </Typography>
+              </div>
+              <Typography variant="body1">{value.title}</Typography>
+              {value.link && (
+                <Typography
+                  variant="caption"
+                  component={"a"}
+                  fontWeight={"bold"}
+                  onClick={() => {
+                    value.link && router.push(value.link);
+                  }}
+                >
+                  {" "}
+                  詳しくはこちら
+                </Typography>
+              )}
+            </div>
+          ))}
+        <Box display={"flex"} justifyContent={"right"}>
+          <Link
+            sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+            pt={1}
+            onClick={() => setIsExpand((ptr) => !ptr)}
+          >
+            {isExpand ? "閉じる" : "全てを見る"}
+          </Link>
+        </Box>
+      </Box>
     </Box>
   );
 };
 
-export default News;
+export default NewsDesktop;
