@@ -28,12 +28,13 @@ const Index = () => {
           <Grid item xs={9} width={"100%"}>
             <Box>
               <Menus />
-              <Box id="About" minHeight={{ xs: "120px", sm: "120px" }}>
+              <Box id="About" minHeight={{ xs: "120px", sm: "120px" }} mb={1}>
                 <TypingH1 />
               </Box>
               <Box>
                 <Typography variant="body1">
-                  I am a PhD student at University of Hokkaido, advised by{" "}
+                  I am a Master 2rd student at University of Hokkaido, advised
+                  by{" "}
                   <Link href={"https://daisukesakamoto.jp/"}>
                     Daisuke Sakamoto
                   </Link>{" "}
