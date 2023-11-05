@@ -3,15 +3,22 @@ import SubTitle from "@/components/Title/SubTitle";
 import TypingH1, { titleFontSize } from "@/components/TypingH1";
 import theme from "@/styles/GlobalTheme";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import Award from "src/CMS/Award";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
+import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 const Index = () => {
+  const topRef = useRef<HTMLElement>(null);
+  const aboutElementRef = useRef<HTMLElement>(null);
+  const projectsElementRef = useRef<HTMLElement>(null);
+  const publicationsElementRef = useRef<HTMLElement>(null);
+  const awardElementRef = useRef<HTMLElement>(null);
+  const contactElementRef = useRef<HTMLElement>(null);
   return (
     <>
       <BodyWrapper>
@@ -23,13 +30,26 @@ const Index = () => {
           width={{ xs: "100%", sm: "100%" }}
           margin={"0px auto"}
         >
+          <Box ref={topRef} />
           <Grid item xs={3} width={"100%"}>
             <Profile />
           </Grid>
           <Grid item xs={9} width={"100%"}>
+            <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
             <Box>
-              <Menus />
-              <Box id="About" minHeight={{ xs: "136px", sm: "160px" }} mb={1}>
+              <Menus
+                aboutElementRef={aboutElementRef}
+                projectsElementRef={projectsElementRef}
+                publicationsElementRef={publicationsElementRef}
+                awardElementRef={awardElementRef}
+                contactElementRef={contactElementRef}
+              />
+              <Box
+                ref={aboutElementRef}
+                id="About"
+                minHeight={{ xs: "136px", sm: "160px" }}
+                mb={1}
+              >
                 <TypingH1 />
               </Box>
               <Box>
@@ -87,20 +107,22 @@ const Index = () => {
               <Box width={"100%"} display={{ xs: "flex", sm: "none" }}>
                 <NewsDesktop />
               </Box>
-              <SubTitle title={"Projects"} />
+              <Box ref={projectsElementRef}>
+                <SubTitle title={"Projects"} />
+              </Box>
               <Projects />
-              <SubTitle title={"Publications"} />
+              <Box ref={publicationsElementRef}>
+                <SubTitle title={"Publications"} />
+              </Box>
               <Publications />
-              <SubTitle title={"Award"} />
+              <Box ref={awardElementRef}>
+                <SubTitle title={"Award"} />
+              </Box>
               <Award />
-              <SubTitle title={"Contact"} />
+              <Box ref={contactElementRef}>
+                <SubTitle title={"Contact"} />
+              </Box>
               <Typography>hnf_yuuki[at]ist.hokudai.ac.jp</Typography>
-              {/* <Typography>
-                2022年，北海道大学大学院情報科学研究科情報理工学専攻修士課程進学．
-                ヒューマンコンピュータインタラクション研究室に所属し，
-                ライブエンターテイメントに関わるインタフェースデザインを研究．
-                未踏IT22年度スーパークリエータ. 株式会社 temaneki 代表．
-              </Typography> */}
             </Box>
           </Grid>
         </Grid>

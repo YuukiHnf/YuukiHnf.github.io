@@ -1,5 +1,5 @@
 import { Box, Button, ButtonGroup, Grid } from "@mui/material";
-import React from "react";
+import React, { useCallback } from "react";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
 import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
@@ -7,8 +7,31 @@ import MilitaryTechOutlinedIcon from "@mui/icons-material/MilitaryTechOutlined";
 import MarkUnreadChatAltOutlinedIcon from "@mui/icons-material/MarkUnreadChatAltOutlined";
 import { useRouter } from "next/router";
 
-const Menus = () => {
+type Props = {
+  aboutElementRef: React.RefObject<HTMLElement>;
+  projectsElementRef: React.RefObject<HTMLElement>;
+  publicationsElementRef: React.RefObject<HTMLElement>;
+  awardElementRef: React.RefObject<HTMLElement>;
+  contactElementRef: React.RefObject<HTMLElement>;
+};
+
+const Menus = ({
+  aboutElementRef,
+  projectsElementRef,
+  publicationsElementRef,
+  awardElementRef,
+  contactElementRef,
+}: Props) => {
   const router = useRouter();
+  // useCallbackを使用して、不必要な再生成を避ける
+  const scrollToMyElement = useCallback((ref: React.RefObject<HTMLElement>) => {
+    if (!ref) return;
+    const element = ref.current;
+    if (element) {
+      // scrollIntoViewを呼び出して要素までスクロールする
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
   return (
     <Box
       width={"100%"}
@@ -33,35 +56,40 @@ const Menus = () => {
         <Button
           startIcon={<InfoOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => router.push("#About")}
+          // onClick={() => router.push("#About")}
+          onClick={() => scrollToMyElement(aboutElementRef)}
         >
           About
         </Button>
         <Button
           startIcon={<AttachFileOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => router.push("#Projects")}
+          // onClick={() => router.push("#Projects")}
+          onClick={() => scrollToMyElement(projectsElementRef)}
         >
           Projects
         </Button>
         <Button
           startIcon={<LibraryBooksOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => router.push("#Publications")}
+          // onClick={() => router.push("#Publications")}
+          onClick={() => scrollToMyElement(publicationsElementRef)}
         >
           Publications
         </Button>
         <Button
           startIcon={<MilitaryTechOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => router.push("#Award")}
+          // onClick={() => router.push("#Award")}
+          onClick={() => scrollToMyElement(awardElementRef)}
         >
           Award
         </Button>
         <Button
           startIcon={<MarkUnreadChatAltOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => router.push("#Contact")}
+          // onClick={() => router.push("#Contact")}
+          onClick={() => scrollToMyElement(contactElementRef)}
         >
           Contact
         </Button>

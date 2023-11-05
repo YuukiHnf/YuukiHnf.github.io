@@ -4,7 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #f3f4ff;
+  background-color: #fffffb;
+  /* background-color: #f3f4ff; */
   font-family: "Open Sans";
 }
 
@@ -23,7 +24,8 @@ a {
   }
   body {
     color: "black";
-    background: #f3f4ff;
+    background: #fffffb;
+    /* background: #f3f4ff; */
   }
 }
 
