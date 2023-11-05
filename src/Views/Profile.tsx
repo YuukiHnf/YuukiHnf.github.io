@@ -42,11 +42,12 @@ const Profile = () => {
       >
         {/* 子要素を中心に揃える */}
         <Avatar
-          src={"./YukiAbe.png"}
+          src={"./Profile1_long_small.png"}
           sx={{
             width: { xs: "120px", sm: "100px" },
             height: { xs: "120px", sm: "100px" },
           }}
+          alt="Yuki Abe"
         />
       </Box>
       <Box
@@ -74,13 +75,13 @@ const Profile = () => {
       >
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() =>
               router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
             }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <FmdGoodIcon />
+              <FmdGoodIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{
@@ -95,7 +96,7 @@ const Profile = () => {
         </Grid>
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() =>
               router.push(
                 "https://scholar.google.com/citations?user=mh82RQkAAAAJ&hl=ja"
@@ -103,7 +104,7 @@ const Profile = () => {
             }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <SchoolIcon />
+              <SchoolIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{
@@ -118,11 +119,11 @@ const Profile = () => {
         </Grid>
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() => router.push("https://twitter.com/_yuukiAbe_")}
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <TwitterIcon />
+              <TwitterIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{
@@ -137,7 +138,7 @@ const Profile = () => {
         </Grid>
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() =>
               router.push(
                 "https://www.facebook.com/profile.php?id=100043165429456"
@@ -145,7 +146,7 @@ const Profile = () => {
             }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <FacebookIcon />
+              <FacebookIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{
@@ -160,11 +161,11 @@ const Profile = () => {
         </Grid>
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() => router.push("https://github.com/YuukiHnf")}
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <GitHubIcon />
+              <GitHubIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{
@@ -179,7 +180,7 @@ const Profile = () => {
         </Grid>
         <Grid item maxWidth={"180px"}>
           <ListItem
-            sx={{ pl: "0px" }}
+            sx={{ pl: { xs: "8px", sm: "0px" }, pr: { xs: "8px" } }}
             onClick={() =>
               router.push(
                 "https://www.youtube.com/channel/UCtFice-6qXjMEUd0IL5EBQw"
@@ -187,7 +188,7 @@ const Profile = () => {
             }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
-              <YouTubeIcon />
+              <YouTubeIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
             </ListItemIcon>
             <Typography
               display={{

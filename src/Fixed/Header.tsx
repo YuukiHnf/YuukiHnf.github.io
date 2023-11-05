@@ -5,12 +5,12 @@ import React, { useMemo } from "react";
 const Header = () => {
   return (
     <Head>
-      <title>abeyuki</title>
+      <title>hi! i am yuki abe</title>
       <meta
         name="阿部優樹のポートフォリオ"
         content="阿部優樹のポートフォリオ"
       />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/temaneki_03.png" />
     </Head>
   );
 };

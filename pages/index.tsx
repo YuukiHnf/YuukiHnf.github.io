@@ -1,6 +1,7 @@
 import BodyWrapper from "@/components/BodyWrapper";
 import SubTitle from "@/components/Title/SubTitle";
 import TypingH1, { titleFontSize } from "@/components/TypingH1";
+import theme from "@/styles/GlobalTheme";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React from "react";
 import Award from "src/CMS/Award";
@@ -28,11 +29,45 @@ const Index = () => {
           <Grid item xs={9} width={"100%"}>
             <Box>
               <Menus />
-              <Box id="About" minHeight={{ xs: "120px", sm: "120px" }} mb={1}>
+              <Box id="About" minHeight={{ xs: "136px", sm: "160px" }} mb={1}>
                 <TypingH1 />
               </Box>
               <Box>
                 <Typography variant="body1">
+                  <Link
+                    href={"https://hci-lab.jp/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    北海道大学 情報科学院
+                    ヒューマンコンピュータインタラクション研究室
+                  </Link>
+                  に所属する修士２年です．コンピュータを活用して，人々の社会的なつながりを強める研究しています．特に，コンピュータを使ってる人が「他の人と仲良くなる」/「コミュニティに参加したくなる」/「参加できなかったつながりに参加できる」ような
+                  操作画面（UI）やデジタル体験（UX）をデザインすることに興味があります．
+                  未踏IT22年度スーパークリエータ. 株式会社 temaneki 代表．
+                </Typography>
+                <Typography variant="body1" fontWeight="lighter" pt={1}>
+                  研究キーワード
+                </Typography>
+                <Typography variant="body1" fontWeight="lighter">
+                  Social Participation, Social Engagement, UI/UX, Accessible
+                  Online Festival, Live Streaming, Civic tech.
+                </Typography>
+                {/* <Link href={"https://daisukesakamoto.jp/"}>
+                    Daisuke Sakamoto
+                  </Link>{" "}
+                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>. */}
+                {/* <Typography variant="body1">
+                  I`m broadly interested in social participation in content
+                  communities.
+                </Typography> */}
+                {/* <Typography variant="body1">
+                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
+                  Streaming, Stranger Communication.
+                </Typography> */}
+                {/* <Typography variant="body1">
                   I am a Master 2rd student at University of Hokkaido, advised
                   by{" "}
                   <Link href={"https://daisukesakamoto.jp/"}>
@@ -47,7 +82,7 @@ const Index = () => {
                 <Typography variant="body1">
                   KEYWORDs: Omasturi/Festival, Social Video Watching, Live
                   Streaming, Stranger Communication.
-                </Typography>
+                </Typography> */}
               </Box>
               <Box width={"100%"} display={{ xs: "flex", sm: "none" }}>
                 <NewsDesktop />
