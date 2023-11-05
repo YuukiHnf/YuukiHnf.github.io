@@ -60,7 +60,8 @@ const Profile = () => {
       >
         <Typography variant="h1">Yuki Abe</Typography>
         <Typography variant="body2">
-          PhD Student at University of Hokkaido
+          Master 2rd Student at University of Hokkaido
+          {/* PhD Student at University of Hokkaido */}
         </Typography>
       </Box>
       <Grid

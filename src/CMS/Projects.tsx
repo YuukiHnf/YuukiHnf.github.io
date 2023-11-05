@@ -80,7 +80,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Stack spacing={2}>
+    <Stack spacing={1}>
       {projects.map((project) => (
         <React.Fragment key={project.id}>
           <AProject {...project} />
@@ -102,8 +102,8 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         boxShadow: "none",
         borderTop: "2px solid #e0e0e0",
         borderRadius: "0px",
-        margin: "8px 0px",
-        padding: "8px 0px",
+        margin: "0px 0px",
+        padding: "16px 0px 8px",
       }}
     >
       <Grid container spacing={2} minHeight={"140px"}>
