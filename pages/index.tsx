@@ -76,16 +76,16 @@ const Index = () => {
                   >
                     HCI-lab
                   </Link>
-                  . My academic journey is set to advance with the commencement
-                  of my Ph.D. program in April 2024. My research interests lie
-                  in the field of Human-Computer Interaction (HCI).
+                  . I'll start my Ph.D. program in April 2024. My research
+                  interests lie in the field of Human-Computer Interaction
+                  (HCI).
                 </Typography>
                 <Typography variant="body1" pt={1}>
-                  I'm broadly interested in UI/UX design for social content,
-                  such as video-sharing platform, live streaming, social AR/VR.
-                  Specifically, I engage in prototyping new interfaces or
-                  digital experiences, and conduct user studies or field
-                  deployments to explore and share these insights.
+                  I&apos;m broadly interested in UI/UX design for social
+                  content, such as video-sharing platform, live streaming,
+                  social AR/VR. Specifically, I engage in prototyping new
+                  interfaces or digital experiences, and conduct user studies or
+                  field deployments to explore and share these insights.
                 </Typography>
 
                 <Typography variant="body1" pt={1}>
