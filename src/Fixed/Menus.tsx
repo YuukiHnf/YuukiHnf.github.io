@@ -98,14 +98,16 @@ const Menus = ({
         </Button>
         <Button
           startIcon={<TranslateIcon />}
-          sx={{
-            color: "white",
-            bgcolor: theme.palette.text.secondary,
-            ":hover": {
-              bgcolor: theme.palette.text.disabled,
-              color: "white",
-            },
-          }}
+          sx={{ color: "gray" }}
+          // sx={{
+          //   color: "white",
+          //   bgcolor: "#B3B3B3",
+          //   ":hover": {
+          //     bgcolor: theme.palette.text.disabled,
+          //     color: "white",
+          //   },
+          // }}
+          variant="text"
           onClick={() => {
             if (isEnglish) {
               router.push("/");
