@@ -76,7 +76,7 @@ const Index = () => {
                   >
                     HCI-lab
                   </Link>
-                  . I'll start my Ph.D. program in April 2024. My research
+                  . I&apos;ll start my Ph.D. program in April 2024. My research
                   interests lie in the field of Human-Computer Interaction
                   (HCI).
                 </Typography>
