@@ -38,7 +38,7 @@ const Menus = ({
       sx={{
         display: "flex",
         justifyContent: "flex-end",
-        alignItems: { xs: "center", sm: "flex-end" },
+        alignItems: { xs: "center", sm: "center", md: "flex-end" },
       }}
       margin={"0px auto 32px"}
     >
@@ -46,7 +46,7 @@ const Menus = ({
       <Grid
         container
         flexDirection={"row"}
-        justifyContent={{ xs: "center", sm: "flex-end" }}
+        justifyContent={{ xs: "center", sm: "center", md: "flex-end" }}
         maxWidth={"100%"}
         color="inherit"
         sx={{

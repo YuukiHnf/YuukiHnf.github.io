@@ -29,6 +29,7 @@ const Profile = () => {
       direction="column"
       maxWidth={{
         xs: "100%",
+        sm: "100%",
         md: "180px",
       }}
       width={"100%"}
@@ -55,7 +56,7 @@ const Profile = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: { xs: "center", sm: "flex-start" },
+          alignItems: { xs: "center", sm: "center", md: "flex-start" },
           justifyContent: "center",
         }}
       >
@@ -67,9 +68,9 @@ const Profile = () => {
       </Box>
       <Grid
         container
-        direction={{ xs: "row", sm: "column" }}
+        direction={{ xs: "row", sm: "row", md: "column" }}
         spacing={{ xs: 1, sm: 1 }}
-        flexDirection={{ xs: "row", sm: "column" }}
+        flexDirection={{ xs: "row", sm: "row", md: "column" }}
         justifyContent="center"
         pt={2}
       >
@@ -201,7 +202,11 @@ const Profile = () => {
             </Typography>
           </ListItem>
         </Grid>
-        <Grid item width={"100%"} display={{ xs: "none", sm: "flex" }}>
+        <Grid
+          item
+          width={"100%"}
+          display={{ xs: "none", sm: "none", md: "flex" }}
+        >
           <NewsDesktop />
         </Grid>
       </Grid>

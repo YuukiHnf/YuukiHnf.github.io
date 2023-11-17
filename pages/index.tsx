@@ -25,7 +25,7 @@ const Index = () => {
         <Grid
           container
           flexDirection={"row"}
-          direction={{ xs: "column", sm: "row" }}
+          direction={{ xs: "column", sm: "column", md: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
           width={{ xs: "100%", sm: "100%" }}
           margin={"0px auto"}
@@ -103,7 +103,10 @@ const Index = () => {
                   Streaming, Stranger Communication.
                 </Typography> */}
               </Box>
-              <Box width={"100%"} display={{ xs: "flex", sm: "none" }}>
+              <Box
+                width={"100%"}
+                display={{ xs: "flex", sm: "flex", md: "none" }}
+              >
                 <NewsDesktop />
               </Box>
               <Box ref={projectsElementRef}>
