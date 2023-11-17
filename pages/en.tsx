@@ -103,7 +103,7 @@ const Index = () => {
                   </Link>
                   , a collaboration application featuring efficiency and
                   enjoyment for participation. I have developed and managed
-                  Temaneki for two years, and has been adapted by over 500 users
+                  Temaneki for two years. It has been adapted by over 500 users
                   across Japan.
                 </Typography>
               </Box>
