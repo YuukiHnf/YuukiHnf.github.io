@@ -6,6 +6,8 @@ import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
 import MilitaryTechOutlinedIcon from "@mui/icons-material/MilitaryTechOutlined";
 import MarkUnreadChatAltOutlinedIcon from "@mui/icons-material/MarkUnreadChatAltOutlined";
 import { useRouter } from "next/router";
+import TranslateIcon from "@mui/icons-material/Translate";
+import theme from "@/styles/GlobalTheme";
 
 type Props = {
   aboutElementRef: React.RefObject<HTMLElement>;
@@ -13,6 +15,7 @@ type Props = {
   publicationsElementRef: React.RefObject<HTMLElement>;
   awardElementRef: React.RefObject<HTMLElement>;
   contactElementRef: React.RefObject<HTMLElement>;
+  isEnglish?: boolean;
 };
 
 const Menus = ({
@@ -21,6 +24,7 @@ const Menus = ({
   publicationsElementRef,
   awardElementRef,
   contactElementRef,
+  isEnglish = true,
 }: Props) => {
   const router = useRouter();
   // useCallbackを使用して、不必要な再生成を避ける
@@ -88,10 +92,29 @@ const Menus = ({
         <Button
           startIcon={<MarkUnreadChatAltOutlinedIcon />}
           sx={{ color: "gray" }}
-          // onClick={() => router.push("#Contact")}
           onClick={() => scrollToMyElement(contactElementRef)}
         >
           Contact
+        </Button>
+        <Button
+          startIcon={<TranslateIcon />}
+          sx={{
+            color: "white",
+            bgcolor: theme.palette.text.secondary,
+            ":hover": {
+              bgcolor: theme.palette.text.disabled,
+              color: "white",
+            },
+          }}
+          onClick={() => {
+            if (isEnglish) {
+              router.push("/ja");
+            } else {
+              router.push("/");
+            }
+          }}
+        >
+          {isEnglish ? "日本語" : "English"}
         </Button>
       </Grid>
     </Box>
