@@ -108,9 +108,9 @@ const Menus = ({
           }}
           onClick={() => {
             if (isEnglish) {
-              router.push("/ja");
-            } else {
               router.push("/");
+            } else {
+              router.push("/en");
             }
           }}
         >

@@ -22,7 +22,10 @@ import SubTitle from "@/components/Title/SubTitle";
 import News from "./News";
 import { BrowserView } from "react-device-detect";
 
-const Profile = () => {
+type Props = {
+  isEnglish?: boolean;
+};
+const Profile = ({ isEnglish = false }: Props) => {
   const router = useRouter();
   return (
     <Stack
@@ -202,13 +205,15 @@ const Profile = () => {
             </Typography>
           </ListItem>
         </Grid>
-        <Grid
-          item
-          width={"100%"}
-          display={{ xs: "none", sm: "none", md: "flex" }}
-        >
-          <NewsDesktop />
-        </Grid>
+        {!isEnglish && (
+          <Grid
+            item
+            width={"100%"}
+            display={{ xs: "none", sm: "none", md: "flex" }}
+          >
+            <NewsDesktop />
+          </Grid>
+        )}
       </Grid>
     </Stack>
   );

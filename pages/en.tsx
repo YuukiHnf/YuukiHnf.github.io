@@ -3,7 +3,8 @@ import SubTitle from "@/components/Title/SubTitle";
 import TypingH1, { titleFontSize } from "@/components/TypingH1";
 import theme from "@/styles/GlobalTheme";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
-import React, { useRef } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
@@ -13,6 +14,7 @@ import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 const Index = () => {
+  const isEnglish = true;
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
   const projectsElementRef = useRef<HTMLElement>(null);
@@ -32,13 +34,12 @@ const Index = () => {
         >
           <Box ref={topRef} />
           <Grid item xs={3} width={"100%"}>
-            <Profile />
+            <Profile isEnglish />
           </Grid>
           <Grid item xs={9} width={"100%"}>
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
             <Box>
               <Menus
-                isEnglish={false}
                 aboutElementRef={aboutElementRef}
                 projectsElementRef={projectsElementRef}
                 publicationsElementRef={publicationsElementRef}
@@ -55,6 +56,17 @@ const Index = () => {
               </Box>
               <Box>
                 <Typography variant="body1">
+                  I am a Master 2nd student at Hokkaido University advised by{" "}
+                  <Link
+                    href={"https://daisukesakamoto.jp/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Daisuke Sakamoto
+                  </Link>{" "}
+                  at the{" "}
                   <Link
                     href={"https://hci-lab.jp/"}
                     sx={{
@@ -62,54 +74,45 @@ const Index = () => {
                       textDecorationColor: theme.palette.text.secondary,
                     }}
                   >
-                    北海道大学 情報科学院
-                    ヒューマンコンピュータインタラクション研究室
+                    HCI-lab
                   </Link>
-                  に所属する修士２年生です．コンピュータを活用して人々の社会的なつながりを強める研究をしています．特に，人が「初対面の人と自然に仲良くなれる」/「コミュニティに思わず参加したくなる」/「物理的・身体的に参加できなかったつながりに参加できるようになる」ためのコンピュータの操作手法（UI）やデジタル体験（UX）に興味があります．未踏IT22年度スーパークリエータ.
-                  株式会社 temaneki 代表．
+                  . I&apos;ll start my Ph.D. program in April 2024. My research
+                  interests lie in the field of Human-Computer Interaction
+                  (HCI).
                 </Typography>
-                <Typography variant="body1" fontWeight="lighter" pt={1}>
-                  研究キーワード
+                <Typography variant="body1" pt={1}>
+                  I&apos;m broadly interested in UI/UX design for social
+                  content, such as video-sharing platform, live streaming,
+                  social AR/VR. Specifically, I engage in prototyping new
+                  interfaces or digital experiences, and conduct user studies or
+                  field deployments to explore and share these insights.
                 </Typography>
-                <Typography variant="body1" fontWeight="lighter">
-                  Social Participation, Social Engagement, UI/UX, Accessible
-                  Online Festival, Live Streaming, Civic tech.
+
+                <Typography variant="body1" pt={1}>
+                  I also like prototyping and development: Next.js, React,
+                  Unity(C#), Python, Arduino, Raspberry Pi, Toio swarming
+                  robots. A notable project in my development life is{" "}
+                  <Link
+                    href={"https://temaneki.jp"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Temaneki
+                  </Link>
+                  , a collaboration application featuring efficiency and
+                  enjoyment for participation. I have developed and managed
+                  Temaneki for two years, and has been adapted by over 500 users
+                  across Japan.
                 </Typography>
-                {/* <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>. */}
-                {/* <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  I am a Master 2rd student at University of Hokkaido, advised
-                  by{" "}
-                  <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>.
-                </Typography>
-                <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography>
-                <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
-                </Typography> */}
               </Box>
-              <Box
+              {/* <Box
                 width={"100%"}
                 display={{ xs: "flex", sm: "flex", md: "none" }}
               >
                 <NewsDesktop />
-              </Box>
+              </Box> */}
               <Box ref={projectsElementRef}>
                 <SubTitle title={"Projects"} />
               </Box>
