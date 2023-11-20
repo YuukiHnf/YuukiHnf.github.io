@@ -241,7 +241,7 @@ const Profile = ({ isEnglish = false }: Props) => {
               pr: { xs: "8px" },
               ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
-            onClick={() => router.push("/resume.pdf")}
+            onClick={() => router.push("/CV.pdf")}
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <PictureAsPdfRoundedIcon
@@ -255,7 +255,7 @@ const Profile = ({ isEnglish = false }: Props) => {
               }}
               variant="body2"
             >
-              Resume
+              CV
             </Typography>
           </ListItem>
         </Grid>

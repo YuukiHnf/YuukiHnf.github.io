@@ -56,7 +56,8 @@ const Index = () => {
               </Box>
               <Box>
                 <Typography variant="body1">
-                  I am a Master 2nd student at Hokkaido University advised by{" "}
+                  I am a M.Sc. Student, and will be a Ph.D. Student at Hokkaido
+                  University, advised by{" "}
                   <Link
                     href={"https://daisukesakamoto.jp/"}
                     sx={{
@@ -75,20 +76,20 @@ const Index = () => {
                     }}
                   >
                     HCI-lab
-                  </Link>
-                  . I&apos;ll start my Ph.D. program in April 2024. My research
-                  interests lie in the field of Human-Computer Interaction
-                  (HCI).
+                  </Link>{" "}
+                  (starting April 2024). My research interests lie in the field
+                  of Human-Computer Interaction (HCI).
                 </Typography>
-                <Typography variant="body1" pt={1}>
+                <Typography variant="body1" pt={2}>
                   I&apos;m broadly interested in UI/UX design for social
-                  content, such as video-sharing platform, live streaming,
-                  social AR/VR. Specifically, I engage in prototyping new
-                  interfaces or digital experiences, and conduct user studies or
-                  field deployments to explore and share these insights.
+                  computing, such as video-sharing platform, live streaming,
+                  social AR/VR, and face-to-face collaboration system.
+                  Specifically, I engage in prototyping new interfaces or user
+                  experiences, and conduct user studies or field deployments to
+                  explore and share these insights.
                 </Typography>
 
-                <Typography variant="body1" pt={1}>
+                <Typography variant="body1" pt={2}>
                   I also like prototyping and development: Next.js, React,
                   Unity(C#), Python, Arduino, Raspberry Pi, Toio swarming
                   robots. A notable project in my development life is{" "}
@@ -103,8 +104,8 @@ const Index = () => {
                   </Link>
                   , a collaboration application featuring efficiency and
                   enjoyment for participation. I have developed and managed
-                  Temaneki for two years. It has been adapted by over 500 users
-                  across Japan.
+                  Temaneki for two years. Over 500 users in Japan have adopted
+                  Temaneki.
                 </Typography>
               </Box>
               {/* <Box
@@ -114,17 +115,15 @@ const Index = () => {
                 <NewsDesktop />
               </Box> */}
               <Box ref={projectsElementRef}>
-                <SubTitle title={"Projects"} />
+                <SubTitle title={"PROJECTS"} />
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"Publications"} />
+                <SubTitle title={"PUBLICATIONS AND AWARDS"} />
+                <Typography variant="subtitle1">
+                  See more on <Link href={"./CV.pdf"}>my English CV</Link>.
+                </Typography>
               </Box>
-              <Publications />
-              <Box ref={awardElementRef}>
-                <SubTitle title={"Award"} />
-              </Box>
-              <Award />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
