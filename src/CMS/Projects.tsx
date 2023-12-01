@@ -28,7 +28,7 @@ const projects = [
     where: [
       {
         link: "https://www.wiss.org/WISS2023/",
-        description: "WISS'23 demo",
+        description: "WISS'23 demo（対話発表賞🏅）",
       },
     ],
     thumnail: "./visionbot.main.png",
@@ -41,7 +41,7 @@ const projects = [
     where: [
       {
         link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-        description: "未踏' 22",
+        description: "未踏' 22（スパクリ🏅）",
       },
     ],
     thumnail: "./temaneki-app.png",

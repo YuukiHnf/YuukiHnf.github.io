@@ -12,6 +12,11 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title: "WISS2023で対話発表賞をいただきました。",
+    date: "2023/12/01",
+    link: "https://www.wiss.org/WISS2023/",
+  },
+  {
     title: "CHI勉強会2023 学生ボランティアに参加しました。",
     date: "2023/06/24",
     link: "https://sigchi.jp/seminar/chi2023/",
