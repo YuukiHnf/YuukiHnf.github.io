@@ -9,6 +9,11 @@ type AwardType = {
 
 const awards: AwardType[] = [
   {
+    title: "WISS 2023 対話発表賞（一般投票）",
+    link: "https://www.wiss.org/WISS2023/",
+    date: "2024/12/01",
+  },
+  {
     title: "2022年度 未踏IT人材発掘・育成事業 「スーパークリエータ」認定",
     link: "https://www.meti.go.jp/press/2023/05/20230526002/20230526002.html",
     date: "2023/05/26",
