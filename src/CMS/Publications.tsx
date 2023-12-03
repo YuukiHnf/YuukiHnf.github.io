@@ -37,6 +37,26 @@ const conference_publications: PublicationsType[] = [
 ];
 const demo_publications: PublicationsType[] = [
   {
+    id: "WISS-OMEME",
+    title: "OMEME:非装着状態のHMDを用いたコンパニオンロボットの開発",
+    authors: "阿部優樹，鈴木湧登，坂本大介，小野哲雄",
+    year: 2024,
+    where: "WISS 2024",
+    whereDetail:
+      "第31回インタラクティブシステムとソフトウェアに関するワークショップ（対話発表賞）",
+    doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A10.pdf",
+  },
+  {
+    id: "WISS-GAMEX",
+    title: "Game-2-X: 種類が異なるゲームプレイ間を繋ぐシステムの提案",
+    authors: "日下部完，阿部優樹，坂本大介，小野哲雄",
+    year: 2024,
+    where: "WISS 2024",
+    whereDetail:
+      "第31回インタラクティブシステムとソフトウェアに関するワークショップ",
+    doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A03.pdf",
+  },
+  {
     id: "interaction22",
     title: "ユーザビリティ調査におけるニコニコデータセット活用．",
     authors: "阿部 優樹, 崔 明根, 坂本 大介, 小野 哲雄",

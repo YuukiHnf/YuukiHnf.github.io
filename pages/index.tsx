@@ -72,8 +72,9 @@ const Index = () => {
                   研究キーワード
                 </Typography>
                 <Typography variant="body1" fontWeight="lighter">
-                  Social Participation, Social Engagement, UI/UX, Accessible
-                  Online Festival, Live Streaming, Civic tech.
+                  Human-Computer Interaction(HCI), User Interface and User
+                  Experience, Social-Computing, Interactive Techniques, User
+                  Studies and Evaluations.
                 </Typography>
                 {/* <Link href={"https://daisukesakamoto.jp/"}>
                     Daisuke Sakamoto
