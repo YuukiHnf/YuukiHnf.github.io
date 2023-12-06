@@ -12,6 +12,11 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title: "HCI Advent Calendar 2023に記事を公開しました。",
+    date: "2023/12/07",
+    link: "https://note.com/yuki_abe6/n/ncf2972c3ac1e",
+  },
+  {
     title: "WISS2023で対話発表賞をいただきました。",
     date: "2023/12/01",
     link: "https://www.wiss.org/WISS2023/",
