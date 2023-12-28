@@ -12,6 +12,11 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title: "SeamlessにOMEMEが紹介されました",
+    date: "2023/12/28",
+    link: "https://twitter.com/shiropen2/status/1740162030924071085",
+  },
+  {
     title: "HCI Advent Calendar 2023に記事を公開しました。",
     date: "2023/12/07",
     link: "https://note.com/yuki_abe6/n/ncf2972c3ac1e",
