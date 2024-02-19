@@ -11,8 +11,13 @@ type NewsType = {
 };
 
 const news: NewsType[] = [
+  // {
+  //   title: "立石研究助成(C)に採択していただきました。",
+  //   date: "2024/02/17",
+  //   link: "https://www.tateisi-f.org/research/c/",
+  // },
   {
-    title: "SeamlessにOMEMEが紹介されました",
+    title: "SeamlessにOMEMEが紹介されました。",
     date: "2023/12/28",
     link: "https://twitter.com/shiropen2/status/1740162030924071085",
   },

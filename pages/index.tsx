@@ -5,6 +5,7 @@ import theme from "@/styles/GlobalTheme";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import Award from "src/CMS/Award";
+import Grant from "src/CMS/Grant";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
@@ -123,6 +124,10 @@ const Index = () => {
                 <SubTitle title={"Award"} />
               </Box>
               <Award />
+              <Box ref={awardElementRef}>
+                <SubTitle title={"Grant"} />
+              </Box>
+              <Grant />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
