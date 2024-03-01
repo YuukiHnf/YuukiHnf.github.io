@@ -9,6 +9,16 @@ type AwardType = {
 
 const awards: AwardType[] = [
   {
+    title: "精密学会学生奨励賞",
+    link: "/",
+    date: "2024/03/25",
+  },
+  {
+    title: "北海道大学 令和5年 えるむ賞",
+    link: "https://www.hokudai.ac.jp/gakusei/campus-life/campus/commendation.html",
+    date: "2024/03/19",
+  },
+  {
     title: "WISS 2023 対話発表賞（一般投票）",
     link: "https://www.wiss.org/WISS2023/",
     date: "2024/12/01",

@@ -17,6 +17,16 @@ const news: NewsType[] = [
   //   link: "https://www.tateisi-f.org/research/c/",
   // },
   {
+    title: "立石研究助成(C)に採択していただきました。",
+    date: "2024/04/01",
+    link: "https://www.tateisi-f.org/research/c/",
+  },
+  {
+    title: "北海道大学 令和5年 えるむ賞を受賞しました。",
+    date: "2024/03/19",
+    link: "https://www.hokudai.ac.jp/gakusei/campus-life/campus/commendation.html",
+  },
+  {
     title: "SeamlessにOMEMEが紹介されました。",
     date: "2023/12/28",
     link: "https://twitter.com/shiropen2/status/1740162030924071085",

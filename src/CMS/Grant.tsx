@@ -11,7 +11,7 @@ const awards: GrantType[] = [
   {
     title: "2024年度 立石科学技術振興財団研究助成(C)",
     link: "https://www.tateisi-f.org/research/c/",
-    date: "2024/02/17",
+    date: "2024/04/01",
   },
 ];
 const Grant = () => {
