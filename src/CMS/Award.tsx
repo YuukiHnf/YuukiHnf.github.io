@@ -35,12 +35,6 @@ const awards: AwardType[] = [
   },
   {
     title:
-      "2022年度未踏IT人材発掘・育成事業 採択「祭り運営を支援するアプリケーションの開発」",
-    link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-    date: "2022/06/20",
-  },
-  {
-    title:
       "北大テックガレージ(HUTG) Spring Founders Program2 採択(2022年2月-3月)",
     link: "https://cosmos.gfc.hokudai.ac.jp/hkd-startup-support/sfp",
     date: "2023/02/01",

@@ -23,29 +23,33 @@ type ProjectType = {
 
 const projects = [
   {
-    id: "OMEME",
-    title: "OMEME: Utilize No-used HMD as a Robot",
-    where: [
-      {
-        link: "https://www.wiss.org/WISS2023/",
-        description: "WISS'23 demo（対話発表賞🏅）",
-      },
-    ],
-    thumnail: "./visionbot.main.png",
-    projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
-  },
-  {
     id: "temaneki",
     title:
-      "Temaneki: Web Application for Enhancing MATSURI festival management communities.",
+      "Temaneki: A Collaboration Tool for Enhancing MATSURI Festival Management Communities",
     where: [
+      {
+        link: "https://doi.org/10.1145/3613905.3651013",
+        description: "CHI EA '24",
+      },
       {
         link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
         description: "未踏' 22（スパクリ🏅）",
       },
     ],
-    thumnail: "./temaneki-app.png",
+    thumnail: "./temaneki.svg",
     projectLink: "https://temaneki.jp",
+  },
+  {
+    id: "OMEME",
+    title: "OMEME: Utilize No-used HMD as a Robot",
+    where: [
+      {
+        link: "https://www.wiss.org/WISS2023/",
+        description: "WISS'23（対話発表賞🏅）",
+      },
+    ],
+    thumnail: "./visionbot.main.png",
+    projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
   },
   {
     id: "telecocha",
@@ -62,7 +66,8 @@ const projects = [
   },
   {
     id: "double flick keyboard",
-    title: "Ja Double Flick Keyboard for Live Streaming",
+    title:
+      "Double Translucent Keyboard for Participating Chats in Live Streaming",
     where: [
       {
         link: "http://id.nii.ac.jp/1001/00224248/",
@@ -131,10 +136,14 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
           </Typography>
           <Typography variant="body1">
             {where.map((value) => (
-              <a
-                key={value.link + value.description}
-                href={value.link}
-              >{`${value.description},`}</a>
+              <>
+                <Link
+                  sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+                  key={value.link + value.description}
+                  href={value.link}
+                >{`${value.description}`}</Link>
+                <span>, </span>
+              </>
             ))}
           </Typography>
           {projectLink && (

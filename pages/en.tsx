@@ -56,8 +56,7 @@ const Index = () => {
               </Box>
               <Box>
                 <Typography variant="body1">
-                  I am a M.Sc. Student, and will be a Ph.D. Student at Hokkaido
-                  University, advised by{" "}
+                  I am a Ph.D. Student at Hokkaido University, advised by{" "}
                   <Link
                     href={"https://daisukesakamoto.jp/"}
                     sx={{
@@ -82,17 +81,21 @@ const Index = () => {
                 </Typography>
                 <Typography variant="body1" pt={2}>
                   I&apos;m broadly interested in UI/UX design for social
-                  computing, such as video-sharing platform, live streaming,
-                  social AR/VR, and face-to-face collaboration system.
-                  Specifically, I engage in prototyping new interfaces or user
-                  experiences, and conduct user studies or field deployments to
-                  explore and share these insights.
+                  computing. Specifically, I want to design a UI/UX enhancing
+                  “get-together” experience, currently focusing on watching
+                  together (co-located families and friends co-watching in a
+                  living room, or remote viewers watching together on
+                  video-sharing and social-VR platforms). In addition, I am
+                  engaging in sub-projects about “work together” (civic- and
+                  hobby-based communities enhancement through festival
+                  management) and “enjoy together” (public exhibition, display,
+                  and technology).
                 </Typography>
 
                 <Typography variant="body1" pt={2}>
-                  I also like prototyping and development: Next.js, React,
-                  Unity(C#), Python, Arduino, Raspberry Pi, Toio swarming
-                  robots. A notable project in my development life is{" "}
+                  I like prototyping and development: Next.js, React, Unity(C#),
+                  Python, Arduino, Raspberry Pi, Toio swarming robots. A notable
+                  project in my development life is{" "}
                   <Link
                     href={"https://temaneki.jp"}
                     sx={{

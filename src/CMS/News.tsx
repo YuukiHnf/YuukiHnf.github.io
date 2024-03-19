@@ -13,14 +13,9 @@ type NewsType = {
 const news: NewsType[] = [
   // {
   //   title: "立石研究助成(C)に採択していただきました。",
-  //   date: "2024/02/17",
+  //   date: "2024/04/01",
   //   link: "https://www.tateisi-f.org/research/c/",
   // },
-  {
-    title: "立石研究助成(C)に採択していただきました。",
-    date: "2024/04/01",
-    link: "https://www.tateisi-f.org/research/c/",
-  },
   {
     title: "北海道大学 令和5年 えるむ賞を受賞しました。",
     date: "2024/03/19",
