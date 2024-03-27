@@ -9,7 +9,8 @@ type AwardType = {
 
 const awards: AwardType[] = [
   {
-    title: "精密学会学生奨励賞",
+    title:
+      "北海道大学 情報科学院 情報理工学コース 修士総代/学生奨励賞(精密学会学生奨励賞）",
     link: "/",
     date: "2024/03/25",
   },

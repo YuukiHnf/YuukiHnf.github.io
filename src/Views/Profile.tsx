@@ -69,8 +69,8 @@ const Profile = ({ isEnglish = false }: Props) => {
           variant="body2"
           textAlign={{ xs: "center", sm: "center", md: "left" }}
         >
-          M.Sc. Student at Hokkaido University
-          {/* PhD Student at University of Hokkaido */}
+          {/* M.Sc. Student at Hokkaido University */}
+          Ph.D. Student at Hokkaido University
         </Typography>
       </Box>
       <Grid
