@@ -14,6 +14,11 @@ const awards: GrantType[] = [
     date: "2024/04/01",
   },
   {
+    title: "Hokkaido University EXEX Doctoral Fellowship ",
+    link: "https://www.tateisi-f.org/research/c/",
+    date: "2024/04/01",
+  },
+  {
     title:
       "2022年度 未踏IT人材発掘・育成事業「祭り運営を支援するアプリケーションの開発」",
     link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
