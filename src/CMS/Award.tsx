@@ -10,7 +10,7 @@ type AwardType = {
 const awards: AwardType[] = [
   {
     title:
-      "北海道大学 情報科学院 情報理工学コース 修士総代/学生奨励賞(精密学会学生奨励賞）",
+      "北海道大学大学院 情報科学院 情報理工学専攻 情報理工学コース 修士総代/学生奨励賞（精密学会学生奨励賞）",
     link: "/",
     date: "2024/03/25",
   },
@@ -36,7 +36,7 @@ const awards: AwardType[] = [
   },
   {
     title:
-      "北大テックガレージ(HUTG) Spring Founders Program2 採択(2022年2月-3月)",
+      "北大テックガレージ（HUTG）Spring Founders Program2 採択(2022年2月-3月)",
     link: "https://cosmos.gfc.hokudai.ac.jp/hkd-startup-support/sfp",
     date: "2023/02/01",
   },
@@ -47,7 +47,7 @@ const awards: AwardType[] = [
   },
   {
     title:
-      "北大テックガレージ(HUTG) Spring Founders Program1 採択(2022年8月-9月)",
+      "北大テックガレージ（HUTG）Spring Founders Program1 採択(2022年8月-9月)",
     link: "https://u4u.oeic.hokudai.ac.jp/en/6146/",
     date: "2023/08/01",
   },

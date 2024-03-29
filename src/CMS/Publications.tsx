@@ -15,7 +15,7 @@ const journal_publications: PublicationsType[] = [
   {
     id: "interaction22",
     title:
-      "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの検証.",
+      "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの検証",
     authors: "阿部 優樹, 崔 明根, 坂本 大介, 小野 哲雄",
     year: 2022,
     where: "情報処理学会論文誌",
@@ -27,7 +27,7 @@ const conference_publications: PublicationsType[] = [
   {
     id: "Temaneki24",
     title:
-      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams.",
+      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
     authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2024,
     where:
@@ -39,7 +39,7 @@ const conference_publications: PublicationsType[] = [
   {
     id: "ronbunnshi22",
     title:
-      "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの入力性能の実験的検証．",
+      "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの入力性能の実験的検証",
     authors: "阿部 優樹, 崔 明根, 坂本 大介, 小野 哲雄",
     year: 2022,
     where: "インタラクション2022",
@@ -50,17 +50,17 @@ const conference_publications: PublicationsType[] = [
 const demo_publications: PublicationsType[] = [
   {
     id: "WISS-OMEME",
-    title: "OMEME:非装着状態のHMDを用いたコンパニオンロボットの開発．",
+    title: "OMEME:非装着状態のHMDを用いたコンパニオンロボットの開発",
     authors: "阿部優樹，鈴木湧登，坂本大介，小野哲雄",
     year: 2024,
     where: "WISS 2024",
     whereDetail:
-      "第31回インタラクティブシステムとソフトウェアに関するワークショップ（対話発表賞）．",
+      "第31回インタラクティブシステムとソフトウェアに関するワークショップ（対話発表賞）",
     doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A10.pdf",
   },
   {
     id: "WISS-GAMEX",
-    title: "Game-2-X: 種類が異なるゲームプレイ間を繋ぐシステムの提案．",
+    title: "Game-2-X: 種類が異なるゲームプレイ間を繋ぐシステムの提案",
     authors: "日下部完，阿部優樹，坂本大介，小野哲雄",
     year: 2024,
     where: "WISS 2024",
@@ -70,7 +70,7 @@ const demo_publications: PublicationsType[] = [
   },
   {
     id: "interaction22",
-    title: "ユーザビリティ調査におけるニコニコデータセット活用．",
+    title: "ユーザビリティ調査におけるニコニコデータセット活用",
     authors: "阿部 優樹, 崔 明根, 坂本 大介, 小野 哲雄",
     year: 2022,
     where: "IDRユーザフォーラム 2022",
@@ -88,11 +88,14 @@ const Publications = () => {
       {journal_publications.map((publication) => (
         <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
-            {publication.authors + " " + publication.year + " "}{" "}
-            <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
+            {publication.authors + ". " + publication.year + ""}
+            {". "}
+            <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+            {". "}
             <span>In </span>
             <span style={{ fontStyle: "italic" }}>{publication.where}</span>.
-            <span> {publication.whereDetail}</span>{" "}
+            <span> {publication.whereDetail}</span>
+            {". "}
           </Typography>
           <div
             style={{
@@ -111,11 +114,14 @@ const Publications = () => {
       {conference_publications.map((publication) => (
         <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
-            {publication.authors + " " + publication.year + " "}{" "}
-            <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
+            {publication.authors + ". " + publication.year}
+            {". "}
+            <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+            {". "}
             <span>In </span>
             <span style={{ fontStyle: "italic" }}>{publication.where}</span>.
-            <span> {publication.whereDetail}</span>{" "}
+            <span> {publication.whereDetail}</span>
+            {". "}
           </Typography>
           <div
             style={{
@@ -134,11 +140,14 @@ const Publications = () => {
       {demo_publications.map((publication) => (
         <div key={publication.id + publication.authors + publication.where}>
           <Typography key={publication.id}>
-            {publication.authors + " " + publication.year + " "}{" "}
-            <span style={{ fontWeight: "bold" }}>{publication.title}</span>{" "}
+            {publication.authors + ". " + publication.year}
+            {". "}
+            <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+            {". "}
             <span>In </span>
             <span style={{ fontStyle: "italic" }}>{publication.where}</span>.
-            <span> {publication.whereDetail}</span>{" "}
+            <span> {publication.whereDetail}</span>
+            {". "}
           </Typography>
           <div
             style={{

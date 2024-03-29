@@ -66,10 +66,9 @@ const Index = () => {
                     北海道大学 情報科学院
                     ヒューマンコンピュータインタラクション研究室
                   </Link>
-                  に所属する修士２年生です．コンピュータを活用して人々の社会的なつながりを強める研究をしています．
-                  特に，人々が“一緒に体験する”—たとえば，一緒に動画を視聴する,
-                  一緒に展示やゲームを楽しむ,
-                  一緒に目標を達成することを，コンピュータの操作手法（UI）やデジタル体験（UX）を工夫して支援することに興味があります．
+                  に所属する博士１年生です．コンピュータを活用して人々の社会的つながりを強める研究をしています．特に
+                  “複数の人が一緒に何かを体験する活動”—たとえば，一緒に動画を視聴する,
+                  一緒に展示を楽しむ，そしてそれらを促すイベントや場所をつくることに興味があり，それをコンピュータの操作手法（UI）やデジタル体験（UX）を工夫して支援する研究をしています．
                   {/* 今まで物理的・能力的・身体的に参加できなかったことをできるようにするためのコンピュータの操作手法（UI）やデジタル体験（UX）に興味があります． */}
                   未踏IT 22年度スーパークリエータ. 株式会社 temaneki
                   取締役．一般社団法人 新雪 メンター．
@@ -79,8 +78,8 @@ const Index = () => {
                 </Typography>
                 <Typography variant="body1" fontWeight="lighter">
                   Human Computer Interaction(HCI), User Interface and User
-                  Experience, Social-computing, Interactive Techniques, User
-                  Studies and Evaluations.
+                  Experience, Social-computing, Watching Together, User Studies
+                  and Evaluations.
                 </Typography>
                 {/* <Link href={"https://daisukesakamoto.jp/"}>
                     Daisuke Sakamoto
