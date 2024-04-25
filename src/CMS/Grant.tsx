@@ -10,12 +10,12 @@ type GrantType = {
 const awards: GrantType[] = [
   {
     title: "2024年度 立石科学技術振興財団研究助成(C)",
-    link: "https://www.tateisi-f.org/research/c/",
+    link: "https://www.tateisi-f.org/news/2024-04-24",
     date: "2024/04/01",
   },
   {
     title: "Hokkaido University EXEX Doctoral Fellowship ",
-    link: "https://www.tateisi-f.org/research/c/",
+    link: "https://sites.google.com/eis.hokudai.ac.jp/exexphd-fellow/",
     date: "2024/04/01",
   },
   {
