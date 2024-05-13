@@ -22,6 +22,7 @@ import SubTitle from "@/components/Title/SubTitle";
 import News from "./News";
 import { BrowserView } from "react-device-detect";
 import PictureAsPdfRoundedIcon from "@mui/icons-material/PictureAsPdfRounded";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 type Props = {
   isEnglish?: boolean;
@@ -130,6 +131,31 @@ const Profile = ({ isEnglish = false }: Props) => {
               variant="body2"
             >
               Google Scholar
+            </Typography>
+          </ListItem>
+        </Grid>
+        <Grid item maxWidth={"180px"}>
+          <ListItem
+            sx={{
+              pl: { xs: "8px", sm: "0px" },
+              pr: { xs: "8px" },
+              ":hover": { opacity: 0.4, cursor: "pointer" },
+            }}
+            onClick={() =>
+              router.push("https://www.linkedin.com/in/yuki-abe-111443283/")
+            }
+          >
+            <ListItemIcon sx={{ minWidth: "32px" }}>
+              <LinkedInIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
+            </ListItemIcon>
+            <Typography
+              display={{
+                xs: "none",
+                sm: "block",
+              }}
+              variant="body2"
+            >
+              LinkedIn
             </Typography>
           </ListItem>
         </Grid>
