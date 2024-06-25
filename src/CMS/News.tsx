@@ -11,11 +11,21 @@ type NewsType = {
 };
 
 const news: NewsType[] = [
-  // {
-  //   title: "立石研究助成(C)に採択していただきました。",
-  //   date: "2024/04/01",
-  //   link: "https://www.tateisi-f.org/research/c/",
-  // },
+  {
+    title: "CHI勉強会で学生スタッフに参加しました。",
+    date: "2024/06/29",
+    link: "https://sigchi.jp/seminar/chi2024/",
+  },
+  {
+    title: "CHI2024でLBWを発表しました。",
+    date: "2024/04/01",
+    link: "https://programs.sigchi.org/chi/2024/my-schedule/content/151083",
+  },
+  {
+    title: "立石研究助成(C)に採択していただきました。",
+    date: "2024/04/01",
+    link: "https://www.tateisi-f.org/research/c/",
+  },
   {
     title: "北海道大学 令和5年 えるむ賞を受賞しました。",
     date: "2024/03/19",
