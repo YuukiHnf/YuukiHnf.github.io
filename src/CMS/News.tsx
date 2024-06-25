@@ -18,7 +18,7 @@ const news: NewsType[] = [
   },
   {
     title: "CHI2024でLBWを発表しました。",
-    date: "2024/04/01",
+    date: "2024/05/13",
     link: "https://programs.sigchi.org/chi/2024/my-schedule/content/151083",
   },
   {
