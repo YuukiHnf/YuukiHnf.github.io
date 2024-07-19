@@ -49,11 +49,21 @@ const conference_publications: PublicationsType[] = [
 ];
 const demo_publications: PublicationsType[] = [
   {
+    id: "HCI209-SpeechAccomodation",
+    title:
+      "音声・動画コンテンツ内のナレーションを高齢者が聞き取りやすい話し方に変換するAIパイプラインの開発",
+    authors: "宮下 拓磨，阿部 優樹，坂本 大介，小野 哲雄",
+    year: 2024,
+    where: "HCI研究会",
+    whereDetail: "第 209回 ヒューマンコンピュータインタラクション研究会",
+    doi: "https://www.sighci.jp/events/sig/209",
+  },
+  {
     id: "WISS-OMEME",
     title: "OMEME:非装着状態のHMDを用いたコンパニオンロボットの開発",
     authors: "阿部優樹，鈴木湧登，坂本大介，小野哲雄",
-    year: 2024,
-    where: "WISS 2024",
+    year: 2023,
+    where: "WISS 2023",
     whereDetail:
       "第31回インタラクティブシステムとソフトウェアに関するワークショップ（対話発表賞）",
     doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A10.pdf",
@@ -62,8 +72,8 @@ const demo_publications: PublicationsType[] = [
     id: "WISS-GAMEX",
     title: "Game-2-X: 種類が異なるゲームプレイ間を繋ぐシステムの提案",
     authors: "日下部完，阿部優樹，坂本大介，小野哲雄",
-    year: 2024,
-    where: "WISS 2024",
+    year: 2023,
+    where: "WISS 2023",
     whereDetail:
       "第31回インタラクティブシステムとソフトウェアに関するワークショップ",
     doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A03.pdf",
@@ -135,7 +145,7 @@ const Publications = () => {
         </div>
       ))}
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        Demonstration
+        Demonstration/Poster
       </Typography>
       {demo_publications.map((publication) => (
         <div key={publication.id + publication.authors + publication.where}>
