@@ -55,7 +55,10 @@ const Index = () => {
                 <TypingH1 />
               </Box>
               <Box>
-                <Typography variant="body1">
+                <Typography
+                  variant="body1"
+                  // sx={{ xs: {}, sm: { textAlign: "justify", hyphens: "auto" } }}
+                >
                   <Link
                     href={"https://hci-lab.jp/"}
                     sx={{
@@ -63,8 +66,7 @@ const Index = () => {
                       textDecorationColor: theme.palette.text.secondary,
                     }}
                   >
-                    北海道大学 情報科学院
-                    ヒューマンコンピュータインタラクション研究室
+                    北海道大学 ヒューマンコンピュータインタラクション研究室
                   </Link>
                   に所属する博士１年生です．
                   2024年9月から2025年3月までは，シンガポールの
@@ -78,8 +80,8 @@ const Index = () => {
                     SMU HCI Research Group
                   </Link>
                   にて研究活動に行っています．
-                  研究分野は情報科学研究の一領域であるHuman-computer Interaction
-                  (HCI)で，特に，複数人で協力しやすくなるためのコンピュータ技術や，視覚障がい者の支援技術の開発に取り組んでいます．
+                  研究分野は情報科学の一領域であるHuman-computer Interaction
+                  (HCI)で，特に，複数人が協力しやすくなるコンピュータ技術や，視覚障がい者を支援する技術の研究開発に取り組んでいます．
                   {/* コンピュータを活用して人々の社会的つながりを強める研究をしています．特に */}
                   {/* “複数の人が一緒に何かを体験する活動”—たとえば，一緒に動画を視聴する, */}
                   {/* 一緒に展示を楽しむ，そしてそれらを促すイベントや場所をつくることに興味があり，それをコンピュータの操作手法（UI）やデジタル体験（UX）を工夫して支援する研究をしています． */}

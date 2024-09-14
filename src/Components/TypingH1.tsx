@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import React, { use, useEffect, useState } from "react";
 export const titleFontSize = { xs: "1.4rem", sm: "1.563em" };
 const text =
-  "hi 👋, i’m yuki—  PhD student, tech dev.🧑‍💻/music🎧/One Piece🏴‍☠️ lover, and MASTURI🏮 enthusiast.";
+  "hi 👋, i’m yuki—  PhD student, tech dev🧑‍💻/music🎧/One Piece🏴‍☠️ lover, and MASTURI🏮 enthusiast.";
 const speed = 100;
 const commaPause = 1000;
 
@@ -21,7 +21,7 @@ const TypingH1 = () => {
         setDisplayedText((prev) => prev + text[index]);
         setIndex(index + 1);
       },
-      text[index] === "," || text[index] === "—" ? commaPause : speed
+      text[index - 1] === "," || text[index - 1] === "—" ? commaPause : speed
     );
 
     return () => clearTimeout(timeoutId);

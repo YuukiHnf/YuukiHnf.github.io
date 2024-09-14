@@ -55,7 +55,10 @@ const Index = () => {
                 <TypingH1 />
               </Box>
               <Box>
-                <Typography variant="body1">
+                <Typography
+                  variant="body1"
+                  // sx={{ xs: {}, sm: { textAlign: "justify", hyphens: "auto" } }}
+                >
                   I am a Ph.D. Student in{" "}
                   <Link
                     href={"https://hci-lab.jp/"}
@@ -150,19 +153,29 @@ const Index = () => {
                 <NewsDesktop />
               </Box> */}
               <Box ref={projectsElementRef}>
-                <SubTitle title={"PROJECTS"} />
+                <SubTitle title={"Projects"} />
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"PUBLICATIONS AND AWARDS"} />
+                <SubTitle title={"Publications and Awards"} />
                 <Typography variant="subtitle1">
-                  See more on <Link href={"./CV.pdf"}>my English CV</Link>.
+                  See my{" "}
+                  <Link
+                    href={"./CV.pdf"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    English CV
+                  </Link>
+                  .
                 </Typography>
               </Box>
               <Box ref={contactElementRef}>
-                <SubTitle title={"CONTACT"} />
+                <SubTitle title={"Contact"} />
               </Box>
-              <Typography>hnf_yuuki[at]ist.hokudai.ac.jp</Typography>
+              <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>
           </Grid>
         </Grid>
