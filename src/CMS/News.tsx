@@ -12,6 +12,11 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title: "SMUで半年間の研究活動が始まりました。",
+    date: "2024/09/12",
+    link: "https://smuhci.com/",
+  },
+  {
     title: "CHI勉強会で学生スタッフに参加しました。",
     date: "2024/06/29",
     link: "https://sigchi.jp/seminar/chi2024/",

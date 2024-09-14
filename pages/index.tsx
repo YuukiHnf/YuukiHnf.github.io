@@ -66,21 +66,36 @@ const Index = () => {
                     北海道大学 情報科学院
                     ヒューマンコンピュータインタラクション研究室
                   </Link>
-                  に所属する博士１年生です．コンピュータを活用して人々の社会的つながりを強める研究をしています．特に
-                  “複数の人が一緒に何かを体験する活動”—たとえば，一緒に動画を視聴する,
-                  一緒に展示を楽しむ，そしてそれらを促すイベントや場所をつくることに興味があり，それをコンピュータの操作手法（UI）やデジタル体験（UX）を工夫して支援する研究をしています．
+                  に所属する博士１年生です．
+                  2024年9月から2025年3月までは，シンガポールの
+                  <Link
+                    href={"https://smuhci.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    SMU HCI Research Group
+                  </Link>
+                  にて研究活動に行っています．
+                  研究分野は情報科学研究の一領域であるHuman-computer Interaction
+                  (HCI)で，特に，複数人で協力しやすくなるためのコンピュータ技術や，視覚障がい者の支援技術の開発に取り組んでいます．
+                  {/* コンピュータを活用して人々の社会的つながりを強める研究をしています．特に */}
+                  {/* “複数の人が一緒に何かを体験する活動”—たとえば，一緒に動画を視聴する, */}
+                  {/* 一緒に展示を楽しむ，そしてそれらを促すイベントや場所をつくることに興味があり，それをコンピュータの操作手法（UI）やデジタル体験（UX）を工夫して支援する研究をしています． */}
                   {/* 今まで物理的・能力的・身体的に参加できなかったことをできるようにするためのコンピュータの操作手法（UI）やデジタル体験（UX）に興味があります． */}
+                  <br />
                   未踏IT 22年度スーパークリエータ. 株式会社 temaneki
                   取締役．一般社団法人 新雪 メンター．
                 </Typography>
-                <Typography variant="body1" fontWeight="lighter" pt={1}>
+                {/* <Typography variant="body1" fontWeight="lighter" pt={1}>
                   研究キーワード
-                </Typography>
-                <Typography variant="body1" fontWeight="lighter">
+                </Typography> */}
+                {/* <Typography variant="body1" fontWeight="lighter">
                   Human Computer Interaction(HCI), User Interface and User
-                  Experience, Social-computing, Watching Together, User Studies
-                  and Evaluations.
-                </Typography>
+                  Experience, Social-computing, Accessibility, User Studies and
+                  Evaluations.
+                </Typography> */}
                 {/* <Link href={"https://daisukesakamoto.jp/"}>
                     Daisuke Sakamoto
                   </Link>{" "}
