@@ -56,17 +56,7 @@ const Index = () => {
               </Box>
               <Box>
                 <Typography variant="body1">
-                  I am a Ph.D. Student at Hokkaido University, advised by{" "}
-                  <Link
-                    href={"https://daisukesakamoto.jp/"}
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textDecorationColor: theme.palette.text.secondary,
-                    }}
-                  >
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the{" "}
+                  I am a Ph.D. Student in{" "}
                   <Link
                     href={"https://hci-lab.jp/"}
                     sx={{
@@ -74,12 +64,54 @@ const Index = () => {
                       textDecorationColor: theme.palette.text.secondary,
                     }}
                   >
-                    HCI-lab
+                    the HCI-lab at Hokkaido University
+                  </Link>
+                  , advised by{" "}
+                  <Link
+                    href={"https://daisukesakamoto.jp/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Prof. Daisuke Sakamoto
+                  </Link>
+                  . My research interests lie in the field of Human-Computer
+                  Interaction (HCI), with a focus on social-computing and
+                  accessibility. From September 2024 to March 2025, I am working
+                  as a visiting research assistant of{" "}
+                  <Link
+                    href={"https://smuhci.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    SMU HCI Research
+                  </Link>
+                  , advised by{" "}
+                  <Link
+                    href={"https://kotarohara.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Prof. Kotaro Hara
+                  </Link>
+                  . Please refer to my{" "}
+                  <Link
+                    href={"./CV.pdf"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    CV
                   </Link>{" "}
-                  (starting April 2024). My research interests lie in the field
-                  of Human-Computer Interaction (HCI).
+                  if you are interested!
                 </Typography>
-                <Typography variant="body1" pt={2}>
+                {/* <Typography variant="body1" pt={2}>
                   I&apos;m broadly interested in UI/UX design for social
                   computing. Specifically, I want to design a UI/UX enhancing
                   “get-together” experience, currently focusing on watching
@@ -90,9 +122,9 @@ const Index = () => {
                   hobby-based communities enhancement through festival
                   management) and “enjoy together” (public exhibition, display,
                   and technology).
-                </Typography>
+                </Typography> */}
 
-                <Typography variant="body1" pt={2}>
+                {/* <Typography variant="body1" pt={2}>
                   I like prototyping and development: Next.js, React, Unity(C#),
                   Python, Arduino, Raspberry Pi, Toio swarming robots. A notable
                   project in my development life is{" "}
@@ -109,7 +141,7 @@ const Index = () => {
                   enjoyment for participation. I have developed and managed
                   Temaneki for two years. Over 500 users in Japan have adopted
                   Temaneki.
-                </Typography>
+                </Typography> */}
               </Box>
               {/* <Box
                 width={"100%"}
@@ -128,7 +160,7 @@ const Index = () => {
                 </Typography>
               </Box>
               <Box ref={contactElementRef}>
-                <SubTitle title={"Contact"} />
+                <SubTitle title={"CONTACT"} />
               </Box>
               <Typography>hnf_yuuki[at]ist.hokudai.ac.jp</Typography>
             </Box>
