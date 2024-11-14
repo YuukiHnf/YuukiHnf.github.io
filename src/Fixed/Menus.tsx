@@ -98,7 +98,7 @@ const Menus = ({
         </Button>
         <Button
           startIcon={<TranslateIcon />}
-          sx={{ color: "gray" }}
+          sx={{ color: "gray", fontWeight: "bold" }}
           // sx={{
           //   color: "white",
           //   bgcolor: "#B3B3B3",

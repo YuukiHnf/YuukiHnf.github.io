@@ -61,7 +61,7 @@ const Index = () => {
                 >
                   I am a Ph.D. Student in{" "}
                   <Link
-                    href={"https://hci-lab.jp/"}
+                    href={"https://hci-lab.jp/en/"}
                     sx={{
                       color: theme.palette.text.secondary,
                       textDecorationColor: theme.palette.text.secondary,
@@ -71,7 +71,7 @@ const Index = () => {
                   </Link>
                   , advised by{" "}
                   <Link
-                    href={"https://daisukesakamoto.jp/"}
+                    href={"https://daisukesakamoto.jp/en/"}
                     sx={{
                       color: theme.palette.text.secondary,
                       textDecorationColor: theme.palette.text.secondary,
