@@ -23,6 +23,18 @@ type ProjectType = {
 
 const projects = [
   {
+    id: "acd",
+    title: "Auditory Comment Display for Eyes-Free Social-Viewing Experience",
+    where: [
+      {
+        link: "https://cscw.acm.org/2025/",
+        description: "CSCW '25 (to appear)",
+      },
+    ],
+    thumnail: "./acd.jpg",
+    projectLink: "",
+  },
+  {
     id: "temaneki",
     title:
       "Temaneki: A Collaboration Tool for Enhancing MATSURI Festival Management Communities",

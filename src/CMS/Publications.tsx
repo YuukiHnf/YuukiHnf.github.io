@@ -13,6 +13,16 @@ type PublicationsType = {
 
 const journal_publications: PublicationsType[] = [
   {
+    id: "acd-cscw25",
+    title:
+      "“I feel lonely when they stop chatting”: Exploring Auditory Comment Display for Eyes-Free Social-Viewing Experience in Online Music Videos",
+    authors: "Yuki Abe, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
+    where: "Proceedings of the ACM on Human-Computer Interaction",
+    whereDetail: "(CSCW) (to appear at CSCW 2025) Apr 2025",
+    doi: "",
+  },
+  {
     id: "interaction22",
     title:
       "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの検証",

@@ -59,7 +59,7 @@ const Index = () => {
                   variant="body1"
                   // sx={{ xs: {}, sm: { textAlign: "justify", hyphens: "auto" } }}
                 >
-                  I am a Ph.D. Student in{" "}
+                  I am a Ph.D. student in the{" "}
                   <Link
                     href={"https://hci-lab.jp/en/"}
                     sx={{
@@ -67,9 +67,9 @@ const Index = () => {
                       textDecorationColor: theme.palette.text.secondary,
                     }}
                   >
-                    the HCI-lab at Hokkaido University
+                    HCI-lab at Hokkaido University
                   </Link>
-                  , advised by{" "}
+                  , where I am advised by{" "}
                   <Link
                     href={"https://daisukesakamoto.jp/en/"}
                     sx={{
@@ -79,10 +79,10 @@ const Index = () => {
                   >
                     Prof. Daisuke Sakamoto
                   </Link>
-                  . My research interests lie in the field of Human-Computer
-                  Interaction (HCI), with a focus on social-computing and
-                  accessibility. From September 2024 to March 2025, I am working
-                  as a visiting research assistant of{" "}
+                  . My research lies in the field of Human-Computer Interaction
+                  (HCI), with a focus on accessibility and social-computing.
+                  From September 2024 to March 2025, I am a visiting student at
+                  the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -92,7 +92,7 @@ const Index = () => {
                   >
                     SMU HCI Research
                   </Link>
-                  , advised by{" "}
+                  , where I am advised by{" "}
                   <Link
                     href={"https://kotarohara.com/"}
                     sx={{
