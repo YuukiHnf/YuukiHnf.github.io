@@ -16,6 +16,7 @@ type ProjectType = {
   where: {
     link: string;
     description: string;
+    descriptionEn?: string;
   }[];
   thumnail: string;
   projectLink: string;
@@ -46,48 +47,46 @@ const projects = [
       {
         link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
         description: "未踏' 22（スパクリ🏅）",
+        descriptionEn: "Mitou Program",
       },
     ],
     thumnail: "./temaneki.svg",
     projectLink: "https://temaneki.jp",
   },
-  {
-    id: "OMEME",
-    title: "OMEME: Utilize No-used HMD as a Robot",
-    where: [
-      {
-        link: "https://www.wiss.org/WISS2023/",
-        description: "WISS'23（対話発表賞🏅）",
-      },
-    ],
-    thumnail: "./visionbot.main.png",
-    projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
-  },
-  {
-    id: "telecocha",
-    title:
-      "Tele-Cocha: Smartphone-based Telepresence System Embodied Swarm Robots",
-    where: [
-      {
-        link: "https://protopedia.net/prototype/2558",
-        description: "ハッカソン toio for Unity SDK 賞",
-      },
-    ],
-    thumnail: "./telecocha.jpg",
-    projectLink: "https://protopedia.net/prototype/2558",
-  },
+  // {
+  //   id: "OMEME",
+  //   title: "OMEME: Utilize No-used HMD as a Robot",
+  //   where: [
+  //     {
+  //       link: "https://www.wiss.org/WISS2023/",
+  //       description: "WISS'23（対話発表賞🏅）",
+  //     },
+  //   ],
+  //   thumnail: "./visionbot.main.png",
+  //   projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
+  // },
+  // {
+  //   id: "telecocha",
+  //   title:
+  //     "Tele-Cocha: Smartphone-based Telepresence System Embodied Swarm Robots",
+  //   where: [
+  //     {
+  //       link: "https://protopedia.net/prototype/2558",
+  //       description: "ハッカソン toio for Unity SDK 賞",
+  //     },
+  //   ],
+  //   thumnail: "./telecocha.jpg",
+  //   projectLink: "https://protopedia.net/prototype/2558",
+  // },
   {
     id: "double flick keyboard",
     title:
       "Double Translucent Keyboard for Participating Chats in Live Streaming",
     where: [
       {
-        link: "http://id.nii.ac.jp/1001/00224248/",
+        link: "http://doi.org/10.20729/00224248",
         description: "情報処理学会 論文誌",
-      },
-      {
-        link: "https://www.interaction-ipsj.org/2022/program/#action_support",
-        description: "インタラクション2022 Paper",
+        descriptionEn: "IPSJ Journal",
       },
     ],
     thumnail: "./commentcocha.png",
@@ -111,6 +110,9 @@ export default Projects;
 
 const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
   const router = useRouter();
+  // pathに/en/が含まれているかどうかで日本語か英語かを切り替える
+  const path = router.asPath;
+  const isEn = path.includes("/en");
   return (
     <Card
       sx={{
@@ -123,7 +125,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         padding: "16px 0px 8px",
       }}
     >
-      <Grid container spacing={2} minHeight={"140px"}>
+      <Grid container spacing={2} minHeight={"120px"}>
         <Grid item xs={12} sm={3} pl={0}>
           <Button onClick={() => projectLink && router.push(projectLink)}>
             <img
@@ -153,19 +155,25 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                   sx={{ color: "GrayText", textDecorationColor: "transparent" }}
                   key={value.link + value.description}
                   href={value.link}
-                >{`${value.description}`}</Link>
+                >{`${
+                  isEn
+                    ? value.descriptionEn ?? value.description
+                    : value.description
+                }`}</Link>
                 <span>, </span>
               </>
             ))}
           </Typography>
-          {projectLink && (
-            <Link
-              sx={{ color: "GrayText", textDecorationColor: "transparent" }}
-              href={projectLink}
-            >
-              Project Page
-            </Link>
-          )}
+          {/* {projectLink && (
+            <Typography variant="body2">
+              <Link
+                sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+                href={projectLink}
+              >
+                Project Page
+              </Link>
+            </Typography>
+          )} */}
         </Grid>
       </Grid>
     </Card>

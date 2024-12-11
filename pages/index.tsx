@@ -146,7 +146,7 @@ const Index = () => {
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
-              <Typography>hnf_yuuki[at]ist.hokudai.ac.jp</Typography>
+              <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>
           </Grid>
         </Grid>

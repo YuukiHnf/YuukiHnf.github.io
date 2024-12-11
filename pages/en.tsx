@@ -157,21 +157,13 @@ const Index = () => {
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"Publications and Awards"} />
-                <Typography variant="subtitle1">
-                  See my{" "}
-                  <Link
-                    href={"./CV.pdf"}
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textDecorationColor: theme.palette.text.secondary,
-                    }}
-                  >
-                    English CV
-                  </Link>
-                  .
-                </Typography>
+                <SubTitle title={"Publications"} />
               </Box>
+              <Publications En />
+              <Box ref={awardElementRef}>
+                <SubTitle title={"Award"} />
+              </Box>
+              <Award />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
