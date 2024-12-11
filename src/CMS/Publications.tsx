@@ -128,43 +128,50 @@ const Publications = ({ En = false }: Props) => {
   return (
     <Stack spacing={2}>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        Journal Paper
+        Refereed Journals
       </Typography>
-      {journal_publications.map((publication) => (
-        <div key={publication.id + publication.authors + publication.where}>
-          <Typography key={publication.id}>
-            {En
-              ? publication.authorsEn ?? publication.authors
-              : publication.authors + ". " + publication.year + ""}
-            {". "}
-            <span style={{ fontWeight: "bold" }}>
+      <ol
+        style={{
+          paddingLeft: "25px",
+          // fontSize: "20px",
+          fontFamily: "Helvetica",
+        }}
+      >
+        {journal_publications.map((publication) => (
+          <li key={publication.id + publication.authors + publication.where}>
+            <Typography key={publication.id}>
               {En
-                ? publication.titleEn ?? publication.title
-                : publication.title}
-            </span>
-            {". "}
-            <span>
-              {En
-                ? publication.whereEn ?? publication.where
-                : publication.where}
-            </span>
-            .<span> {publication.whereDetail}</span>
-            {". "}
-            {publication.doi ? (
-              <>
-                {"["}
-                <Link
-                  href={publication.doi}
-                  sx={{ wordWrap: "break-word" }}
-                  display={publication.doi ? undefined : "none"}
-                >
-                  DOI
-                </Link>
-                {"]"}
-              </>
-            ) : null}
-          </Typography>
-          {/* <div
+                ? publication.authorsEn ?? publication.authors
+                : publication.authors + ". " + publication.year + ""}
+              {". "}
+              <span style={{ fontWeight: "bold" }}>
+                {En
+                  ? publication.titleEn ?? publication.title
+                  : publication.title}
+              </span>
+              {". "}
+              <span>
+                {En
+                  ? publication.whereEn ?? publication.where
+                  : publication.where}
+              </span>
+              .<span> {publication.whereDetail}</span>
+              {". "}
+              {publication.doi ? (
+                <>
+                  {"["}
+                  <Link
+                    href={publication.doi}
+                    sx={{ wordWrap: "break-word" }}
+                    display={publication.doi ? undefined : "none"}
+                  >
+                    DOI
+                  </Link>
+                  {"]"}
+                </>
+              ) : null}
+            </Typography>
+            {/* <div
             style={
               {
                 // marginTop: "0px",
@@ -177,61 +184,21 @@ const Publications = ({ En = false }: Props) => {
             </Link>
             ]
           </div> */}
-        </div>
-      ))}
+          </li>
+        ))}
+      </ol>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        Conference Paper (Reviewed)
+        Peer-Reviewed International Conferences
       </Typography>
-      {conf_publications.map((publication) => (
-        <div key={publication.id + publication.authors + publication.where}>
-          <Typography key={publication.id}>
-            {publication.authors + ". " + publication.year}
-            {". "}
-            <span style={{ fontWeight: "bold" }}>{publication.title}</span>
-            {". "}
-            {/* <span>In </span> */}
-            <span>{publication.where}</span>.
-            <span> {publication.whereDetail}</span>
-            {". "}
-            {publication.doi ? (
-              <>
-                {"["}
-                <Link
-                  href={publication.doi}
-                  sx={{ wordWrap: "break-word" }}
-                  display={publication.doi ? undefined : "none"}
-                >
-                  DOI
-                </Link>
-                {"]"}
-              </>
-            ) : null}
-          </Typography>
-          {/* <div
-            style={{
-              marginTop: "0px",
-            }}
-          >
-            [
-            <Link href={publication.doi} sx={{ wordWrap: "break-word" }}>
-              DOI
-            </Link>
-            ]
-          </div> */}
-        </div>
-      ))}
-      <Typography
-        pt={2}
-        variant="subtitle1"
-        borderBottom={"2px solid #e0e0e0"}
-        display={dem_publications.length > 0 ? undefined : "none"}
+      <ol
+        style={{
+          paddingLeft: "25px",
+          // fontSize: "20px",
+          fontFamily: "Helvetica",
+        }}
       >
-        Demonstration, Poster
-      </Typography>
-      {dem_publications
-        .filter((publication) => (En ? !publication.invisibleInEn : true))
-        .map((publication) => (
-          <div key={publication.id + publication.authors + publication.where}>
+        {conf_publications.map((publication) => (
+          <li key={publication.id + publication.authors + publication.where}>
             <Typography key={publication.id}>
               {publication.authors + ". " + publication.year}
               {". "}
@@ -249,15 +216,60 @@ const Publications = ({ En = false }: Props) => {
                     sx={{ wordWrap: "break-word" }}
                     display={publication.doi ? undefined : "none"}
                   >
-                    {/* doiにdoiという文字列が入っていればDOI, それ以外はURL */}
-                    {publication.doi.includes("doi") ? "DOI" : "URL"}
-                    {/* DOI */}
+                    DOI
                   </Link>
                   {"]"}
                 </>
               ) : null}
             </Typography>
-            {/* <div
+          </li>
+        ))}
+      </ol>
+      <Typography
+        pt={2}
+        variant="subtitle1"
+        borderBottom={"2px solid #e0e0e0"}
+        display={dem_publications.length > 0 ? undefined : "none"}
+      >
+        Demonstration, Poster
+      </Typography>
+      <ol
+        style={{
+          paddingLeft: "25px",
+          // fontSize: "20px",
+          fontFamily: "Helvetica",
+        }}
+      >
+        {dem_publications
+          .filter((publication) => (En ? !publication.invisibleInEn : true))
+          .map((publication) => (
+            <li key={publication.id + publication.authors + publication.where}>
+              <Typography key={publication.id}>
+                {publication.authors + ". " + publication.year}
+                {". "}
+                <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+                {". "}
+                {/* <span>In </span> */}
+                <span>{publication.where}</span>.
+                <span> {publication.whereDetail}</span>
+                {". "}
+                {publication.doi ? (
+                  <>
+                    {"["}
+                    <Link
+                      href={publication.doi}
+                      sx={{ wordWrap: "break-word" }}
+                      display={publication.doi ? undefined : "none"}
+                    >
+                      {/* doiにdoiという文字列が入っていればDOI, それ以外はURL */}
+                      {publication.doi.includes("doi") ? "DOI" : "URL"}
+                      {/* DOI */}
+                    </Link>
+                    {"]"}
+                  </>
+                ) : null}
+              </Typography>
+              {/* <div
               style={{
                 // marginTop: "0px",
                 maxWidth: "100%",
@@ -269,8 +281,9 @@ const Publications = ({ En = false }: Props) => {
               </Link>
               ]
             </div> */}
-          </div>
-        ))}
+            </li>
+          ))}
+      </ol>
     </Stack>
   );
 };

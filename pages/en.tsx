@@ -6,6 +6,7 @@ import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
+import Grant from "src/CMS/Grant";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
@@ -161,9 +162,13 @@ const Index = () => {
               </Box>
               <Publications En />
               <Box ref={awardElementRef}>
-                <SubTitle title={"Award"} />
+                <SubTitle title={"Awards"} />
               </Box>
-              <Award />
+              <Award En />
+              <Box ref={awardElementRef}>
+                <SubTitle title={"Grants"} />
+              </Box>
+              <Grant En />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
