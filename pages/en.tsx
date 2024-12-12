@@ -6,9 +6,12 @@ import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
+import Grant from "src/CMS/Grant";
+import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
+import Servise from "src/CMS/Servise";
 import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
@@ -40,6 +43,7 @@ const Index = () => {
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
             <Box>
               <Menus
+                isEnglish={true}
                 aboutElementRef={aboutElementRef}
                 projectsElementRef={projectsElementRef}
                 publicationsElementRef={publicationsElementRef}
@@ -157,21 +161,23 @@ const Index = () => {
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"Publications and Awards"} />
-                <Typography variant="subtitle1">
-                  See my{" "}
-                  <Link
-                    href={"./CV.pdf"}
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textDecorationColor: theme.palette.text.secondary,
-                    }}
-                  >
-                    English CV
-                  </Link>
-                  .
-                </Typography>
+                <SubTitle title={"Publications"} />
               </Box>
+              <Publications En />
+              <Box ref={awardElementRef}>
+                <SubTitle title={"Awards"} />
+              </Box>
+              <Award En />
+              <Box>
+                <SubTitle title={"Grants"} />
+              </Box>
+              <Grant En />
+              <SubTitle title={"Academic Service"} />
+              <Servise />
+              <Box>
+                <SubTitle title={"Others"} />
+              </Box>
+              <Hobby />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>

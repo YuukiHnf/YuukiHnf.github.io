@@ -24,77 +24,35 @@ type ProjectType = {
 
 const projects = [
   {
-    id: "acd",
-    title: "Auditory Comment Display for Eyes-Free Social-Viewing Experience",
+    id: "OMEME",
+    title: "OMEME",
     where: [
       {
-        link: "https://cscw.acm.org/2025/",
-        description: "CSCW '25 (to appear)",
+        link: "https://www.wiss.org/WISS2023/",
+        description: "WISS'23",
+        descriptionEn: "WISS'23",
       },
     ],
-    thumnail: "./acd.jpg",
-    projectLink: "",
+    thumnail: "./visionbot.main.png",
+    projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
   },
   {
-    id: "temaneki",
-    title: "Temaneki: A Collaborative Tool for MATSURI Communities",
+    id: "telecocha",
+    title: "Tele-Cocha",
     where: [
       {
-        link: "https://doi.org/10.1145/3613905.3651013",
-        description: "CHI EA '24",
-      },
-      {
-        link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-        description: "未踏' 22",
-        descriptionEn: "Mitou Program",
+        link: "https://protopedia.net/prototype/2558",
+        description: "Protopedia",
       },
     ],
-    thumnail: "./temaneki.svg",
-    projectLink: "https://temaneki.jp",
-  },
-  // {
-  //   id: "OMEME",
-  //   title: "OMEME: Utilize No-used HMD as a Robot",
-  //   where: [
-  //     {
-  //       link: "https://www.wiss.org/WISS2023/",
-  //       description: "WISS'23（対話発表賞🏅）",
-  //     },
-  //   ],
-  //   thumnail: "./visionbot.main.png",
-  //   projectLink: "https://www.youtube.com/watch?v=hL36g6_rMPI",
-  // },
-  // {
-  //   id: "telecocha",
-  //   title:
-  //     "Tele-Cocha: Smartphone-based Telepresence System Embodied Swarm Robots",
-  //   where: [
-  //     {
-  //       link: "https://protopedia.net/prototype/2558",
-  //       description: "ハッカソン toio for Unity SDK 賞",
-  //     },
-  //   ],
-  //   thumnail: "./telecocha.jpg",
-  //   projectLink: "https://protopedia.net/prototype/2558",
-  // },
-  {
-    id: "double flick keyboard",
-    title: "Keyboard to Help Participate Chats in Live Streaming",
-    where: [
-      {
-        link: "http://doi.org/10.20729/00224248",
-        description: "情報処理学会 論文誌",
-        descriptionEn: "IPSJ Journal",
-      },
-    ],
-    thumnail: "./commentcocha.png",
-    projectLink: "https://hci-lab.jp/research/streamchatkeyboard/",
+    thumnail: "./telecocha.jpg",
+    projectLink: "https://protopedia.net/prototype/2558",
   },
 ];
 
-const Projects = () => {
+const Hobby = () => {
   return (
-    <Stack spacing={0}>
+    <Stack spacing={1}>
       {projects.map((project) => (
         <React.Fragment key={project.id}>
           <AProject {...project} />
@@ -113,7 +71,7 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Hobby;
 
 const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
   const router = useRouter();
@@ -139,7 +97,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         height={{
           xs: undefined,
           sm: undefined,
-          md: "120px",
+          md: undefined,
         }}
       >
         <Grid
@@ -154,14 +112,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             marginTop: "0px",
           }}
         >
-          <Button
-            onClick={() => projectLink && router.push(projectLink)}
-            sx={{
-              xs: { paddingLeft: "0px", paddingRight: "0px" },
-              sm: { paddingLeft: "0px", paddingRight: "0px" },
-              md: {},
-            }}
-          >
+          <Button onClick={() => projectLink && router.push(projectLink)}>
             <img
               src={thumnail}
               style={{
@@ -169,7 +120,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                 maxHeight: "100%",
                 objectFit: "contain",
               }}
-              width="100%"
+              width={"100%"}
             />
           </Button>
         </Grid>
@@ -189,11 +140,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                   sx={{ color: "GrayText", textDecorationColor: "transparent" }}
                   key={value.link + value.description}
                   href={value.link}
-                >{`${
-                  isEn
-                    ? value.descriptionEn ?? value.description
-                    : value.description
-                }`}</Link>
+                >{`${isEn ? value.description : value.description}`}</Link>
                 <span>, </span>
               </>
             ))}

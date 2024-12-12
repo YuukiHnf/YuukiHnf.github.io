@@ -3,6 +3,7 @@ import {
   Box,
   Grid,
   ListItem,
+  ListItemButton,
   ListItemIcon,
   ListItemText,
   Stack,
@@ -65,14 +66,35 @@ const Profile = ({ isEnglish = false }: Props) => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h1">Yuki Abe</Typography>
-        <Typography
-          variant="body2"
-          textAlign={{ xs: "center", sm: "center", md: "left" }}
-        >
-          {/* M.Sc. Student at Hokkaido University */}
-          Ph.D. Student at Hokkaido University
+        <Typography variant={"h1"} fontSize={isEnglish ? undefined : "29px"}>
+          {isEnglish ? "Yuki Abe" : "阿部 優樹"}
         </Typography>
+        {isEnglish && (
+          <Typography
+            variant="body2"
+            textAlign={{ xs: "center", sm: "center", md: "left" }}
+          >
+            {isEnglish && "Ph.D. Student at Hokkaido University"}
+            {!isEnglish && "北海道大学 博士後期課程"}
+          </Typography>
+        )}
+        {!isEnglish && (
+          <Typography
+            variant="body2"
+            textAlign={{ xs: "center", sm: "center", md: "left" }}
+            marginTop={{ xs: "8 px", sm: "8px" }}
+          >
+            {!isEnglish && "北海道大学大学院 情報科学院"}
+          </Typography>
+        )}
+        {!isEnglish && (
+          <Typography
+            variant="body2"
+            textAlign={{ xs: "center", sm: "center", md: "left" }}
+          >
+            {!isEnglish && "博士後期課程"}
+          </Typography>
+        )}
       </Box>
       <Grid
         container
@@ -83,14 +105,17 @@ const Profile = ({ isEnglish = false }: Props) => {
         pt={2}
       >
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
+            // onClick={() =>
+            //   router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
+            // }
             onClick={() =>
-              router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
+              router.push("https://maps.app.goo.gl/iq432MgDp6gKP8vL7")
             }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
@@ -103,16 +128,17 @@ const Profile = ({ isEnglish = false }: Props) => {
               }}
               variant="body2"
             >
-              Hokkaido, Japan
+              {/* {isEnglish ? "Hokkaido, Japan" : "北海道, 日本"} */}
+              {isEnglish ? "Singapore" : "Singapore"}
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() =>
               router.push(
@@ -132,14 +158,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               Google Scholar
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() =>
               router.push("https://www.linkedin.com/in/yuki-abe-111443283/")
@@ -157,14 +183,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               LinkedIn
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() => router.push("https://twitter.com/_yuukiAbe_")}
           >
@@ -180,14 +206,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               Twitter
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() =>
               router.push(
@@ -207,14 +233,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               Facebook
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() => router.push("https://github.com/YuukiHnf")}
           >
@@ -234,14 +260,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               Github
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() =>
               router.push(
@@ -261,14 +287,14 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               YouTube
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         <Grid item maxWidth={"180px"}>
-          <ListItem
+          <ListItemButton
             sx={{
               pl: { xs: "8px", sm: "0px" },
               pr: { xs: "8px" },
-              ":hover": { opacity: 0.4, cursor: "pointer" },
+              // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
             onClick={() => router.push("/CV.pdf")}
           >
@@ -286,7 +312,7 @@ const Profile = ({ isEnglish = false }: Props) => {
             >
               CV
             </Typography>
-          </ListItem>
+          </ListItemButton>
         </Grid>
         {!isEnglish && (
           <Grid

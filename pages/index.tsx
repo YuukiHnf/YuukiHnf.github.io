@@ -6,6 +6,7 @@ import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
+import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
@@ -33,7 +34,7 @@ const Index = () => {
         >
           <Box ref={topRef} />
           <Grid item xs={3} width={"100%"}>
-            <Profile />
+            <Profile isEnglish={false} />
           </Grid>
           <Grid item xs={9} width={"100%"}>
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
@@ -128,25 +129,29 @@ const Index = () => {
                 <NewsDesktop />
               </Box>
               <Box ref={projectsElementRef}>
-                <SubTitle title={"Projects"} />
+                <SubTitle title={"プロジェクト"} isEnglish={false} />
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"Publications"} />
+                <SubTitle title={"論文"} isEnglish={false} />
               </Box>
               <Publications />
               <Box ref={awardElementRef}>
-                <SubTitle title={"Award"} />
+                <SubTitle title={"受賞"} isEnglish={false} />
               </Box>
               <Award />
-              <Box ref={awardElementRef}>
-                <SubTitle title={"Grant"} />
+              <Box>
+                <SubTitle title={"研究助成等"} isEnglish={false} />
               </Box>
               <Grant />
-              <Box ref={contactElementRef}>
-                <SubTitle title={"Contact"} />
+              <Box>
+                <SubTitle title={"その他"} isEnglish={false} />
               </Box>
-              <Typography>hnf_yuuki[at]ist.hokudai.ac.jp</Typography>
+              <Hobby />
+              <Box ref={contactElementRef}>
+                <SubTitle title={"連絡先"} isEnglish={false} />
+              </Box>
+              <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>
           </Grid>
         </Grid>
