@@ -22,7 +22,7 @@ type Props = {
 };
 const Servise = ({ En = false }: Props) => {
   return (
-    <Stack spacing={1} pt={2}>
+    <Stack spacing={1}>
       {awards.map((award) => (
         <div key={award.title}>
           <div>
