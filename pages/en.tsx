@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
+import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
@@ -173,6 +174,10 @@ const Index = () => {
               <Grant En />
               <SubTitle title={"Academic Service"} />
               <Servise />
+              <Box>
+                <SubTitle title={"Others"} />
+              </Box>
+              <Hobby />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>

@@ -76,7 +76,7 @@ const demo_publications: PublicationsType[] = [
     year: 2024,
     where: "HCI研究会",
     whereDetail: "第 209回 ヒューマンコンピュータインタラクション研究会",
-    doi: "https://www.sighci.jp/events/sig/209",
+    doi: "http://id.nii.ac.jp/1001/00237205/",
     invisibleInEn: true,
   },
   {
@@ -132,7 +132,7 @@ const Publications = ({ En = false }: Props) => {
       </Typography>
       <ol
         style={{
-          paddingLeft: "25px",
+          paddingLeft: "30px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}
@@ -192,7 +192,7 @@ const Publications = ({ En = false }: Props) => {
       </Typography>
       <ol
         style={{
-          paddingLeft: "25px",
+          paddingLeft: "30px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}
@@ -235,7 +235,7 @@ const Publications = ({ En = false }: Props) => {
       </Typography>
       <ol
         style={{
-          paddingLeft: "25px",
+          paddingLeft: "30px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}

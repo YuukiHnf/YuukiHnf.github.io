@@ -37,8 +37,7 @@ const projects = [
   },
   {
     id: "temaneki",
-    title:
-      "Temaneki: A Collaboration Tool for Enhancing MATSURI Festival Management Communities",
+    title: "Temaneki: A Collaborative Tool for MATSURI Communities",
     where: [
       {
         link: "https://doi.org/10.1145/3613905.3651013",
@@ -46,7 +45,7 @@ const projects = [
       },
       {
         link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-        description: "未踏' 22（スパクリ🏅）",
+        description: "未踏' 22",
         descriptionEn: "Mitou Program",
       },
     ],
@@ -80,8 +79,7 @@ const projects = [
   // },
   {
     id: "double flick keyboard",
-    title:
-      "Double Translucent Keyboard for Participating Chats in Live Streaming",
+    title: "Keyboard to Help Participate Chats in Live Streaming",
     where: [
       {
         link: "http://doi.org/10.20729/00224248",
@@ -96,12 +94,21 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Stack spacing={1}>
+    <Stack spacing={0}>
       {projects.map((project) => (
         <React.Fragment key={project.id}>
           <AProject {...project} />
         </React.Fragment>
       ))}
+      <Card
+        sx={{
+          borderTop: "2px solid #e0e0e0",
+          margin: "0px",
+          padding: "0px",
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        }}
+      ></Card>
     </Stack>
   );
 };
@@ -122,12 +129,39 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         borderTop: "2px solid #e0e0e0",
         borderRadius: "0px",
         margin: "0px 0px",
-        padding: "16px 0px 8px",
+        padding: "16px 0px",
       }}
     >
-      <Grid container spacing={2} minHeight={"120px"}>
-        <Grid item xs={12} sm={3} pl={0}>
-          <Button onClick={() => projectLink && router.push(projectLink)}>
+      <Grid
+        container
+        spacing={2}
+        minHeight={"120px"}
+        height={{
+          xs: undefined,
+          sm: undefined,
+          md: "120px",
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          pl={0}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            marginTop: "0px",
+          }}
+        >
+          <Button
+            onClick={() => projectLink && router.push(projectLink)}
+            sx={{
+              xs: { paddingLeft: "0px", paddingRight: "0px" },
+              sm: { paddingLeft: "0px", paddingRight: "0px" },
+              md: {},
+            }}
+          >
             <img
               src={thumnail}
               style={{

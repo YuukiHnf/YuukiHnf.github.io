@@ -16,6 +16,7 @@ type ProjectType = {
   where: {
     link: string;
     description: string;
+    descriptionEn?: string;
   }[];
   thumnail: string;
   projectLink: string;
@@ -24,11 +25,12 @@ type ProjectType = {
 const projects = [
   {
     id: "OMEME",
-    title: "OMEME: Utilize No-used HMD as a Robot",
+    title: "OMEME",
     where: [
       {
         link: "https://www.wiss.org/WISS2023/",
-        description: "WISS'23（対話発表賞🏅）",
+        description: "WISS'23",
+        descriptionEn: "WISS'23",
       },
     ],
     thumnail: "./visionbot.main.png",
@@ -36,12 +38,11 @@ const projects = [
   },
   {
     id: "telecocha",
-    title:
-      "Tele-Cocha: Smartphone-based Telepresence System Embodied Swarm Robots",
+    title: "Tele-Cocha",
     where: [
       {
         link: "https://protopedia.net/prototype/2558",
-        description: "ハッカソン toio for Unity SDK 賞",
+        description: "Protopedia",
       },
     ],
     thumnail: "./telecocha.jpg",
@@ -49,7 +50,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Hobby = () => {
   return (
     <Stack spacing={1}>
       {projects.map((project) => (
@@ -57,14 +58,26 @@ const Projects = () => {
           <AProject {...project} />
         </React.Fragment>
       ))}
+      <Card
+        sx={{
+          borderTop: "2px solid #e0e0e0",
+          margin: "0px",
+          padding: "0px",
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        }}
+      ></Card>
     </Stack>
   );
 };
 
-export default Projects;
+export default Hobby;
 
 const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
   const router = useRouter();
+  // pathに/en/が含まれているかどうかで日本語か英語かを切り替える
+  const path = router.asPath;
+  const isEn = path.includes("/en");
   return (
     <Card
       sx={{
@@ -74,11 +87,31 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
         borderTop: "2px solid #e0e0e0",
         borderRadius: "0px",
         margin: "0px 0px",
-        padding: "16px 0px 8px",
+        padding: "16px 0px",
       }}
     >
-      <Grid container spacing={2} minHeight={"140px"}>
-        <Grid item xs={12} sm={3} pl={0}>
+      <Grid
+        container
+        spacing={2}
+        minHeight={"120px"}
+        height={{
+          xs: undefined,
+          sm: undefined,
+          md: undefined,
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          pl={0}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            marginTop: "0px",
+          }}
+        >
           <Button onClick={() => projectLink && router.push(projectLink)}>
             <img
               src={thumnail}
@@ -87,7 +120,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                 maxHeight: "100%",
                 objectFit: "contain",
               }}
-              width="100%"
+              width={"100%"}
             />
           </Button>
         </Grid>
@@ -107,19 +140,21 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                   sx={{ color: "GrayText", textDecorationColor: "transparent" }}
                   key={value.link + value.description}
                   href={value.link}
-                >{`${value.description}`}</Link>
+                >{`${isEn ? value.description : value.description}`}</Link>
                 <span>, </span>
               </>
             ))}
           </Typography>
-          {projectLink && (
-            <Link
-              sx={{ color: "GrayText", textDecorationColor: "transparent" }}
-              href={projectLink}
-            >
-              Project Page
-            </Link>
-          )}
+          {/* {projectLink && (
+            <Typography variant="body2">
+              <Link
+                sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+                href={projectLink}
+              >
+                Project Page
+              </Link>
+            </Typography>
+          )} */}
         </Grid>
       </Grid>
     </Card>

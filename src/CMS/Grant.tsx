@@ -11,19 +11,19 @@ type GrantType = {
 
 const awards: GrantType[] = [
   {
-    title: "2024年度 立石科学技術振興財団 (C)",
-    titleEn: "Tateisi Science and Technology Foundation 2024 (C)",
+    title: "立石科学技術振興財団 (C)",
+    titleEn: "Tateisi Science and Technology Foundation (C)",
     link: "https://www.tateisi-f.org/news/2024-04-24",
     date: "2024/04/01-Present",
   },
   {
-    title: "Hokkaido University EXEX Doctoral Fellowship ",
+    title: "北海道大学 EXEX博士人材フェローシップ",
+    titleEn: "Hokkaido University EXEX Doctoral Fellowship ",
     link: "https://sites.google.com/eis.hokudai.ac.jp/exexphd-fellow/",
     date: "2024/04-Present",
   },
   {
-    title:
-      "2022年度 未踏IT人材発掘・育成事業「祭り運営を支援するアプリケーションの開発」",
+    title: "2022年度 未踏IT人材発掘・育成事業",
     titleEn: "Information-technology Promotion Agency (IPA) MITOU Program 2022",
     link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
     date: "2022/06-2023/03",

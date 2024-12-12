@@ -6,6 +6,7 @@ import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
+import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
@@ -136,15 +137,19 @@ const Index = () => {
               </Box>
               <Publications />
               <Box ref={awardElementRef}>
-                <SubTitle title={"受賞"} />
+                <SubTitle title={"受賞"} isEnglish={false} />
               </Box>
               <Award />
               <Box>
-                <SubTitle title={"研究助成等"} />
+                <SubTitle title={"研究助成等"} isEnglish={false} />
               </Box>
               <Grant />
+              <Box>
+                <SubTitle title={"その他"} isEnglish={false} />
+              </Box>
+              <Hobby />
               <Box ref={contactElementRef}>
-                <SubTitle title={"連絡先"} />
+                <SubTitle title={"連絡先"} isEnglish={false} />
               </Box>
               <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>
