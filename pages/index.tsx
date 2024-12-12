@@ -33,7 +33,7 @@ const Index = () => {
         >
           <Box ref={topRef} />
           <Grid item xs={3} width={"100%"}>
-            <Profile />
+            <Profile isEnglish={false} />
           </Grid>
           <Grid item xs={9} width={"100%"}>
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
@@ -128,23 +128,23 @@ const Index = () => {
                 <NewsDesktop />
               </Box>
               <Box ref={projectsElementRef}>
-                <SubTitle title={"Projects"} />
+                <SubTitle title={"プロジェクト"} isEnglish={false} />
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"Publications"} />
+                <SubTitle title={"論文"} isEnglish={false} />
               </Box>
               <Publications />
               <Box ref={awardElementRef}>
-                <SubTitle title={"Award"} />
+                <SubTitle title={"受賞"} />
               </Box>
               <Award />
-              <Box ref={awardElementRef}>
-                <SubTitle title={"Grant"} />
+              <Box>
+                <SubTitle title={"研究助成等"} />
               </Box>
               <Grant />
               <Box ref={contactElementRef}>
-                <SubTitle title={"Contact"} />
+                <SubTitle title={"連絡先"} />
               </Box>
               <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>

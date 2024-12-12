@@ -63,7 +63,7 @@ const Menus = ({
           // onClick={() => router.push("#About")}
           onClick={() => scrollToMyElement(aboutElementRef)}
         >
-          About
+          {isEnglish ? "About" : "自己紹介"}
         </Button>
         <Button
           startIcon={<AttachFileOutlinedIcon />}
@@ -71,7 +71,7 @@ const Menus = ({
           // onClick={() => router.push("#Projects")}
           onClick={() => scrollToMyElement(projectsElementRef)}
         >
-          Projects
+          {isEnglish ? "Projects" : "プロジェクト"}
         </Button>
         <Button
           startIcon={<LibraryBooksOutlinedIcon />}
@@ -79,7 +79,7 @@ const Menus = ({
           // onClick={() => router.push("#Publications")}
           onClick={() => scrollToMyElement(publicationsElementRef)}
         >
-          Publications
+          {isEnglish ? "Publications" : "論文等"}
         </Button>
         <Button
           startIcon={<MilitaryTechOutlinedIcon />}
@@ -87,14 +87,14 @@ const Menus = ({
           // onClick={() => router.push("#Award")}
           onClick={() => scrollToMyElement(awardElementRef)}
         >
-          Award
+          {isEnglish ? "Awards" : "受賞等"}
         </Button>
         <Button
           startIcon={<MarkUnreadChatAltOutlinedIcon />}
           sx={{ color: "gray" }}
           onClick={() => scrollToMyElement(contactElementRef)}
         >
-          Contact
+          {isEnglish ? "Contact" : "連絡先"}
         </Button>
         <Button
           startIcon={<TranslateIcon />}

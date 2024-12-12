@@ -103,6 +103,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: "rgba(0,0,0,0.6)",
+          textDecorationColor: "rgba(0,0,0,0.6)",
+        },
+      },
+    },
   },
 });
 

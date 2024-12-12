@@ -12,21 +12,33 @@ type GrantType = {
 const awards: GrantType[] = [
   {
     title: "2024年度 立石科学技術振興財団 (C)",
-    titleEn: "The Tateisi Science and Technology Foundation, 2024, (C)",
+    titleEn: "Tateisi Science and Technology Foundation 2024 (C)",
     link: "https://www.tateisi-f.org/news/2024-04-24",
-    date: "2024/04/01",
+    date: "2024/04/01-Present",
   },
   {
     title: "Hokkaido University EXEX Doctoral Fellowship ",
     link: "https://sites.google.com/eis.hokudai.ac.jp/exexphd-fellow/",
-    date: "2024/04/01",
+    date: "2024/04-Present",
   },
   {
     title:
       "2022年度 未踏IT人材発掘・育成事業「祭り運営を支援するアプリケーションの開発」",
     titleEn: "Information-technology Promotion Agency (IPA) MITOU Program 2022",
     link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-    date: "2022/06/20",
+    date: "2022/06-2023/03",
+  },
+  {
+    title: "北大テックガレージ Program 2",
+    titleEn: "Hokkaido University Tech Garage Scholarship Program 2",
+    link: "https://hokudai-hutg.com/",
+    date: "2022/02-2022/03",
+  },
+  {
+    title: "北大テックガレージ Program 1",
+    titleEn: "Hokkaido University Tech Garage Scholarship Program 1",
+    link: "https://hokudai-hutg.com/",
+    date: "2021/08-2021/09",
   },
 ];
 type Props = {
@@ -43,15 +55,29 @@ const Grant = ({ En = false }: Props) => {
               {award.date}
             </Typography>
           </div>
-          <Link
-            href={award.link}
+          <Typography
             sx={{
               color: theme.palette.text.primary,
               textDecorationColor: "transparent",
             }}
           >
             {En ? award.titleEn ?? award.title : award.title}
-          </Link>
+            {award.link ? (
+              <>
+                {" ["}
+                <Link
+                  href={award.link}
+                  sx={{
+                    wordWrap: "break-word",
+                  }}
+                  display={award.link ? undefined : "none"}
+                >
+                  URL
+                </Link>
+                {"]"}
+              </>
+            ) : null}
+          </Typography>
         </div>
       ))}
     </Stack>

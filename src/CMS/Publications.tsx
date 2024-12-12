@@ -82,7 +82,7 @@ const demo_publications: PublicationsType[] = [
   {
     id: "WISS-OMEME",
     title: "OMEME:非装着状態のHMDを用いたコンパニオンロボットの開発",
-    authors: "阿部優樹，鈴木湧登，坂本大介，小野哲雄",
+    authors: "阿部 優樹，鈴木 湧登，坂本 大介，小野 哲雄",
     year: 2023,
     where: "WISS 2023",
     whereDetail:
@@ -93,7 +93,7 @@ const demo_publications: PublicationsType[] = [
   {
     id: "WISS-GAMEX",
     title: "Game-2-X: 種類が異なるゲームプレイ間を繋ぐシステムの提案",
-    authors: "日下部完，阿部優樹，坂本大介，小野哲雄",
+    authors: "日下部 完，阿部 優樹，坂本 大介，小野 哲雄",
     year: 2023,
     where: "WISS 2023",
     whereDetail:
@@ -128,7 +128,7 @@ const Publications = ({ En = false }: Props) => {
   return (
     <Stack spacing={2}>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        Refereed Journals
+        {En ? "Refereed Journals" : "論文誌"}
       </Typography>
       <ol
         style={{
@@ -188,7 +188,7 @@ const Publications = ({ En = false }: Props) => {
         ))}
       </ol>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        Peer-Reviewed International Conferences
+        {En ? "Peer-Reviewed Conferences" : "国内・国際会議（口頭発表）"}
       </Typography>
       <ol
         style={{
@@ -231,7 +231,7 @@ const Publications = ({ En = false }: Props) => {
         borderBottom={"2px solid #e0e0e0"}
         display={dem_publications.length > 0 ? undefined : "none"}
       >
-        Demonstration, Poster
+        ポスター・デモ発表等
       </Typography>
       <ol
         style={{

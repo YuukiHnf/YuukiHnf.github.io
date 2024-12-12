@@ -25,13 +25,13 @@ const awards: AwardType[] = [
   },
   {
     title: "WISS 2023 対話発表賞（一般投票）",
-    titleEn: "WISS 2023 DEMONSTRATION AWARD (People Chose)",
+    titleEn: "WISS 2023 Demonstration Award (People Chose)",
     link: "https://www.wiss.org/WISS2023/",
     date: "2024/12/01",
   },
   {
     title: "2022年度 未踏IT人材発掘・育成事業 「スーパークリエータ」認定",
-    titleEn: "Super creator certified at “MITOU PROGRAM”",
+    titleEn: "MITOU PROGRAM 2022 Super Creator",
     link: "https://www.meti.go.jp/press/2023/05/20230526002/20230526002.html",
     date: "2023/05/26",
   },
@@ -41,26 +41,26 @@ const awards: AwardType[] = [
     date: "2023/04/01",
     invisibleInEn: true,
   },
-  {
-    title:
-      "北大テックガレージ（HUTG）Spring Founders Program2 採択(2022年2月-3月)",
-    link: "https://cosmos.gfc.hokudai.ac.jp/hkd-startup-support/sfp",
-    date: "2023/02/01",
-    invisibleInEn: true,
-  },
+  // {
+  //   title:
+  //     "北大テックガレージ（HUTG）Spring Founders Program2 採択(2022年2月-3月)",
+  //   link: "https://cosmos.gfc.hokudai.ac.jp/hkd-startup-support/sfp",
+  //   date: "2023/02/01",
+  //   invisibleInEn: true,
+  // },
   {
     title: "toio SDK for Unity賞 bytoio™ “てれコチャ” @ヒーローズ・リーグ2021",
     link: "https://cosmos.gfc.hokudai.ac.jp/news/1194",
-    date: "2023/01/11",
+    date: "2022/01/11",
     invisibleInEn: true,
   },
-  {
-    title:
-      "北大テックガレージ（HUTG）Spring Founders Program1 採択(2022年8月-9月)",
-    link: "https://u4u.oeic.hokudai.ac.jp/en/6146/",
-    date: "2023/08/01",
-    invisibleInEn: true,
-  },
+  // {
+  //   title:
+  //     "北大テックガレージ（HUTG）Spring Founders Program1 採択(2022年8月-9月)",
+  //   link: "https://u4u.oeic.hokudai.ac.jp/en/6146/",
+  //   date: "2023/08/01",
+  //   invisibleInEn: true,
+  // },
 ];
 type Props = {
   En?: boolean;
@@ -79,15 +79,29 @@ const Award = ({ En = false }: Props) => {
             </Typography>
           </div>
           {
-            <Link
-              href={award.link}
+            <Typography
               sx={{
                 color: theme.palette.text.primary,
                 textDecorationColor: "transparent",
               }}
             >
               {En ? award.titleEn ?? award.title : award.title}
-            </Link>
+              {award.link ? (
+                <>
+                  {" ["}
+                  <Link
+                    href={award.link}
+                    sx={{
+                      wordWrap: "break-word",
+                    }}
+                    display={award.link ? undefined : "none"}
+                  >
+                    URL
+                  </Link>
+                  {"]"}
+                </>
+              ) : null}
+            </Typography>
           }
         </div>
       ))}

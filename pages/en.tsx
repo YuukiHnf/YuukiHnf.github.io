@@ -10,6 +10,7 @@ import Grant from "src/CMS/Grant";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
+import Servise from "src/CMS/Servise";
 import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
@@ -41,6 +42,7 @@ const Index = () => {
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
             <Box>
               <Menus
+                isEnglish={true}
                 aboutElementRef={aboutElementRef}
                 projectsElementRef={projectsElementRef}
                 publicationsElementRef={publicationsElementRef}
@@ -165,10 +167,12 @@ const Index = () => {
                 <SubTitle title={"Awards"} />
               </Box>
               <Award En />
-              <Box ref={awardElementRef}>
+              <Box>
                 <SubTitle title={"Grants"} />
               </Box>
               <Grant En />
+              <SubTitle title={"Academic Service"} />
+              <Servise />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
