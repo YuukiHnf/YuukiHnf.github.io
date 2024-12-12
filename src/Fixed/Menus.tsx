@@ -8,6 +8,7 @@ import MarkUnreadChatAltOutlinedIcon from "@mui/icons-material/MarkUnreadChatAlt
 import { useRouter } from "next/router";
 import TranslateIcon from "@mui/icons-material/Translate";
 import theme from "@/styles/GlobalTheme";
+import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
 
 type Props = {
   aboutElementRef: React.RefObject<HTMLElement>;
@@ -90,11 +91,11 @@ const Menus = ({
           {isEnglish ? "Awards" : "受賞等"}
         </Button>
         <Button
-          startIcon={<MarkUnreadChatAltOutlinedIcon />}
+          startIcon={<PictureAsPdfOutlinedIcon />}
           sx={{ color: "gray" }}
-          onClick={() => scrollToMyElement(contactElementRef)}
+          onClick={() => router.push("/CV.pdf")}
         >
-          {isEnglish ? "Contact" : "連絡先"}
+          {isEnglish ? "CV/Resume" : "レジュメ"}
         </Button>
         <Button
           startIcon={<TranslateIcon />}
