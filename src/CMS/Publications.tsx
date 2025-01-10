@@ -25,7 +25,7 @@ const journal_publications: PublicationsType[] = [
     year: 2025,
     where: "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
     whereDetail: "Apr 2025. (to appear at CSCW 2025)",
-    doi: "",
+    doi: "https://doi.org/10.1145/3711004",
   },
   {
     id: "interaction22",

@@ -32,8 +32,8 @@ const projects = [
         description: "CSCW '25 (to appear)",
       },
     ],
-    thumnail: "./acd.jpg",
-    projectLink: "",
+    thumnail: "./V9cscw106.jpg",
+    projectLink: "https://doi.org/10.1145/3711004",
   },
   {
     id: "temaneki",
@@ -152,6 +152,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             flexDirection: "column",
             justifyContent: "center",
             marginTop: "0px",
+            maxHeight: "100%",
           }}
         >
           <Button
