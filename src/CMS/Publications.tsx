@@ -44,6 +44,30 @@ const journal_publications: PublicationsType[] = [
 ];
 const conference_publications: PublicationsType[] = [
   {
+    id: "RunSight24",
+    title:
+      "“I can run at night!”: Using Augmented Reality to Support Nighttime Guided Running for Low-vision Runners",
+    authors:
+      "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
+    where: "CHI Conference on Human Factors in Computing Systems (CHI ’25)",
+    whereDetail:
+      "April 26– May 1, 2025, Yokohama, Kanagawa, Japan. ACM, New York, NY, USA, X pages",
+    doi: "",
+  },
+  {
+    id: "HandheldHMD24",
+    title:
+      "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
+    authors:
+      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
+    where: "CHI Conference on Human Factors in Computing Systems (CHI ’25)",
+    whereDetail:
+      "April 26– May 1, 2025, Yokohama, Kanagawa, Japan. ACM, New York, NY, USA, X pages",
+    doi: "",
+  },
+  {
     id: "Temaneki24",
     title:
       "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
@@ -137,9 +161,12 @@ const Publications = ({ En = false }: Props) => {
           fontFamily: "Helvetica",
         }}
       >
-        {journal_publications.map((publication) => (
+        {journal_publications.map((publication, index) => (
           <li key={publication.id + publication.authors + publication.where}>
-            <Typography key={publication.id}>
+            <Typography
+              key={publication.id}
+              sx={{ m: index == 0 ? "0px" : "4px 0px" }}
+            >
               {En
                 ? publication.authorsEn ?? publication.authors
                 : publication.authors + ". " + publication.year + ""}
@@ -188,7 +215,7 @@ const Publications = ({ En = false }: Props) => {
         ))}
       </ol>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        {En ? "Peer-Reviewed Conferences" : "国内・国際会議（口頭発表）"}
+        {En ? "Peer-Reviewed Conferences" : "国内・国際会議（査読有）"}
       </Typography>
       <ol
         style={{
@@ -197,9 +224,12 @@ const Publications = ({ En = false }: Props) => {
           fontFamily: "Helvetica",
         }}
       >
-        {conf_publications.map((publication) => (
+        {conf_publications.map((publication, index) => (
           <li key={publication.id + publication.authors + publication.where}>
-            <Typography key={publication.id}>
+            <Typography
+              key={publication.id}
+              sx={{ m: index == 0 ? "0px" : "4px 0px" }}
+            >
               {publication.authors + ". " + publication.year}
               {". "}
               <span style={{ fontWeight: "bold" }}>{publication.title}</span>
@@ -244,7 +274,7 @@ const Publications = ({ En = false }: Props) => {
           .filter((publication) => (En ? !publication.invisibleInEn : true))
           .map((publication) => (
             <li key={publication.id + publication.authors + publication.where}>
-              <Typography key={publication.id}>
+              <Typography key={publication.id} sx={{ m: "4px 0px" }}>
                 {publication.authors + ". " + publication.year}
                 {". "}
                 <span style={{ fontWeight: "bold" }}>{publication.title}</span>

@@ -24,6 +24,31 @@ type ProjectType = {
 
 const projects = [
   {
+    id: "runsight",
+    title:
+      "RunSight: Augmented Reality for Low-vision Runners' Nighttime Guided Running",
+    where: [
+      {
+        link: "https://chi2025.acm.org/",
+        description: "CHI '25 (to appear)",
+      },
+    ],
+    thumnail: "./RunSight.jpg",
+    projectLink: "",
+  },
+  {
+    id: "handheld",
+    title: "Handheld HMD Interface for Onsite Exhibition of Virtual Reality",
+    where: [
+      {
+        link: "https://chi2025.acm.org/",
+        description: "CHI '25 (to appear)",
+      },
+    ],
+    thumnail: "./handheldHMD.jpg",
+    projectLink: "",
+  },
+  {
     id: "acd",
     title: "Auditory Comment Display for Eyes-Free Social-Viewing Experience",
     where: [
@@ -77,19 +102,19 @@ const projects = [
   //   thumnail: "./telecocha.jpg",
   //   projectLink: "https://protopedia.net/prototype/2558",
   // },
-  {
-    id: "double flick keyboard",
-    title: "Keyboard to Help Participate Chats in Live Streaming",
-    where: [
-      {
-        link: "http://doi.org/10.20729/00224248",
-        description: "情報処理学会 論文誌",
-        descriptionEn: "IPSJ Journal",
-      },
-    ],
-    thumnail: "./commentcocha.png",
-    projectLink: "https://hci-lab.jp/research/streamchatkeyboard/",
-  },
+  // {
+  //   id: "double flick keyboard",
+  //   title: "Keyboard to Help Participate Chats in Live Streaming",
+  //   where: [
+  //     {
+  //       link: "http://doi.org/10.20729/00224248",
+  //       description: "情報処理学会 論文誌",
+  //       descriptionEn: "IPSJ Journal",
+  //     },
+  //   ],
+  //   thumnail: "./commentcocha.png",
+  //   projectLink: "https://hci-lab.jp/research/streamchatkeyboard/",
+  // },
 ];
 
 const Projects = () => {
@@ -183,11 +208,14 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
           >
             {title}
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ mt: "2px" }}>
             {where.map((value) => (
               <>
                 <Link
-                  sx={{ color: "GrayText", textDecorationColor: "transparent" }}
+                  sx={{
+                    color: "GrayText",
+                    textDecorationColor: "transparent",
+                  }}
                   key={value.link + value.description}
                   href={value.link}
                 >{`${

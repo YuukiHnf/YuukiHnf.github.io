@@ -11,6 +11,13 @@ type GrantType = {
 
 const awards: GrantType[] = [
   {
+    title: "独立行政法人日本学術振興会 特別研究員-DC2",
+    titleEn:
+      "Research Fellow of the Japan Society for the Promotion of Science (DC2)",
+    link: "",
+    date: "2025/04/01-Present",
+  },
+  {
     title: "立石科学技術振興財団 (C)",
     titleEn: "Tateisi Science and Technology Foundation (C)",
     link: "https://www.tateisi-f.org/news/2024-04-24",
@@ -20,7 +27,7 @@ const awards: GrantType[] = [
     title: "北海道大学 EXEX博士人材フェローシップ",
     titleEn: "Hokkaido University EXEX Doctoral Fellowship ",
     link: "https://sites.google.com/eis.hokudai.ac.jp/exexphd-fellow/",
-    date: "2024/04-Present",
+    date: "2024/04-2025/03",
   },
   {
     title: "2022年度 未踏IT人材発掘・育成事業",
