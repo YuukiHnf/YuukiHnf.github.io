@@ -12,6 +12,21 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title: "CHI2025に論文が2本採択されました。",
+    date: "2025/03/XX",
+    link: "",
+  },
+  {
+    title: "DC2に採択されました。",
+    date: "2025/03/XX",
+    link: "",
+  },
+  {
+    title: "CSCWに採択されました。",
+    date: "2024/12/10",
+    link: "https://doi.org/10.1145/3711004",
+  },
+  {
     title: "SMUで半年間の研究活動が始まりました。",
     date: "2024/09/12",
     link: "https://smuhci.com/",

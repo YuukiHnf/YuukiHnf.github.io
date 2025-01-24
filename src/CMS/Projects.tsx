@@ -1,3 +1,4 @@
+import { titleFontSize } from "@/components/TypingH1";
 import {
   Box,
   Button,
@@ -26,14 +27,14 @@ const projects = [
   {
     id: "runsight",
     title:
-      "RunSight: Augmented Reality for Low-vision Runners' Nighttime Guided Running",
+      "RunSight: Augmented Reality for Low-vision Runner's Nighttime Guided Running",
     where: [
       {
         link: "https://chi2025.acm.org/",
         description: "CHI '25 (to appear)",
       },
     ],
-    thumnail: "./RunSight.jpg",
+    thumnail: "./RunSight.png",
     projectLink: "",
   },
   {
@@ -205,10 +206,15 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             fontWeight={"bolder"}
             // textの改行の幅を小さくする
             lineHeight={"1.2em"}
+            fontSize={{ xs: titleFontSize.xs, sm: undefined }}
           >
             {title}
           </Typography>
-          <Typography variant="body1" sx={{ mt: "2px" }}>
+          <Typography
+            variant="body1"
+            sx={{ mt: "2px" }}
+            fontSize={{ xs: titleFontSize.xs, sm: undefined }}
+          >
             {where.map((value) => (
               <>
                 <Link

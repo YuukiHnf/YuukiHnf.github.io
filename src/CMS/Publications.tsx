@@ -23,8 +23,9 @@ const journal_publications: PublicationsType[] = [
       "“I feel lonely when they stop chatting”: Exploring Auditory Comment Display for Eyes-Free Social-Viewing Experience in Online Music Videos",
     authors: "Yuki Abe, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2025,
-    where: "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
-    whereDetail: "Apr 2025. (to appear at CSCW 2025)",
+    where: "Proc. ACM Hum.-Comput. Interact",
+    whereDetail:
+      "9, 2, Article CSCW106 (April 2025) 30 pages (to appear at CSCW 2025)",
     doi: "https://doi.org/10.1145/3711004",
   },
   {
@@ -50,22 +51,22 @@ const conference_publications: PublicationsType[] = [
     authors:
       "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2025,
-    where: "CHI Conference on Human Factors in Computing Systems (CHI ’25)",
-    whereDetail:
-      "April 26– May 1, 2025, Yokohama, Kanagawa, Japan. ACM, New York, NY, USA, X pages",
-    doi: "",
+    where:
+      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+    whereDetail: "ACM, New York, NY, USA, 20 pages",
+    doi: "https://doi.org/10.1145/3706598.3714284",
   },
   {
     id: "HandheldHMD24",
     title:
       "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
     authors:
-      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
+      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono. (*—equal contribution)",
     year: 2025,
-    where: "CHI Conference on Human Factors in Computing Systems (CHI ’25)",
-    whereDetail:
-      "April 26– May 1, 2025, Yokohama, Kanagawa, Japan. ACM, New York, NY, USA, X pages",
-    doi: "",
+    where:
+      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+    whereDetail: "ACM, New York, NY, USA, 21 pages",
+    doi: "https://doi.org/10.1145/3706598.3713874",
   },
   {
     id: "Temaneki24",
@@ -74,9 +75,8 @@ const conference_publications: PublicationsType[] = [
     authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2024,
     where:
-      "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24)",
-    whereDetail:
-      "May 11– 16, 2024, Honolulu, HI, USA. ACM, New York, NY, USA, 8 pages",
+      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
+    whereDetail: "ACM, New York, NY, USA, 8 pages",
     doi: "https://doi.org/10.1145/3613905.3651013",
   },
   {
@@ -166,10 +166,12 @@ const Publications = ({ En = false }: Props) => {
             <Typography
               key={publication.id}
               sx={{ m: index == 0 ? "0px" : "4px 0px" }}
+              variant="body1"
             >
               {En
                 ? publication.authorsEn ?? publication.authors
-                : publication.authors + ". " + publication.year + ""}
+                : // : publication.authors + ". " + publication.year + ""}
+                  publication.authors}
               {". "}
               <span style={{ fontWeight: "bold" }}>
                 {En
@@ -229,8 +231,9 @@ const Publications = ({ En = false }: Props) => {
             <Typography
               key={publication.id}
               sx={{ m: index == 0 ? "0px" : "4px 0px" }}
+              variant="body1"
             >
-              {publication.authors + ". " + publication.year}
+              {publication.authors}
               {". "}
               <span style={{ fontWeight: "bold" }}>{publication.title}</span>
               {". "}
@@ -274,8 +277,12 @@ const Publications = ({ En = false }: Props) => {
           .filter((publication) => (En ? !publication.invisibleInEn : true))
           .map((publication) => (
             <li key={publication.id + publication.authors + publication.where}>
-              <Typography key={publication.id} sx={{ m: "4px 0px" }}>
-                {publication.authors + ". " + publication.year}
+              <Typography
+                key={publication.id}
+                sx={{ m: "4px 0px" }}
+                variant="body1"
+              >
+                {publication.authors}
                 {". "}
                 <span style={{ fontWeight: "bold" }}>{publication.title}</span>
                 {". "}
