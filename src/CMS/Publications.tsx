@@ -14,6 +14,7 @@ type PublicationsType = {
   whereDetailEn?: string;
   doi: string;
   invisibleInEn?: boolean;
+  award?: string;
 };
 
 const journal_publications: PublicationsType[] = [
@@ -61,11 +62,11 @@ const conference_publications: PublicationsType[] = [
     title:
       "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
     authors:
-      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono. (*—equal contribution)",
+      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2025,
     where:
       "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
-    whereDetail: "ACM, New York, NY, USA, 21 pages",
+    whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
     doi: "https://doi.org/10.1145/3706598.3713874",
   },
   {
@@ -102,6 +103,7 @@ const demo_publications: PublicationsType[] = [
     whereDetail: "第 209回 ヒューマンコンピュータインタラクション研究会",
     doi: "http://id.nii.ac.jp/1001/00237205/",
     invisibleInEn: true,
+    award: "学生奨励賞",
   },
   {
     id: "WISS-OMEME",
@@ -110,9 +112,10 @@ const demo_publications: PublicationsType[] = [
     year: 2023,
     where: "WISS 2023",
     whereDetail:
-      "第31回インタラクティブシステムとソフトウェアに関するワークショップ（対話発表賞）",
+      "第31回インタラクティブシステムとソフトウェアに関するワークショップ",
     doi: "https://www.wiss.org/WISS2023Proceedings/data/1-A10.pdf",
     invisibleInEn: true,
+    award: "対話発表賞",
   },
   {
     id: "WISS-GAMEX",
@@ -290,6 +293,14 @@ const Publications = ({ En = false }: Props) => {
                 <span>{publication.where}</span>.
                 <span> {publication.whereDetail}</span>
                 {". "}
+                {publication.award && (
+                  <>
+                    <span style={{ fontWeight: "bolder", color: "#347DA8" }}>
+                      {publication.award}
+                    </span>
+                    {". "}
+                  </>
+                )}
                 {publication.doi ? (
                   <>
                     {"["}
