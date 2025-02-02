@@ -189,6 +189,14 @@ const Publications = ({ En = false }: Props) => {
               </span>
               .<span> {publication.whereDetail}</span>
               {". "}
+              {publication.award && (
+                <>
+                  <span style={{ fontWeight: "bolder", color: "#347DA8" }}>
+                    {publication.award}
+                  </span>
+                  {". "}
+                </>
+              )}
               {publication.doi ? (
                 <>
                   {"["}
@@ -244,6 +252,14 @@ const Publications = ({ En = false }: Props) => {
               <span>{publication.where}</span>.
               <span> {publication.whereDetail}</span>
               {". "}
+              {publication.award && (
+                <>
+                  <span style={{ fontWeight: "bolder", color: "#347DA8" }}>
+                    {publication.award}
+                  </span>
+                  {". "}
+                </>
+              )}
               {publication.doi ? (
                 <>
                   {"["}

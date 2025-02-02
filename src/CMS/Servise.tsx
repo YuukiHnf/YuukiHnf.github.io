@@ -8,7 +8,7 @@ type ServiseType = {
 
 const awards: ServiseType[] = [
   {
-    title: "External Reviewer of CHI 2024 LBWs, CHI 2025.",
+    title: "External Reviewer of CHI 2024 LBWs, CHI 2025, CHI 2025 LBWs.",
     date: "2024-",
   },
   {
