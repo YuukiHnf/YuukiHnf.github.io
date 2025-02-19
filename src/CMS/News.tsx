@@ -13,12 +13,12 @@ type NewsType = {
 const news: NewsType[] = [
   {
     title: "CHI2025に論文が2本採択されました。",
-    date: "2025/03/XX",
+    date: "2025/02/20",
     link: "",
   },
   {
     title: "DC2に採択されました。",
-    date: "2025/03/XX",
+    date: "2025/02/20",
     link: "",
   },
   {
