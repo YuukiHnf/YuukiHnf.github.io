@@ -36,7 +36,7 @@ const journal_publications: PublicationsType[] = [
     titleEn:
       "A Study on Semi-transparent Double Flick Keyboard for Live Chat in Live-streaming",
     authors: "阿部 優樹, 崔 明根, 坂本 大介, 小野 哲雄",
-    authorsEn: "Yuki Abe, Myungguen Choi, Daisuke Sakamoto, Tetsuo Ono",
+    authorsEn: "Yuki Abe, Myungguen Choi, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2022,
     where: "情報処理学会論文誌",
     whereEn: "Information Processing Society of Japan (IPSJ) Journal",
