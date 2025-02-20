@@ -105,30 +105,30 @@ const journal_publications: PublicationsType[] = [
   },
 ];
 const conference_publications: PublicationsType[] = [
-  {
-    id: "RunSight24",
-    title:
-      "“I can run at night!”: Using Augmented Reality to Support Nighttime Guided Running for Low-vision Runners",
-    authors:
-      "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
-    year: 2025,
-    where:
-      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
-    whereDetail: "ACM, New York, NY, USA, 20 pages",
-    doi: "https://doi.org/10.1145/3706598.3714284",
-  },
-  {
-    id: "HandheldHMD24",
-    title:
-      "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
-    authors:
-      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
-    year: 2025,
-    where:
-      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
-    whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
-    doi: "https://doi.org/10.1145/3706598.3713874",
-  },
+  // {
+  //   id: "RunSight24",
+  //   title:
+  //     "“I can run at night!”: Using Augmented Reality to Support Nighttime Guided Running for Low-vision Runners",
+  //   authors:
+  //     "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
+  //   year: 2025,
+  //   where:
+  //     "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+  //   whereDetail: "ACM, New York, NY, USA, 20 pages",
+  //   doi: "https://doi.org/10.1145/3706598.3714284",
+  // },
+  // {
+  //   id: "HandheldHMD24",
+  //   title:
+  //     "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
+  //   authors:
+  //     "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
+  //   year: 2025,
+  //   where:
+  //     "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+  //   whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
+  //   doi: "https://doi.org/10.1145/3706598.3713874",
+  // },
   {
     id: "Temaneki24",
     title:
