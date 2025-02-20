@@ -9,6 +9,7 @@ import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
 import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
+import News_en from "src/CMS/News_en";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
 import Servise from "src/CMS/Servise";
@@ -84,9 +85,10 @@ const Index = () => {
                     Prof. Daisuke Sakamoto
                   </Link>
                   . My research lies in the field of Human-Computer Interaction
-                  (HCI), with a focus on accessibility and social-computing.
-                  From September 2024 to March 2025, I am a visiting student at
-                  the{" "}
+                  (HCI). I focus on the design, development, and evaluation of
+                  assistive technology that supports the daily activities and
+                  exercises of people with visual impairments. From September
+                  2024 to March 2025, I am a visiting student at the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -156,6 +158,13 @@ const Index = () => {
               >
                 <NewsDesktop />
               </Box> */}
+              <Box>
+                {/* <Box mt={"48px"}>
+                  <Typography variant="h1">{"News"}</Typography>
+                </Box> */}
+                <SubTitle title={"News"} />
+              </Box>
+              <News_en />
               <Box ref={projectsElementRef}>
                 <SubTitle title={"Projects"} />
               </Box>

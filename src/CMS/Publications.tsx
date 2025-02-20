@@ -17,6 +17,66 @@ type PublicationsType = {
   award?: string;
 };
 
+const UnderlineAuthorName = ({ text }: { text: string }) => {
+  // 著者名のパターン
+  const patterns = {
+    en: /Yuki Abe\*?/g,
+    jp: /阿部\s*優樹/g,
+  };
+
+  // テキストを分割してコンポーネントの配列を作成
+  const createTextWithUnderline = (text: string) => {
+    let lastIndex = 0;
+    const elements = [];
+    let matches = [] as any[];
+
+    // 英語と日本語のパターンの両方でマッチを探す
+    Object.values(patterns).forEach((pattern) => {
+      let match;
+      while ((match = pattern.exec(text)) !== null) {
+        matches.push({
+          index: match.index,
+          length: match[0].length,
+          text: match[0],
+        });
+      }
+    });
+
+    // マッチした位置でソート
+    matches.sort((a, b) => a.index - b.index);
+
+    // マッチした部分とそれ以外の部分を交互に配列に追加
+    matches.forEach((match, i) => {
+      // マッチの前のテキスト
+      if (match.index > lastIndex) {
+        elements.push(
+          <span key={`text-${i}`}>
+            {text.substring(lastIndex, match.index)}
+          </span>
+        );
+      }
+
+      // マッチしたテキスト（下線付き）
+      elements.push(
+        <span key={`match-${i}`} style={{ textDecoration: "underline" }}>
+          {match.text}
+        </span>
+      );
+
+      lastIndex = match.index + match.length;
+    });
+
+    // 残りのテキスト
+    if (lastIndex < text.length) {
+      elements.push(<span key="text-last">{text.substring(lastIndex)}</span>);
+    }
+
+    return elements;
+  };
+
+  return <>{createTextWithUnderline(text)}</>;
+};
+
 const journal_publications: PublicationsType[] = [
   {
     id: "acd-cscw25",
@@ -171,10 +231,17 @@ const Publications = ({ En = false }: Props) => {
               sx={{ m: index == 0 ? "0px" : "4px 0px" }}
               variant="body1"
             >
-              {En
+              {/* {En
                 ? publication.authorsEn ?? publication.authors
                 : // : publication.authors + ". " + publication.year + ""}
-                  publication.authors}
+                  publication.authors} */}
+              <UnderlineAuthorName
+                text={
+                  En
+                    ? publication.authorsEn ?? publication.authors
+                    : publication.authors
+                }
+              />
               {". "}
               <span style={{ fontWeight: "bold" }}>
                 {En
@@ -244,9 +311,16 @@ const Publications = ({ En = false }: Props) => {
               sx={{ m: index == 0 ? "0px" : "4px 0px" }}
               variant="body1"
             >
-              {publication.authors}
+              {/* {publication.authors} */}
+              <UnderlineAuthorName
+                text={
+                  En
+                    ? publication.authorsEn ?? publication.authors
+                    : publication.authors
+                }
+              />
               {". "}
-              <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+              <span style={{ fontWeight: "bolder" }}>{publication.title}</span>
               {". "}
               {/* <span>In </span> */}
               <span>{publication.where}</span>.
@@ -301,9 +375,17 @@ const Publications = ({ En = false }: Props) => {
                 sx={{ m: "4px 0px" }}
                 variant="body1"
               >
-                {publication.authors}
+                <UnderlineAuthorName
+                  text={
+                    En
+                      ? publication.authorsEn ?? publication.authors
+                      : publication.authors
+                  }
+                />
                 {". "}
-                <span style={{ fontWeight: "bold" }}>{publication.title}</span>
+                <span style={{ fontWeight: "bolder" }}>
+                  {publication.title}
+                </span>
                 {". "}
                 {/* <span>In </span> */}
                 <span>{publication.where}</span>.
