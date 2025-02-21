@@ -111,9 +111,9 @@ const Menus = ({
           variant="text"
           onClick={() => {
             if (isEnglish) {
-              router.push("/");
+              router.push("/ja");
             } else {
-              router.push("/en");
+              router.push("/");
             }
           }}
         >

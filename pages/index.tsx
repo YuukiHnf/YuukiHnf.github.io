@@ -3,18 +3,22 @@ import SubTitle from "@/components/Title/SubTitle";
 import TypingH1, { titleFontSize } from "@/components/TypingH1";
 import theme from "@/styles/GlobalTheme";
 import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
-import React, { useRef } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
 import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
+import News_en from "src/CMS/News_en";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
+import Servise from "src/CMS/Servise";
 import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 const Index = () => {
+  const isEnglish = true;
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
   const projectsElementRef = useRef<HTMLElement>(null);
@@ -34,13 +38,13 @@ const Index = () => {
         >
           <Box ref={topRef} />
           <Grid item xs={3} width={"100%"}>
-            <Profile isEnglish={false} />
+            <Profile isEnglish />
           </Grid>
           <Grid item xs={9} width={"100%"}>
             <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
             <Box>
               <Menus
-                isEnglish={false}
+                isEnglish={true}
                 aboutElementRef={aboutElementRef}
                 projectsElementRef={projectsElementRef}
                 publicationsElementRef={publicationsElementRef}
@@ -60,19 +64,31 @@ const Index = () => {
                   variant="body1"
                   // sx={{ xs: {}, sm: { textAlign: "justify", hyphens: "auto" } }}
                 >
+                  I am a 1st-year Ph.D. student in the{" "}
                   <Link
-                    href={"https://hci-lab.jp/"}
+                    href={"https://hci-lab.jp/en/"}
                     sx={{
                       color: theme.palette.text.secondary,
                       textDecorationColor: theme.palette.text.secondary,
                     }}
                   >
-                    北海道大学 ヒューマンコンピュータインタラクション研究室
+                    HCI-lab at Hokkaido University
                   </Link>
-                  に所属する博士１年生です．研究分野は情報科学の一領域であるHuman-Computer
-                  Interaction
-                  (HCI)で，特に，複数人が協力しやすくなるコンピュータ技術や，視覚障がい者のアシスト技術の研究開発に取り組んでいます．
-                  2024年9月から2025年3月までは，シンガポールの
+                  , where I am advised by{" "}
+                  <Link
+                    href={"https://daisukesakamoto.jp/en/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Prof. Daisuke Sakamoto
+                  </Link>
+                  . My research lies in the field of Human-Computer Interaction
+                  (HCI). I focus on the design, development, and evaluation of
+                  assistive technology that supports the daily activities and
+                  exercises of people with visual impairments. From September
+                  2024 to March 2025, I am a visiting student at the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -82,74 +98,97 @@ const Index = () => {
                   >
                     SMU HCI Research
                   </Link>
-                  にて研究活動を行っています．未踏IT 22年度スーパークリエータ．
-                  株式会社 temaneki 取締役．一般社団法人 新雪 メンター．
-                </Typography>
-                {/* <Typography variant="body1" fontWeight="lighter" pt={1}>
-                  研究キーワード
-                </Typography> */}
-                {/* <Typography variant="body1" fontWeight="lighter">
-                  Human Computer Interaction(HCI), User Interface and User
-                  Experience, Social-computing, Accessibility, User Studies and
-                  Evaluations.
-                </Typography> */}
-                {/* <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
+                  , where I am advised by{" "}
+                  <Link
+                    href={"https://kotarohara.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Prof. Kotaro Hara
+                  </Link>
+                  . Please refer to my{" "}
+                  <Link
+                    href={"./CV.pdf"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    CV
                   </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>. */}
-                {/* <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  I am a Master 2rd student at University of Hokkaido, advised
-                  by{" "}
-                  <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>.
+                  if you are interested!
                 </Typography>
-                <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography>
-                <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
+                {/* <Typography variant="body1" pt={2}>
+                  I&apos;m broadly interested in UI/UX design for social
+                  computing. Specifically, I want to design a UI/UX enhancing
+                  “get-together” experience, currently focusing on watching
+                  together (co-located families and friends co-watching in a
+                  living room, or remote viewers watching together on
+                  video-sharing and social-VR platforms). In addition, I am
+                  engaging in sub-projects about “work together” (civic- and
+                  hobby-based communities enhancement through festival
+                  management) and “enjoy together” (public exhibition, display,
+                  and technology).
+                </Typography> */}
+
+                {/* <Typography variant="body1" pt={2}>
+                  I like prototyping and development: Next.js, React, Unity(C#),
+                  Python, Arduino, Raspberry Pi, Toio swarming robots. A notable
+                  project in my development life is{" "}
+                  <Link
+                    href={"https://temaneki.jp"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Temaneki
+                  </Link>
+                  , a collaboration application featuring efficiency and
+                  enjoyment for participation. I have developed and managed
+                  Temaneki for two years. Over 500 users in Japan have adopted
+                  Temaneki.
                 </Typography> */}
               </Box>
-              <Box
+              {/* <Box
                 width={"100%"}
                 display={{ xs: "flex", sm: "flex", md: "none" }}
               >
                 <NewsDesktop />
+              </Box> */}
+              <Box>
+                {/* <Box mt={"48px"}>
+                  <Typography variant="h1">{"News"}</Typography>
+                </Box> */}
+                <SubTitle title={"News"} />
               </Box>
+              <News_en />
               <Box ref={projectsElementRef}>
-                <SubTitle title={"プロジェクト"} isEnglish={false} />
+                <SubTitle title={"Projects"} />
               </Box>
               <Projects />
               <Box ref={publicationsElementRef}>
-                <SubTitle title={"論文"} isEnglish={false} />
+                <SubTitle title={"Publications"} />
               </Box>
-              <Publications />
+              <Publications En />
               <Box ref={awardElementRef}>
-                <SubTitle title={"受賞"} isEnglish={false} />
+                <SubTitle title={"Awards"} />
               </Box>
-              <Award />
+              <Award En />
               <Box>
-                <SubTitle title={"研究助成等"} isEnglish={false} />
+                <SubTitle title={"Grants"} />
               </Box>
-              <Grant />
+              <Grant En />
+              <SubTitle title={"Academic Service"} />
+              <Servise />
               <Box>
-                <SubTitle title={"その他"} isEnglish={false} />
+                <SubTitle title={"Others"} />
               </Box>
               <Hobby />
               <Box ref={contactElementRef}>
-                <SubTitle title={"連絡先"} isEnglish={false} />
+                <SubTitle title={"Contact"} />
               </Box>
               <Typography>hnf_yuuki[at]eis.hokudai.ac.jp</Typography>
             </Box>

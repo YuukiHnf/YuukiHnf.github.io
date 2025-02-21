@@ -2,7 +2,15 @@ import BodyWrapper from "@/components/BodyWrapper";
 import SubTitle from "@/components/Title/SubTitle";
 import TypingH1, { titleFontSize } from "@/components/TypingH1";
 import theme from "@/styles/GlobalTheme";
-import { Box, Grid, Link, Menu, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Link,
+  Menu,
+  Skeleton,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
@@ -18,6 +26,16 @@ import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 const Index = () => {
+  // root, つまり/にアクセスするようにする
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/");
+  }, []);
+  return (
+    <BodyWrapper>
+      <Box width={"1000px"} height={"1000px"} />
+    </BodyWrapper>
+  );
   const isEnglish = true;
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
@@ -64,7 +82,7 @@ const Index = () => {
                   variant="body1"
                   // sx={{ xs: {}, sm: { textAlign: "justify", hyphens: "auto" } }}
                 >
-                  I am a Ph.D. student in the{" "}
+                  I am a 1st-year Ph.D. student in the{" "}
                   <Link
                     href={"https://hci-lab.jp/en/"}
                     sx={{

@@ -6,10 +6,11 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Skeleton,
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -30,6 +31,27 @@ type Props = {
 };
 const Profile = ({ isEnglish = false }: Props) => {
   const router = useRouter();
+  const [imageLoading, setImageLoading] = useState(true);
+  const PROFILE_IMAGE_PATH = "./Profile1_long_small.png";
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+  useEffect(() => {
+    const img = new Image();
+    img.src = PROFILE_IMAGE_PATH;
+
+    if (img.complete) {
+      setImageLoading(false);
+    } else {
+      img.onload = () => {
+        setImageLoading(false);
+      };
+    }
+
+    return () => {
+      img.onload = null;
+    };
+  }, []);
   return (
     <Stack
       direction="column"
@@ -39,20 +61,43 @@ const Profile = ({ isEnglish = false }: Props) => {
         md: "180px",
       }}
       width={"100%"}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: { xs: "120px", sm: "100px" },
+          height: { xs: "120px", sm: "100px" },
         }}
       >
+        {imageLoading && (
+          <Skeleton
+            variant="circular"
+            sx={{
+              width: { xs: "120px", sm: "100px" },
+              height: { xs: "120px", sm: "100px" },
+            }}
+          />
+        )}
         {/* 子要素を中心に揃える */}
         <Avatar
-          src={"./Profile1_long_small.png"}
+          // src={"./Profile1_long_small.png"}
+          // sx={{
+          //   width: { xs: "120px", sm: "100px" },
+          //   height: { xs: "120px", sm: "100px" },
+          // }}
+          // alt="Yuki Abe"
+          // onLoad={handleImageLoad}
+          src={PROFILE_IMAGE_PATH}
           sx={{
-            width: { xs: "120px", sm: "100px" },
-            height: { xs: "120px", sm: "100px" },
+            width: "100%",
+            height: "100%",
           }}
           alt="Yuki Abe"
         />

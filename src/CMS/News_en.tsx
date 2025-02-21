@@ -15,12 +15,12 @@ const awards: AwardType[] = [
     date: "2025/02/20",
   },
   {
-    title: "One paper has been accepted to PACMHCIv9 (CSCW2025)!",
+    title: "One paper has been accepted to PACMHCI (CSCW2025)!",
     date: "2024/12/10",
   },
   {
     title:
-      "I start my visiting student life at Singapore Management University (SMU)!",
+      "I start my visiting student life at Singapore Management University!",
     date: "2024/09/12",
   },
 ];

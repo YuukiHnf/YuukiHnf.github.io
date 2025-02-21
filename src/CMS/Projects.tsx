@@ -145,7 +145,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
   const router = useRouter();
   // pathに/en/が含まれているかどうかで日本語か英語かを切り替える
   const path = router.asPath;
-  const isEn = path.includes("/en");
+  const isEn = !path.includes("/ja");
   return (
     <Card
       sx={{

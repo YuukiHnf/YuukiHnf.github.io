@@ -105,40 +105,29 @@ const journal_publications: PublicationsType[] = [
   },
 ];
 const conference_publications: PublicationsType[] = [
-  // {
-  //   id: "RunSight24",
-  //   title:
-  //     "“I can run at night!”: Using Augmented Reality to Support Nighttime Guided Running for Low-vision Runners",
-  //   authors:
-  //     "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
-  //   year: 2025,
-  //   where:
-  //     "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
-  //   whereDetail: "ACM, New York, NY, USA, 20 pages",
-  //   doi: "https://doi.org/10.1145/3706598.3714284",
-  // },
-  // {
-  //   id: "HandheldHMD24",
-  //   title:
-  //     "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
-  //   authors:
-  //     "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
-  //   year: 2025,
-  //   where:
-  //     "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
-  //   whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
-  //   doi: "https://doi.org/10.1145/3706598.3713874",
-  // },
   {
-    id: "Temaneki24",
+    id: "RunSight24",
     title:
-      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
-    authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
-    year: 2024,
+      "“I can run at night!”: Using Augmented Reality to Support Nighttime Guided Running for Low-vision Runners",
+    authors:
+      "Yuki Abe, Keisuke Matsushima, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
     where:
-      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
-    whereDetail: "ACM, New York, NY, USA, 8 pages",
-    doi: "https://doi.org/10.1145/3613905.3651013",
+      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+    whereDetail: "ACM, New York, NY, USA, 20 pages",
+    doi: "https://doi.org/10.1145/3706598.3714284",
+  },
+  {
+    id: "HandheldHMD24",
+    title:
+      "Understanding Usability of VR Pointing Methods with a Handheld-style HMD for Onsite Exhibitions",
+    authors:
+      "Yuki Abe*, Kan Kusakabe*, Myungguen Choi*, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
+    where:
+      "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
+    whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
+    doi: "https://doi.org/10.1145/3706598.3713874",
   },
   {
     id: "ronbunnshi22",
@@ -153,6 +142,17 @@ const conference_publications: PublicationsType[] = [
   },
 ];
 const demo_publications: PublicationsType[] = [
+  {
+    id: "Temaneki24",
+    title:
+      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
+    authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2024,
+    where:
+      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
+    whereDetail: "ACM, New York, NY, USA, 8 pages",
+    doi: "https://doi.org/10.1145/3613905.3651013",
+  },
   {
     id: "HCI209-SpeechAccomodation",
     title:
@@ -215,7 +215,7 @@ const Publications = ({ En = false }: Props) => {
   return (
     <Stack spacing={2}>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        {En ? "Refereed Journals" : "論文誌"}
+        {En ? "Refereed Journal Papers" : "論文誌"}
       </Typography>
       <ol
         style={{
@@ -295,7 +295,7 @@ const Publications = ({ En = false }: Props) => {
         ))}
       </ol>
       <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
-        {En ? "Peer-Reviewed Conferences" : "国内・国際会議（査読有）"}
+        {En ? "Conference Proceedings" : "国内・国際会議（査読有）"}
       </Typography>
       <ol
         style={{
@@ -357,7 +357,7 @@ const Publications = ({ En = false }: Props) => {
         borderBottom={"2px solid #e0e0e0"}
         display={dem_publications.length > 0 ? undefined : "none"}
       >
-        ポスター・デモ発表等
+        {En ? "Poster Proceedings" : "ポスター・デモ発表等"}
       </Typography>
       <ol
         style={{
