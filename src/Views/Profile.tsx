@@ -103,7 +103,7 @@ const Profile = ({ isEnglish = false }: Props) => {
         />
       </Box>
       <Box
-        paddingTop={{ xs: "32px", sm: "16px" }}
+        paddingTop={{ xs: "16px", sm: "16px" }}
         sx={{
           display: "flex",
           flexDirection: "column",
