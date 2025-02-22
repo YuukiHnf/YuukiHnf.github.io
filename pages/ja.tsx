@@ -50,8 +50,9 @@ const Index = () => {
               <Box
                 ref={aboutElementRef}
                 id="About"
-                minHeight={{ xs: "136px", sm: "160px" }}
-                mb={1}
+                // minHeight={{ xs: "136px", sm: "160px" }}
+                minHeight={{ xs: "136px", sm: "100px" }}
+                mb={0.5}
               >
                 <TypingH1 />
               </Box>

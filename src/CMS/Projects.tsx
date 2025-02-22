@@ -206,14 +206,15 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             fontWeight={"bolder"}
             // textの改行の幅を小さくする
             lineHeight={"1.2em"}
-            fontSize={{ xs: titleFontSize.xs, sm: undefined }}
+            mt={{ xs: "0px", sm: undefined }}
+            // fontSize={{ xs: titleFontSize.xs, sm: undefined }}
           >
             {title}
           </Typography>
           <Typography
             variant="body1"
             sx={{ mt: "2px" }}
-            fontSize={{ xs: titleFontSize.xs, sm: undefined }}
+            // fontSize={{ xs: titleFontSize.xs, sm: undefined }}
           >
             {where.map((value, index) => (
               <>

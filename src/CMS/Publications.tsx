@@ -213,13 +213,13 @@ const Publications = ({ En = false }: Props) => {
     : demo_publications;
 
   return (
-    <Stack spacing={2}>
-      <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
+    <Stack spacing={1}>
+      <Typography pt={1} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
         {En ? "Refereed Journal Papers" : "論文誌"}
       </Typography>
       <ol
         style={{
-          paddingLeft: "30px",
+          paddingLeft: "25px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}
@@ -294,12 +294,12 @@ const Publications = ({ En = false }: Props) => {
           </li>
         ))}
       </ol>
-      <Typography pt={2} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
+      <Typography pt={1} variant="subtitle1" borderBottom={"2px solid #e0e0e0"}>
         {En ? "Conference Proceedings" : "国内・国際会議（査読有）"}
       </Typography>
       <ol
         style={{
-          paddingLeft: "30px",
+          paddingLeft: "25px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}
@@ -352,7 +352,7 @@ const Publications = ({ En = false }: Props) => {
         ))}
       </ol>
       <Typography
-        pt={2}
+        pt={1}
         variant="subtitle1"
         borderBottom={"2px solid #e0e0e0"}
         display={dem_publications.length > 0 ? undefined : "none"}
@@ -361,7 +361,7 @@ const Publications = ({ En = false }: Props) => {
       </Typography>
       <ol
         style={{
-          paddingLeft: "30px",
+          paddingLeft: "25px",
           // fontSize: "20px",
           fontFamily: "Helvetica",
         }}

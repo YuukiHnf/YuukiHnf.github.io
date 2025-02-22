@@ -111,7 +111,7 @@ const Profile = ({ isEnglish = false }: Props) => {
           justifyContent: "center",
         }}
       >
-        <Typography variant={"h1"} fontSize={isEnglish ? undefined : "29px"}>
+        <Typography variant={"h1"} fontSize={isEnglish ? "1.563em" : "1.563em"}>
           {isEnglish ? "Yuki Abe" : "阿部 優樹"}
         </Typography>
         {isEnglish && (

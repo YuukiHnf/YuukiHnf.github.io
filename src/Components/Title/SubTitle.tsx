@@ -13,7 +13,7 @@ const SubTitle = ({ title, ref, isEnglish = true }: Props) => {
       mt={"56px"}
       id={title}
       ref={ref}
-      fontSize={isEnglish ? undefined : "20px"}
+      fontSize={isEnglish ? undefined : undefined}
     >
       <Typography variant="h1">{title}</Typography>
     </Box>

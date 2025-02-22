@@ -1,6 +1,8 @@
 import { Typography } from "@mui/material";
+import exp from "constants";
 import React, { use, useEffect, useState } from "react";
-export const titleFontSize = { xs: "1.4rem", sm: "1.563em" };
+// export const titleFontSize = { xs: "1.4rem", sm: "1.563em" };
+export const titleFontSize = { xs: "1.4rem", sm: "1.68em" };
 const text =
   "hi 👋, i’m yuki—  PhD student, tech dev🧑‍💻/running🏃/One Piece🏴‍☠️ lover, and MASTURI🏮 enthusiast.";
 const speed = 100;

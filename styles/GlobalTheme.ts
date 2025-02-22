@@ -53,31 +53,38 @@ const theme = createTheme({
     caption: {
       color: "#00000",
       opacity: "50%",
-      fontSize: "14px",
+      // fontSize: "14px",
+      fontSize: "0.875em",
     },
     body2: {
       color: "#00000",
       opacity: "70%",
-      fontSize: "16px",
+      // fontSize: "16px",
+      fontSize: "1em",
     },
     subtitle1: {
       color: "#00000",
       opacity: "90%",
-      fontSize: "24px",
+      // fontSize: "24px",
+      fontSize: "1.125em",
     },
     subtitle2: {
       color: "#00000",
       opacity: "75%",
-      fontSize: "18px",
+      // fontSize: "18px",
+      fontSize: "1.125em",
     },
     h6: {
       color: "#00000",
       fontWeight: "bolder",
       opacity: "70%",
-      fontSize: "24px",
+      // fontSize: "24px",
+      fontSize: "1.5em",
     },
     body1: {
-      fontSize: "22px",
+      // fontSize: "22px",
+      fontSize: "1.125em",
+      // mobil時とそうでない時でかえる
       color: "#494e52",
     },
     h1: {
