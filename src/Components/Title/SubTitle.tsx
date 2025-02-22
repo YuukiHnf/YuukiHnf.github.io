@@ -10,7 +10,7 @@ type Props = {
 const SubTitle = ({ title, ref, isEnglish = true }: Props) => {
   return (
     <Box
-      mt={"56px"}
+      mt={{ xs: "40px", sm: "48px" }}
       id={title}
       ref={ref}
       fontSize={isEnglish ? undefined : undefined}

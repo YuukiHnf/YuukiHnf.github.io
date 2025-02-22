@@ -129,7 +129,7 @@ const Index = () => {
               >
                 <NewsDesktop />
               </Box>
-              <Box ref={projectsElementRef}>
+              <Box ref={projectsElementRef} pb={1}>
                 <SubTitle title={"プロジェクト"} isEnglish={false} />
               </Box>
               <Projects />

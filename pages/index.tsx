@@ -166,7 +166,7 @@ const Index = () => {
                 <SubTitle title={"News"} />
               </Box>
               <News_en />
-              <Box ref={projectsElementRef}>
+              <Box ref={projectsElementRef} pb={0.5}>
                 <SubTitle title={"Projects"} />
               </Box>
               <Projects />

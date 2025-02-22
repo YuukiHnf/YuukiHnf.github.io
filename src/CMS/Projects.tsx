@@ -39,7 +39,7 @@ const projects = [
   },
   {
     id: "handheld",
-    title: "VR interface for handheld-style HMD in onsite exhibition",
+    title: "VR interface with handheld-style HMD for onsite exhibition",
     where: [
       {
         link: "https://chi2025.acm.org/",
