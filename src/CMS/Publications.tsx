@@ -143,6 +143,16 @@ const conference_publications: PublicationsType[] = [
 ];
 const demo_publications: PublicationsType[] = [
   {
+    id: "FollowYourFingerLBW25",
+    title: "Exploring Auditory Hand Guidance for Eyes-free 3D Path Tracing",
+    authors: "Yuki Abe, Kotaro Hara, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2025,
+    where:
+      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25), April 26–May 01, 2025, Yokohama, Japan",
+    whereDetail: "ACM, New York, NY, USA, 10 pages",
+    doi: "https://doi.org/10.1145/3706599.3719761",
+  },
+  {
     id: "Temaneki24",
     title:
       "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",

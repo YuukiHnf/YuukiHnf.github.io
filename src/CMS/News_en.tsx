@@ -11,8 +11,8 @@ type AwardType = {
 
 const awards: AwardType[] = [
   {
-    title: "Two papers have been accepted to CHI2025!",
-    date: "2025/02/20",
+    title: "Two papers and one LBW have been accepted to CHI2025!",
+    date: "2025/03/05",
   },
   {
     title: "One paper has been accepted to PACMHCI (CSCW2025)!",

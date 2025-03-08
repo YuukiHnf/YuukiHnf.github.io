@@ -160,7 +160,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
     >
       <Grid
         container
-        spacing={2}
+        spacing={{ xs: 0.5, sm: 2 }}
         minHeight={"120px"}
         height={{
           xs: undefined,
