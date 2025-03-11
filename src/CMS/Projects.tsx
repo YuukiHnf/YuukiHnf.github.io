@@ -30,7 +30,7 @@ const projects = [
       "RunSight: AR-based assistive system for low-vision nighttime running",
     where: [
       {
-        link: "https://chi2025.acm.org/",
+        link: "https://programs.sigchi.org/chi/2025/program/content/189122",
         description: "CHI ’25",
       },
     ],
@@ -42,7 +42,7 @@ const projects = [
     title: "VR interface with handheld-style HMD for onsite exhibition",
     where: [
       {
-        link: "https://chi2025.acm.org/",
+        link: "https://programs.sigchi.org/chi/2025/program/content/189122",
         description: "CHI ’25",
       },
     ],
