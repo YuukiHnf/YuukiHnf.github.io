@@ -12,6 +12,12 @@ type NewsType = {
 
 const news: NewsType[] = [
   {
+    title:
+      "CHI2025で発表する2本のFull PaperがHonorable Mentionに選ばれました。",
+    date: "2025/03/27",
+    link: "",
+  },
+  {
     title: "CHI2025にFull Paperが2本とLBWが1本採択されました。",
     date: "2025/03/05",
     link: "",

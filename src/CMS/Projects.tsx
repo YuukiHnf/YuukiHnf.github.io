@@ -42,7 +42,7 @@ const projects = [
     title: "VR interface with handheld-style HMD for onsite exhibition",
     where: [
       {
-        link: "https://programs.sigchi.org/chi/2025/program/content/189122",
+        link: "https://programs.sigchi.org/chi/2025/program/content/189044",
         description: "CHI ’25",
       },
     ],

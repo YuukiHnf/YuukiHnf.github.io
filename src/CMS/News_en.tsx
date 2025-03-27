@@ -11,6 +11,11 @@ type AwardType = {
 
 const awards: AwardType[] = [
   {
+    title:
+      "Two papers have been selected for Honorable Mention recognitions at CHI 2025!",
+    date: "2025/03/27",
+  },
+  {
     title: "Two papers and one LBW have been accepted to CHI2025!",
     date: "2025/03/05",
   },
@@ -18,11 +23,11 @@ const awards: AwardType[] = [
     title: "One paper has been accepted to PACMHCI (CSCW2025)!",
     date: "2024/12/10",
   },
-  {
-    title:
-      "I start my visiting student life at Singapore Management University!",
-    date: "2024/09/12",
-  },
+  // {
+  //   title:
+  //     "I start my visiting student life at Singapore Management University!",
+  //   date: "2024/09/12",
+  // },
 ];
 type Props = {
   En?: boolean;

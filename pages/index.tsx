@@ -89,7 +89,7 @@ const Index = () => {
                   (HCI). I focus on the design, development, and evaluation of
                   assistive technology that supports the daily activities and
                   exercises of people with visual impairments. From September
-                  2024 to March 2025, I am a visiting student at the{" "}
+                  2024 to March 2025, I was a visiting student at the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{

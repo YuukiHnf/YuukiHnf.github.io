@@ -83,8 +83,9 @@ const Index = () => {
                   >
                     SMU HCI Research
                   </Link>
-                  にて研究活動を行っています．未踏IT 22年度スーパークリエータ．
-                  株式会社 temaneki 取締役．一般社団法人 新雪 メンター．
+                  にて研究活動を行っていました．未踏IT
+                  22年度スーパークリエータ． 株式会社 temaneki
+                  取締役．一般社団法人 新雪 メンター．
                 </Typography>
                 {/* <Typography variant="body1" fontWeight="lighter" pt={1}>
                   研究キーワード
