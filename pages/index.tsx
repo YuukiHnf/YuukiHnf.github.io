@@ -99,7 +99,7 @@ const Index = () => {
                   >
                     SMU HCI Research
                   </Link>
-                  , where I am advised by{" "}
+                  , where I was advised by{" "}
                   <Link
                     href={"https://kotarohara.com/"}
                     sx={{
