@@ -15,6 +15,7 @@ type PublicationsType = {
   doi: string;
   invisibleInEn?: boolean;
   award?: string;
+  poster?: string;
 };
 
 const UnderlineAuthorName = ({ text }: { text: string }) => {
@@ -153,6 +154,7 @@ const demo_publications: PublicationsType[] = [
       "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25), April 26–May 01, 2025, Yokohama, Japan",
     whereDetail: "ACM, New York, NY, USA, 10 pages",
     doi: "https://doi.org/10.1145/3706599.3719761",
+    poster: "/poster/chi25_poster.pdf",
   },
   {
     id: "Temaneki24",
@@ -164,6 +166,7 @@ const demo_publications: PublicationsType[] = [
       "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
     whereDetail: "ACM, New York, NY, USA, 8 pages",
     doi: "https://doi.org/10.1145/3613905.3651013",
+    poster: "/poster/chiea24-541-poster.pdf",
   },
   {
     id: "HCI209-SpeechAccomodation",
@@ -352,7 +355,7 @@ const Publications = ({ En = false }: Props) => {
               )}
               {publication.doi ? (
                 <>
-                  {"["}
+                  {" ["}
                   <Link
                     href={publication.doi}
                     sx={{ wordWrap: "break-word" }}
@@ -424,6 +427,21 @@ const Publications = ({ En = false }: Props) => {
                     >
                       {/* doiにdoiという文字列が入っていればDOI, それ以外はURL */}
                       {publication.doi.includes("doi") ? "DOI" : "URL"}
+                      {/* DOI */}
+                    </Link>
+                    {"]"}
+                  </>
+                ) : null}
+                {publication.poster ? (
+                  <>
+                    {" ["}
+                    <Link
+                      href={publication.poster ?? "/"}
+                      sx={{ wordWrap: "break-word" }}
+                      display={publication.poster ? undefined : "none"}
+                    >
+                      {/* doiにdoiという文字列が入っていればDOI, それ以外はURL */}
+                      {"Poster"}
                       {/* DOI */}
                     </Link>
                     {"]"}

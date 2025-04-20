@@ -98,8 +98,11 @@ const Profile = ({ isEnglish = false }: Props) => {
           sx={{
             width: "100%",
             height: "100%",
+            ":hover": { opacity: 0.4, cursor: "pointer" },
           }}
           alt="Yuki Abe"
+          // clickable
+          onClick={() => router.push("/")}
         />
       </Box>
       <Box
@@ -156,12 +159,12 @@ const Profile = ({ isEnglish = false }: Props) => {
               pr: { xs: "8px" },
               // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
-            // onClick={() =>
-            //   router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
-            // }
             onClick={() =>
-              router.push("https://maps.app.goo.gl/iq432MgDp6gKP8vL7")
+              router.push("https://maps.app.goo.gl/rQmx5A5Br5VGx4AY8")
             }
+            // onClick={() =>
+            //   router.push("https://maps.app.goo.gl/iq432MgDp6gKP8vL7")
+            // }
           >
             <ListItemIcon sx={{ minWidth: "32px" }}>
               <FmdGoodIcon sx={{ fontSize: { xs: "32px", sm: "24px" } }} />
@@ -173,8 +176,8 @@ const Profile = ({ isEnglish = false }: Props) => {
               }}
               variant="body2"
             >
-              {/* {isEnglish ? "Hokkaido, Japan" : "北海道, 日本"} */}
-              {isEnglish ? "Singapore" : "Singapore"}
+              {isEnglish ? "Japan" : "北海道, 日本"}
+              {/* {isEnglish ? "Singapore" : "Singapore"} */}
             </Typography>
           </ListItemButton>
         </Grid>

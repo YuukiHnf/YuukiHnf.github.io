@@ -182,6 +182,7 @@ const Index = () => {
                 <SubTitle title={"Grants"} />
               </Box>
               <Grant En />
+              <SubTitle title={"Talk"} />
               <SubTitle title={"Academic Service"} />
               <Servise />
               <Box>
