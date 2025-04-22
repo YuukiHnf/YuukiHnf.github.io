@@ -33,7 +33,7 @@ const NotFound = () => {
               // height: "100vh",
             }}
           >
-            <h2>This page doesn't seems to exist.</h2>
+            <h2>This page does not seems to exist.</h2>
             {/* 改行 */}
             <br />
             <h2>

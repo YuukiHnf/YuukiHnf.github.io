@@ -18,7 +18,7 @@ type PublicationsType = {
   poster?: string;
 };
 
-const UnderlineAuthorName = ({ text }: { text: string }) => {
+export const UnderlineAuthorName = ({ text }: { text: string }) => {
   // 著者名のパターン
   const patterns = {
     en: /Yuki Abe\*?/g,
@@ -78,7 +78,7 @@ const UnderlineAuthorName = ({ text }: { text: string }) => {
   return <>{createTextWithUnderline(text)}</>;
 };
 
-const journal_publications: PublicationsType[] = [
+export const journal_publications: PublicationsType[] = [
   {
     id: "acd-cscw25",
     title:
@@ -105,7 +105,7 @@ const journal_publications: PublicationsType[] = [
     doi: "https://doi.org/10.20729/00224248",
   },
 ];
-const conference_publications: PublicationsType[] = [
+export const conference_publications: PublicationsType[] = [
   {
     id: "RunSight24",
     title:
@@ -144,7 +144,7 @@ const conference_publications: PublicationsType[] = [
     invisibleInEn: true,
   },
 ];
-const demo_publications: PublicationsType[] = [
+export const demo_publications: PublicationsType[] = [
   {
     id: "FollowYourFingerLBW25",
     title: "Exploring Auditory Hand Guidance for Eyes-free 3D Path Tracing",
@@ -154,7 +154,7 @@ const demo_publications: PublicationsType[] = [
       "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’25), April 26–May 01, 2025, Yokohama, Japan",
     whereDetail: "ACM, New York, NY, USA, 10 pages",
     doi: "https://doi.org/10.1145/3706599.3719761",
-    poster: "/poster/chi25_poster.pdf",
+    poster: "/poster/chi25_lbw_177.pdf",
   },
   {
     id: "Temaneki24",

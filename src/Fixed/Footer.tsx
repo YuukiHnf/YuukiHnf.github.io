@@ -10,7 +10,7 @@ const Footer = () => {
         sx={{ position: "absolute", right: 8 }}
         color="text.disabled"
       >
-        Yuki Abe. This page is highly inspired by{" "}
+        <Link href="/">Yuki Abe</Link>. This page is highly inspired by{" "}
         <Link href="https://github.com/academicpages/academicpages.github.io">
           Jekyll & AcademicPages
         </Link>

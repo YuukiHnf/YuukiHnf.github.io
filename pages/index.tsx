@@ -121,6 +121,14 @@ const Index = () => {
                   </Link>{" "}
                   if you are interested!
                 </Typography>
+                <Typography
+                  variant="body1"
+                  pt={2}
+                  color={"#347DA8"}
+                  fontWeight={"bold"}
+                >
+                  Looking for a Research Internship — Summer or Winter 2025!
+                </Typography>
                 {/* <Typography variant="body1" pt={2}>
                   I&apos;m broadly interested in UI/UX design for social
                   computing. Specifically, I want to design a UI/UX enhancing
