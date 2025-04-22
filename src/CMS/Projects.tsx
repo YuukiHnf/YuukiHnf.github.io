@@ -35,7 +35,7 @@ const projects = [
       },
     ],
     thumnail: "./RunSight.png",
-    projectLink: "",
+    projectLink: "./projects/RunSight",
   },
   {
     id: "handheld",
@@ -47,7 +47,7 @@ const projects = [
       },
     ],
     thumnail: "./handheldHMD.jpg",
-    projectLink: "",
+    projectLink: "https://hci-lab.jp/research/HandheldStyleHMD/",
   },
   {
     id: "acd",
