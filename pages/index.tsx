@@ -127,7 +127,8 @@ const Index = () => {
                   color={"#347DA8"}
                   fontWeight={"bold"}
                 >
-                  Looking for a Research Internship — Summer or Winter 2025!
+                  Looking for a Research Internship Opportunities — Summer or
+                  Winter 2025!
                 </Typography>
                 {/* <Typography variant="body1" pt={2}>
                   I&apos;m broadly interested in UI/UX design for social
@@ -190,7 +191,7 @@ const Index = () => {
                 <SubTitle title={"Grants"} />
               </Box>
               <Grant En />
-              <SubTitle title={"Talk"} />
+              {/* <SubTitle title={"Talk"} /> */}
               <SubTitle title={"Academic Service"} />
               <Servise />
               <Box>

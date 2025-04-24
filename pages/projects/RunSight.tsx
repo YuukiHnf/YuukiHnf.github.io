@@ -27,7 +27,7 @@ const abstract =
   "Dark environment challenges low-vision (LV) individuals to engage in running by following sighted guide—a Caller-style guided running—due to insufficient illumination, because it prevents them from using their residual vision to follow the guide and be aware about their environment. We design, develop, and evaluate RunSight, an augmented reality (AR)-based assistive tool to support LV individuals to run at night. RunSight combines see-through HMD and image processing to enhance one’s visual awareness of the surrounding environment (e.g., potential hazard) and visualize the guide’s position with AR-based visualization. To demonstrate RunSight’s efficacy, we conducted a user study with 8 LV runners. The results showed that all participants could run at least 1km (mean = 3.44 km) using RunSight, while none could engage in Caller-style guided running without it. Our participants could run safely because they effectively synthesized RunSight-provided cues and information gained from runner-guide communication.";
 const conference_publicationID = "RunSight24";
 const En = true;
-const presentationVideoId = "Vj_JIwxL4GM";
+const presentationVideoId = "rgYPiq8QGLI";
 const teaserVideoId = "Vj_JIwxL4GM";
 const RunSight = () => {
   const router = useRouter();
@@ -236,7 +236,7 @@ const RunSight = () => {
                       textAlign: "center",
                     }}
                   >
-                    Presentation (to appear)
+                    Presentation (10 min)
                   </Typography>
                 </Box>
               </Box>

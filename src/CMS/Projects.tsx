@@ -55,11 +55,11 @@ const projects = [
     where: [
       {
         link: "https://cscw.acm.org/2025/",
-        description: "CSCW ’25",
+        description: "CSCW ’25 (to appear)",
       },
     ],
     thumnail: "./V9cscw106.jpg",
-    projectLink: "https://doi.org/10.1145/3711004",
+    projectLink: "",
   },
   {
     id: "temaneki",
@@ -201,7 +201,12 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
           </Button>
         </Grid>
         <Grid item xs={12} sm={9} pl={0}>
-          <Typography
+          <Link
+            sx={{
+              color: "black",
+              textDecorationColor: "transparent",
+            }}
+            href={projectLink}
             variant="subtitle1"
             fontWeight={"bolder"}
             // textの改行の幅を小さくする
@@ -210,7 +215,18 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             // fontSize={{ xs: titleFontSize.xs, sm: undefined }}
           >
             {title}
-          </Typography>
+          </Link>
+          {/* <Typography
+            variant="subtitle1"
+            fontWeight={"bolder"}
+            // textの改行の幅を小さくする
+            lineHeight={"1.2em"}
+            mt={{ xs: "0px", sm: undefined }}
+            // fontSize={{ xs: titleFontSize.xs, sm: undefined }}
+            onClick={() => projectLink && router.push(projectLink)}
+          >
+            {title}
+          </Typography> */}
           <Typography
             variant="body1"
             sx={{ mt: "2px" }}

@@ -14,7 +14,7 @@ const awards: GrantType[] = [
     title: "独立行政法人日本学術振興会 特別研究員-DC2",
     titleEn:
       "Research Fellow of the Japan Society for the Promotion of Science (DC2)",
-    link: "",
+    link: "https://www.jsps.go.jp/file/storage/j-pd/data/list_of_recruits/R7_DC2_saiyou.pdf",
     date: "2025/04-2027/03",
   },
   {
