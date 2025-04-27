@@ -127,7 +127,7 @@ const Index = () => {
                   color={"#347DA8"}
                   fontWeight={"bold"}
                 >
-                  Looking for a Research Internship Opportunities — Summer or
+                  Looking for Research Internship Opportunities — Summer or
                   Winter 2025!
                 </Typography>
                 {/* <Typography variant="body1" pt={2}>
