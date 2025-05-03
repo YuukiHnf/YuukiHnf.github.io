@@ -9,23 +9,28 @@ type GrantType = {
   invisibleInEn?: boolean;
 };
 
-const awards: GrantType[] = [
+const talks: GrantType[] = [
   {
-    title: "独立行政法人日本学術振興会 特別研究員-DC2",
-    titleEn:
-      "Research Fellow of the Japan Society for the Promotion of Science (DC2)",
-    link: "",
-    date: "2025/04-2027/03",
+    title: "市民公開講座 / 横浜市MICE次世代育成事業「CHI 2025 シンポジウム」",
+    titleEn: "CHI 2025 Symposium, Citizen Open Lecture in Yokohama City",
+    link: "https://sigchi.jp/symposium/chi2025_symposium/",
+    date: "2023/03/10",
+  },
+  {
+    title: "未踏会議 2023, フレッシュ ライトニングトーク",
+    titleEn: "MITOU CONFERENCE 2023, Fresh Lightning Talk",
+    link: "https://www.ipa.go.jp/jinzai/mitou/mitoukaigi/2023/",
+    date: "2023/03/10",
   },
 ];
 type Props = {
   En?: boolean;
 };
 const Talk = ({ En = false }: Props) => {
-  const conf_awards = En ? awards.filter((pub) => !pub.invisibleInEn) : awards;
+  const conf_talks = En ? talks.filter((pub) => !pub.invisibleInEn) : talks;
   return (
     <Stack spacing={1}>
-      {conf_awards.map((award) => (
+      {conf_talks.map((award) => (
         <div key={award.title + award.date + award.link}>
           <div>
             <Typography key={award.title} variant="caption">

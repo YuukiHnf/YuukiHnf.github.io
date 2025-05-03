@@ -59,7 +59,7 @@ const projects = [
       },
     ],
     thumnail: "./V9cscw106.jpg",
-    projectLink: "",
+    projectLink: "./projects/acd",
   },
   {
     id: "temaneki",
@@ -197,6 +197,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                 objectFit: "contain",
               }}
               width="100%"
+              alt={"thumbnail of the project," + title}
             />
           </Button>
         </Grid>

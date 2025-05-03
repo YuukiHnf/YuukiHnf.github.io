@@ -203,7 +203,7 @@ const Profile = ({ isEnglish = false, aboutElement = true }: Props) => {
             //   width: { xs: "120px", sm: "100px" },
             //   height: { xs: "120px", sm: "100px" },
             // }}
-            // alt="Yuki Abe"
+            alt="Yuki Abe, profile image"
             onLoad={handleImageLoad}
             src={PROFILE_IMAGE_PATH}
             sx={{
@@ -211,7 +211,6 @@ const Profile = ({ isEnglish = false, aboutElement = true }: Props) => {
               height: "100%",
               // ":hover": { opacity: 0.4, cursor: "pointer" },
             }}
-            alt="Yuki Abe"
             // clickable
           />
         </ButtonBase>

@@ -19,6 +19,7 @@ const FigureAndCaption = ({ materialURL, caption }: Props) => {
           objectFit: "contain",
           width: "100%",
         }}
+        alt={"thumbnail of the project"}
       />
       {/* Captionをcenter */}
       <Typography

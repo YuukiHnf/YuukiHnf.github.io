@@ -13,6 +13,7 @@ import News_en from "src/CMS/News_en";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
 import Servise from "src/CMS/Servise";
+import Talk from "src/CMS/Talk";
 import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
@@ -190,7 +191,8 @@ const Index = () => {
                 <SubTitle title={"Grants"} />
               </Box>
               <Grant En />
-              {/* <SubTitle title={"Talk"} /> */}
+              <SubTitle title={"Talk"} />
+              <Talk En />
               <SubTitle title={"Academic Service"} />
               <Servise />
               <Box>

@@ -474,18 +474,6 @@ const RunSight = () => {
                           </>
                         ) : null}
                       </Typography>
-                      {/* <div
-                                style={{
-                                  // marginTop: "0px",
-                                  maxWidth: "100%",
-                                }}
-                              >
-                                [
-                                <Link href={publication.doi} sx={{ wordWrap: "break-word" }}>
-                                  DOI
-                                </Link>
-                                ]
-                              </div> */}
                     </li>
                   ))}
               </ol>
@@ -500,6 +488,7 @@ const RunSight = () => {
                     objectFit: "contain",
                     width: "100%",
                   }}
+                  alt="The image of the paper PDF"
                 />
               </ButtonBase>
               <Box sx={{ height: "40px" }} />
@@ -511,6 +500,7 @@ const RunSight = () => {
                   objectFit: "contain",
                   width: "100%",
                 }}
+                alt="The image of the footer, which is conference logo"
               />
             </Box>
           </Grid>
