@@ -10,6 +10,7 @@ import Hobby from "src/CMS/Hobby";
 import NewsDesktop from "src/CMS/News";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
+import Talk from "src/CMS/Talk";
 import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
@@ -70,7 +71,7 @@ const Index = () => {
                   >
                     北海道大学 ヒューマンコンピュータインタラクション研究室
                   </Link>
-                  に所属する博士１年生です．研究分野は情報科学の一領域であるHuman-Computer
+                  に所属する博士2年生です．研究分野は情報科学の一領域であるHuman-Computer
                   Interaction
                   (HCI)で，特に，複数人が協力しやすくなるコンピュータ技術や，視覚障がい者のアシスト技術の研究開発に取り組んでいます．
                   2024年9月から2025年3月までは，シンガポールの
@@ -146,6 +147,8 @@ const Index = () => {
                 <SubTitle title={"研究助成等"} isEnglish={false} />
               </Box>
               <Grant />
+              <SubTitle title={"講演等"} />
+              <Talk />
               <Box>
                 <SubTitle title={"その他"} isEnglish={false} />
               </Box>
