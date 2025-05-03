@@ -122,44 +122,13 @@ const Index = () => {
                   </Link>{" "}
                   if you are interested!
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="body1"
                   pt={2}
                   color={"#347DA8"}
                   fontWeight={"bold"}
                 >
                   Looking for Research Internship Opportunities!
-                </Typography>
-                {/* <Typography variant="body1" pt={2}>
-                  I&apos;m broadly interested in UI/UX design for social
-                  computing. Specifically, I want to design a UI/UX enhancing
-                  “get-together” experience, currently focusing on watching
-                  together (co-located families and friends co-watching in a
-                  living room, or remote viewers watching together on
-                  video-sharing and social-VR platforms). In addition, I am
-                  engaging in sub-projects about “work together” (civic- and
-                  hobby-based communities enhancement through festival
-                  management) and “enjoy together” (public exhibition, display,
-                  and technology).
-                </Typography> */}
-
-                {/* <Typography variant="body1" pt={2}>
-                  I like prototyping and development: Next.js, React, Unity(C#),
-                  Python, Arduino, Raspberry Pi, Toio swarming robots. A notable
-                  project in my development life is{" "}
-                  <Link
-                    href={"https://temaneki.jp"}
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textDecorationColor: theme.palette.text.secondary,
-                    }}
-                  >
-                    Temaneki
-                  </Link>
-                  , a collaboration application featuring efficiency and
-                  enjoyment for participation. I have developed and managed
-                  Temaneki for two years. Over 500 users in Japan have adopted
-                  Temaneki.
                 </Typography> */}
               </Box>
               {/* <Box
