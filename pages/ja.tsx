@@ -153,6 +153,26 @@ const Index = () => {
                 <SubTitle title={"その他"} isEnglish={false} />
               </Box>
               <Hobby />
+              <Typography
+                sx={{
+                  color: theme.palette.text.secondary,
+                  textDecorationColor: "transparent",
+                }}
+                variant="caption"
+              >
+                ゆるいポッドキャストもやってます。よろしければ。
+              </Typography>
+              <iframe
+                title="Spotify podcast"
+                style={{ borderRadius: "12px" }} // ← style はオブジェクト
+                src="https://open.spotify.com/embed/show/4wUxidzTLqBABhlWlJTdPx?utm_source=generator"
+                width="100%"
+                height="172"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                allowFullScreen // ← allowfullscreen → allowFullScreen
+              />
               <Box ref={contactElementRef}>
                 <SubTitle title={"連絡先"} isEnglish={false} />
               </Box>

@@ -52,22 +52,24 @@ const projects = [
 
 const Hobby = () => {
   return (
-    <Stack spacing={1}>
-      {projects.map((project) => (
-        <React.Fragment key={project.id}>
-          <AProject {...project} />
-        </React.Fragment>
-      ))}
-      <Card
-        sx={{
-          borderTop: "2px solid #e0e0e0",
-          margin: "0px",
-          padding: "0px",
-          backgroundColor: "transparent",
-          boxShadow: "none",
-        }}
-      ></Card>
-    </Stack>
+    <>
+      <Stack spacing={1}>
+        {projects.map((project) => (
+          <React.Fragment key={project.id}>
+            <AProject {...project} />
+          </React.Fragment>
+        ))}
+        <Card
+          sx={{
+            borderTop: "2px solid #e0e0e0",
+            margin: "0px",
+            padding: "0px",
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          }}
+        ></Card>
+      </Stack>
+    </>
   );
 };
 
