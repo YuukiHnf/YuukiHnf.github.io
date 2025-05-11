@@ -168,7 +168,7 @@ const Index = () => {
                 <SubTitle title={"Others"} />
               </Box>
               <Hobby />
-              <Typography
+              {/* <Typography
                 sx={{
                   color: theme.palette.text.secondary,
                   textDecorationColor: "transparent",
@@ -187,7 +187,7 @@ const Index = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 allowFullScreen // ← allowfullscreen → allowFullScreen
-              />
+              /> */}
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
