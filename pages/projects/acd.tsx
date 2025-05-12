@@ -26,7 +26,7 @@ const abstract =
   "Online music videos on video-sharing platforms offer video comments that viewers can read to enjoy their social-viewing experience. However, because these comments rely on visual elements through texts, they are not accessible to eyes-free listeners, such as those who listen to music videos while jogging, commuting, or showering. To address this gap, we explore Auditory Comment Display (ACD), which offers text comments via text-to-speech (TTS) synthesis, enabling eyes-free listeners to enjoy a social-viewing experience while listening to music videos. We used music concert videos as example content and prototyped varying comment- to-speech styles in this context. We conducted a formative study (N = 8), prototyping (N = 10), and a user study (N = 12). The results indicated that ACD enhanced eyes-free listeners’ social-viewing experience, although it may not be appropriate for specific situations and users. We discuss the design implications and future directions for the eyes-free social-viewing experience via comment-to-speech synthesis.";
 const conference_publicationID = "acd-cscw25";
 const En = true;
-// const presentationVideoId = "rgYPiq8QGLI";
+const teaserVideoId = "fSdDc9sJkQQ";
 // const teaserVideoId = "Vj_JIwxL4GM";
 const AuditoryCommentDisplay = () => {
   const router = useRouter();
@@ -154,6 +154,38 @@ const AuditoryCommentDisplay = () => {
               >
                 {abstract}
               </Typography>
+              <SubTitle title="Video" />
+              <Box
+                display="flex"
+                flexDirection={{ xs: "column", sm: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+                gap={2}
+                width="100%" // 幅を100%に設定
+              >
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  width={"100%"} // 幅を少し調整
+                >
+                  <Box width="100%">
+                    <YouTubeEmbed embedId={teaserVideoId} />
+                  </Box>
+                  {/* <Typography
+                    variant="body1"
+                    fontSize={{ xs: "1rem", sm: "1.2rem" }}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: "transparent",
+                      textAlign: "center",
+                    }}
+                  >
+                    Video figure (3 min)
+                  </Typography> */}
+                </Box>
+              </Box>
               {/*<SubTitle title="Video" />
               <Box
                 display="flex"
