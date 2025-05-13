@@ -173,7 +173,7 @@ const AuditoryCommentDisplay = () => {
                   <Box width="100%">
                     <YouTubeEmbed embedId={teaserVideoId} />
                   </Box>
-                  {/* <Typography
+                  <Typography
                     variant="body1"
                     fontSize={{ xs: "1rem", sm: "1.2rem" }}
                     sx={{
@@ -182,8 +182,8 @@ const AuditoryCommentDisplay = () => {
                       textAlign: "center",
                     }}
                   >
-                    Video figure (3 min)
-                  </Typography> */}
+                    3 min video figure
+                  </Typography>
                 </Box>
               </Box>
               {/*<SubTitle title="Video" />
