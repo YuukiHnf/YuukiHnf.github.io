@@ -462,8 +462,8 @@ const AuditoryCommentDisplay = () => {
               />
               {/* </ButtonBase> */}
               <Box sx={{ height: "40px" }} />
-              {/* <img
-                src={materialURL + "logo.png"}
+              <img
+                src={materialURL + "footer.png"}
                 style={{
                   borderRadius: "8px",
                   maxHeight: "100%",
@@ -471,7 +471,7 @@ const AuditoryCommentDisplay = () => {
                   width: "100%",
                 }}
                 alt="The image of the footer, which is conference logo"
-              /> */}
+              />
             </Box>
           </Grid>
         </Grid>

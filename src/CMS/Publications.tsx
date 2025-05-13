@@ -117,7 +117,7 @@ export const conference_publications: PublicationsType[] = [
       "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
     whereDetail: "ACM, New York, NY, USA, 20 pages",
     doi: "https://doi.org/10.1145/3706598.3714284",
-    award: "Honorable Mention recognition",
+    award: "Honorable Mention Award",
   },
   {
     id: "HandheldHMD24",
@@ -130,7 +130,7 @@ export const conference_publications: PublicationsType[] = [
       "In CHI Conference on Human Factors in Computing Systems (CHI ’25), April 26–May 01, 2025, Yokohama, Japan",
     whereDetail: "ACM, New York, NY, USA, 21 pages. *—equal contribution",
     doi: "https://doi.org/10.1145/3706598.3713874",
-    award: "Honorable Mention recognition",
+    award: "Honorable Mention Award",
   },
   {
     id: "ronbunnshi22",

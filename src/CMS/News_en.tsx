@@ -12,7 +12,7 @@ type AwardType = {
 const awards: AwardType[] = [
   {
     title:
-      "Two papers have been selected for Honorable Mention recognitions at CHI 2025!",
+      "Two papers have been selected for Honorable Mention Awards at CHI 2025!",
     date: "2025/03/27",
   },
   {

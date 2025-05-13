@@ -12,17 +12,17 @@ type AwardType = {
 const awards: AwardType[] = [
   {
     title:
-      "Honorable Mention recognition at ACM CHI 2025 (10.1145/3706598.3714284)",
+      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3714284)",
     titleEn:
-      "Honorable Mention recognition at ACM CHI 2025 (10.1145/3706598.3714284)",
+      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3714284)",
     link: "https://programs.sigchi.org/chi/2025/program/content/189122",
     date: "2025/03/27",
   },
   {
     title:
-      "Honorable Mention recognition at ACM CHI 2025 (10.1145/3706598.3713874)",
+      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3713874)",
     titleEn:
-      "Honorable Mention recognition at ACM CHI 2025 (10.1145/3706598.3713874)",
+      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3713874)",
     link: "https://programs.sigchi.org/chi/2025/program/content/189044",
     date: "2025/03/27",
   },

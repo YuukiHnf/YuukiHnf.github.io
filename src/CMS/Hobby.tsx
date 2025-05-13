@@ -46,7 +46,7 @@ const projects = [
       },
     ],
     thumnail: "./telecocha.jpg",
-    projectLink: "https://protopedia.net/prototype/2558",
+    projectLink: "https://youtu.be/hNgghW0qtIU",
   },
 ];
 

@@ -47,7 +47,7 @@ const projects = [
       },
     ],
     thumnail: "./handheldHMD.jpg",
-    projectLink: "https://hci-lab.jp/research/HandheldStyleHMD/",
+    projectLink: "./projects/handheldHMD",
   },
   {
     id: "acd",
