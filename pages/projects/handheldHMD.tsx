@@ -30,7 +30,7 @@ const suplimentaryfigure =
 const conference_publicationID = "HandheldHMD24";
 const En = true;
 const presentationVideoId = "aLAMypv2lwI";
-const teaserVideoId = "aLAMypv2lwI";
+// const teaserVideoId = "aLAMypv2lwI";
 const RunSight = () => {
   const router = useRouter();
   return (
@@ -202,14 +202,13 @@ const RunSight = () => {
                 gap={2}
                 width="100%" // 幅を100%に設定
               >
-                <Box
+                {/* <Box
                   display="flex"
                   flexDirection="column"
                   justifyContent="center"
                   alignItems="center"
                   width={{ xs: "100%", sm: "48%" }} // 幅を少し調整
                 >
-                  {/* width="100%"を明示的に設定 */}
                   <Box width="100%">
                     <YouTubeEmbed embedId={teaserVideoId} />
                   </Box>
@@ -224,13 +223,14 @@ const RunSight = () => {
                   >
                     Teaser (1 min)
                   </Typography>
-                </Box>
+                </Box> */}
                 <Box
                   display="flex"
                   flexDirection="column"
                   justifyContent="center"
                   alignItems="center"
-                  width={{ xs: "100%", sm: "48%" }} // 幅を少し調整
+                  width="100%"
+                  // width={{ xs: "100%", sm: "48%" }} // 幅を少し調整
                 >
                   {/* width="100%"を明示的に設定 */}
                   <Box width="100%">
