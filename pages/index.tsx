@@ -8,8 +8,7 @@ import React, { useEffect, useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
 import Hobby from "src/CMS/Hobby";
-import NewsDesktop from "src/CMS/News";
-import News_en from "src/CMS/News_en";
+import NewsUnified from "src/CMS/NewsUnified";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
 import Servise from "src/CMS/Servise";
@@ -137,13 +136,7 @@ const Index = () => {
               >
                 <NewsDesktop />
               </Box> */}
-              <Box>
-                {/* <Box mt={"48px"}>
-                  <Typography variant="h1">{"News"}</Typography>
-                </Box> */}
-                <SubTitle title={"News"} />
-              </Box>
-              <News_en />
+              <NewsUnified isEnglish={true} />
               <Box ref={projectsElementRef} pb={0.5}>
                 <SubTitle title={"Projects"} />
               </Box>

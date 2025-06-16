@@ -480,15 +480,6 @@ const Profile = ({ isEnglish = false, aboutElement = true }: Props) => {
               </Typography>
             </ListItemButton>
           </Grid>
-          {!isEnglish && (
-            <Grid
-              item
-              width={"100%"}
-              display={{ xs: "none", sm: "none", md: "flex" }}
-            >
-              <NewsDesktop />
-            </Grid>
-          )}
         </Grid>
       )}
     </Stack>

@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import Award from "src/CMS/Award";
 import Grant from "src/CMS/Grant";
 import Hobby from "src/CMS/Hobby";
-import NewsDesktop from "src/CMS/News";
+import NewsUnified from "src/CMS/NewsUnified";
 import Projects from "src/CMS/Projects";
 import Publications from "src/CMS/Publications";
 import Talk from "src/CMS/Talk";
@@ -88,49 +88,8 @@ const Index = () => {
                   22年度スーパークリエータ． 株式会社 temaneki
                   取締役．一般社団法人 新雪 メンター．
                 </Typography>
-                {/* <Typography variant="body1" fontWeight="lighter" pt={1}>
-                  研究キーワード
-                </Typography> */}
-                {/* <Typography variant="body1" fontWeight="lighter">
-                  Human Computer Interaction(HCI), User Interface and User
-                  Experience, Social-computing, Accessibility, User Studies and
-                  Evaluations.
-                </Typography> */}
-                {/* <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>. */}
-                {/* <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
-                </Typography> */}
-                {/* <Typography variant="body1">
-                  I am a Master 2rd student at University of Hokkaido, advised
-                  by{" "}
-                  <Link href={"https://daisukesakamoto.jp/"}>
-                    Daisuke Sakamoto
-                  </Link>{" "}
-                  at the <Link href={"https://hci-lab.jp/"}>HCI-lab</Link>.
-                </Typography>
-                <Typography variant="body1">
-                  I`m broadly interested in social participation in content
-                  communities.
-                </Typography>
-                <Typography variant="body1">
-                  KEYWORDs: Omasturi/Festival, Social Video Watching, Live
-                  Streaming, Stranger Communication.
-                </Typography> */}
               </Box>
-              <Box
-                width={"100%"}
-                display={{ xs: "flex", sm: "flex", md: "none" }}
-              >
-                <NewsDesktop />
-              </Box>
+              <NewsUnified isEnglish={false} />
               <Box ref={projectsElementRef} pb={1}>
                 <SubTitle title={"プロジェクト"} isEnglish={false} />
               </Box>
