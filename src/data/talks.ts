@@ -8,6 +8,14 @@ export const talks: CMSItem[] = [
     date: "2025/05/03",
   },
   {
+    title:
+      "シンガポール国立大学 Prof. Renwen (Alice) Zhang とProf. Yi-Chieh (EJ) Lee チームでの講演",
+    titleEn:
+      "National University of Singapore, One-hour Research Presentation and Discussion at Alice's and EJ's Lab",
+    link: "",
+    date: "2025/02/10",
+  },
+  {
     title: "未踏会議 2023, フレッシュ ライトニングトーク",
     titleEn: "MITOU CONFERENCE 2023, Fresh Lightning Talk",
     link: "https://www.ipa.go.jp/jinzai/mitou/mitoukaigi/2023/",

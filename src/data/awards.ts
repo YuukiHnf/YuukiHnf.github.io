@@ -3,17 +3,17 @@ import { CMSItem } from "../Components/CMSListItem";
 export const awards: CMSItem[] = [
   {
     title:
-      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3714284)",
+      "ACM CHI 2025 優秀論文賞（Honorable Mention Award; top 5%）for 10.1145/3706598.3714284",
     titleEn:
-      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3714284)",
+      "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3714284",
     link: "https://programs.sigchi.org/chi/2025/program/content/189122",
     date: "2025/03/27",
   },
   {
     title:
-      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3713874)",
+      "ACM CHI 2025 優秀論文賞（Honorable Mention Award; top 5%）for 10.1145/3706598.3713874",
     titleEn:
-      "Honorable Mention Award at ACM CHI 2025 (10.1145/3706598.3713874)",
+      "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3713874",
     link: "https://programs.sigchi.org/chi/2025/program/content/189044",
     date: "2025/03/27",
   },
@@ -49,7 +49,7 @@ export const awards: CMSItem[] = [
     invisibleInEn: true,
   },
   {
-    title: "toio SDK for Unity賞 bytoio™ \"てれコチャ\" @ヒーローズ・リーグ2021",
+    title: 'toio SDK for Unity賞 bytoio™ "てれコチャ" @ヒーローズ・リーグ2021',
     link: "https://cosmos.gfc.hokudai.ac.jp/news/1194",
     date: "2022/01/11",
     invisibleInEn: true,

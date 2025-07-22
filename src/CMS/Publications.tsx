@@ -157,18 +157,6 @@ export const demo_publications: PublicationsType[] = [
     poster: "/poster/chi25_lbw_177.pdf",
   },
   {
-    id: "Temaneki24",
-    title:
-      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
-    authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
-    year: 2024,
-    where:
-      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
-    whereDetail: "ACM, New York, NY, USA, 8 pages",
-    doi: "https://doi.org/10.1145/3613905.3651013",
-    poster: "/poster/chiea24-541-poster.pdf",
-  },
-  {
     id: "HCI209-SpeechAccomodation",
     title:
       "音声・動画コンテンツ内のナレーションを高齢者が聞き取りやすい話し方に変換するAIパイプラインの開発",
@@ -179,6 +167,18 @@ export const demo_publications: PublicationsType[] = [
     doi: "http://id.nii.ac.jp/1001/00237205/",
     invisibleInEn: true,
     award: "学生奨励賞",
+  },
+  {
+    id: "Temaneki24",
+    title:
+      "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
+    authors: "Yuki Abe, Hikaru Tsujiguchi, Daisuke Sakamoto, and Tetsuo Ono",
+    year: 2024,
+    where:
+      "In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24), May 11– 16, 2024, Honolulu, HI, USA",
+    whereDetail: "ACM, New York, NY, USA, 8 pages",
+    doi: "https://doi.org/10.1145/3613905.3651013",
+    poster: "/poster/chiea24-541-poster.pdf",
   },
   {
     id: "WISS-OMEME",
