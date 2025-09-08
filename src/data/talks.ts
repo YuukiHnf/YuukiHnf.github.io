@@ -2,6 +2,13 @@ import { CMSItem } from "../Components/CMSListItem";
 
 export const talks: CMSItem[] = [
   {
+    title: "FIT2025 情報科学技術フォーラム トップコンファレンスセッション",
+    titleEn:
+      "FIT2025 Information Science and Technology Forum Top Conference Session",
+    link: "https://www.gakkai-web.net/fit/program_web/data/html/event/TCS6-1.html",
+    date: "2025/09/08",
+  },
+  {
     title: "市民公開講座 / 横浜市MICE次世代育成事業「CHI 2025 シンポジウム」",
     titleEn: "CHI 2025 Symposium, Citizen Open Lecture in Yokohama City",
     link: "https://sigchi.jp/symposium/chi2025_symposium/",
