@@ -15,6 +15,12 @@ type NewsItem = {
 // Japanese news data
 const newsJa: NewsItem[] = [
   {
+    title: "ノルウェーで開催されるACM CSCW 2025で研究を発表します。",
+    titleEn:
+      "I am going to present our paper at CSCW 2025. See you in Bergen, Norway!",
+    date: "2025/10/18",
+  },
+  {
     title:
       "CHI2025で発表する2本のFull PaperがHonorable Mentionに選ばれました。",
     titleEn:

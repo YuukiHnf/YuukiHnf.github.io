@@ -18,7 +18,7 @@ export const talks: CMSItem[] = [
     title:
       "シンガポール国立大学 Prof. Renwen (Alice) Zhang とProf. Yi-Chieh (EJ) Lee チームでの講演",
     titleEn:
-      "National University of Singapore, One-hour Research Presentation and Discussion at Alice's and EJ's Lab",
+      "National University of Singapore, Research Presentation and Discussion with Alice's and EJ's Lab Members",
     link: "",
     date: "2025/02/10",
   },
