@@ -17,6 +17,7 @@ import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
+import Work from "src/CMS/Work";
 const Index = () => {
   const isEnglish = true;
   const topRef = useRef<HTMLElement>(null);
@@ -86,10 +87,14 @@ const Index = () => {
                     Prof. Daisuke Sakamoto
                   </Link>
                   . My research lies in the field of Human-Computer Interaction
-                  (HCI). I focus on the design, development, and evaluation of
-                  assistive technology that supports the daily activities and
-                  exercises of people with visual impairments. From September
-                  2024 to March 2025, I was a visiting student at the{" "}
+                  (HCI). I design, develop, and evaluate assistive technology
+                  that supports the daily activities and exercises of people
+                  with visual impairments.{" "}
+                  {/* I also like designing user interface
+                  and interactive system that fosters communication and
+                  collaboration.  */}
+                  From September 2024 to March 2025, I was a visiting student at
+                  the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -121,21 +126,17 @@ const Index = () => {
                   </Link>{" "}
                   if you are interested!
                 </Typography>
-                {/* <Typography
+                <Typography
                   variant="body1"
                   pt={2}
                   color={"#347DA8"}
                   fontWeight={"bold"}
                 >
-                  Looking for Research Internship Opportunities!
-                </Typography> */}
+                  I am expected to complete my Ph.D. degree in March 2027 and am
+                  actively looking for opportunities after graduation. Please
+                  let me know if there are any opportunities available!
+                </Typography>
               </Box>
-              {/* <Box
-                width={"100%"}
-                display={{ xs: "flex", sm: "flex", md: "none" }}
-              >
-                <NewsDesktop />
-              </Box> */}
               <NewsUnified isEnglish={true} />
               <Box ref={projectsElementRef} pb={0.5}>
                 <SubTitle title={"Projects"} />
@@ -145,6 +146,10 @@ const Index = () => {
                 <SubTitle title={"Publications"} />
               </Box>
               <Publications En />
+              <Box>
+                <SubTitle title={"Work Experience"} />
+              </Box>
+              <Work En />
               <Box ref={awardElementRef}>
                 <SubTitle title={"Awards"} />
               </Box>

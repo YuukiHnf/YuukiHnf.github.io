@@ -8,12 +8,13 @@ type ServiseType = {
 
 const awards: ServiseType[] = [
   {
-    title: "External Reviewer of CHI 2024 LBWs, CHI 2025, CHI 2025 LBWs.",
+    title:
+      "External Reviewer of CHI 2024 LBWs, CHI 2025, CHI 2025 LBWs, CHI 2026.",
     date: "2024-",
   },
   {
     title:
-      "Student Volunteer of Japan ACM SIGCHI Chapter's CHI Study Group 2023, 2024.",
+      "Student Volunteer of Japan ACM SIGCHI Chapter's CHI Study Group 2023, 2024, 2025.",
     date: "2023-",
   },
 ];

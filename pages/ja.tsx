@@ -15,6 +15,7 @@ import BackButton from "src/Fixed/BackButton";
 import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
+import Work from "src/CMS/Work";
 const Index = () => {
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
@@ -73,7 +74,8 @@ const Index = () => {
                   </Link>
                   に所属する博士2年生です．研究分野は情報科学の一領域であるHuman-Computer
                   Interaction
-                  (HCI)で，特に，視覚障がい者のアシスト技術や複数人が協力しやすくなるAR/VR技術の研究開発に取り組んでいます．
+                  (HCI)で，特に，視覚障がい者のアシスト技術や複数人が協力しやすくなるAR/VR技術の研究開発に取り組んでいます．学振
+                  特別研究員（DC2）．未踏IT 22年度スーパークリエータ．
                   {/* <br /> */}
                   {/* 2024年9月から2025年3月までは，シンガポールの
                   <Link
@@ -87,9 +89,16 @@ const Index = () => {
                   </Link>
                   にて研究活動を行っていました． */}
                   {/* ユーザとそのコミュニティで共に生活しながら，彼らに「これを使いたい」と思ってもらえる価値や体験を設計し，そのプロトタイプの作成から定量・定性的な評価まで一貫して行うことを得意としています． */}
-                  学振 特別研究員（DC2）．未踏IT
-                  22年度スーパークリエータ．株式会社 temaneki
-                  取締役．一般社団法人 新雪 メンター．
+                  {/* 株式会社 temaneki 取締役． */}
+                  {/* 一般社団法人 新雪 メンター． */}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  pt={2}
+                  color={"#347DA8"}
+                  fontWeight={"bold"}
+                >
+                  2027年3月に博士課程修了見込みです．卒業後の研究職やエンジニア職を探し始めています．機会がございましたら，ご連絡ください．
                 </Typography>
               </Box>
               <NewsUnified isEnglish={false} />
@@ -101,6 +110,10 @@ const Index = () => {
                 <SubTitle title={"論文"} isEnglish={false} />
               </Box>
               <Publications />
+              <Box>
+                <SubTitle title={"職歴"} />
+              </Box>
+              <Work />
               <Box ref={awardElementRef}>
                 <SubTitle title={"受賞"} isEnglish={false} />
               </Box>
