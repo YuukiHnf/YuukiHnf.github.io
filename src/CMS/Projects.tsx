@@ -54,8 +54,8 @@ const projects = [
     title: "Auditory comment display for eyes-free social-viewing experience",
     where: [
       {
-        link: "https://cscw.acm.org/2025/",
-        description: "CSCW ’25 (to appear)",
+        link: "https://cscw.acm.org/2025/index.php/program-overview-3/",
+        description: "CSCW ’25",
       },
     ],
     thumnail: "./V9cscw106.jpg",
