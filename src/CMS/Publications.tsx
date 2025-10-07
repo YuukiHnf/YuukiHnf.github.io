@@ -86,8 +86,7 @@ export const journal_publications: PublicationsType[] = [
     authors: "Yuki Abe, Daisuke Sakamoto, and Tetsuo Ono",
     year: 2025,
     where: "Proc. ACM Hum.-Comput. Interact",
-    whereDetail:
-      "9, 2, Article CSCW106 (April 2025) 30 pages (to appear at CSCW 2025)",
+    whereDetail: "9, 2, Article CSCW106 (April 2025) 30 pages. CSCW 2025",
     doi: "https://doi.org/10.1145/3711004",
   },
   {
