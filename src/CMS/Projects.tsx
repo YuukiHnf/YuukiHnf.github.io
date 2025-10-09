@@ -54,7 +54,7 @@ const projects = [
     title: "Auditory comment display for eyes-free social-viewing experience",
     where: [
       {
-        link: "https://cscw.acm.org/2025/index.php/program-overview-3/",
+        link: "https://programs.sigchi.org/cscw/2025/program/content/213167",
         description: "CSCW ’25",
       },
     ],
