@@ -15,6 +15,13 @@ export const grants: CMSItem[] = [
     date: "2024/04-2027/03",
   },
   {
+    title: "立石科学技術振興財団 (C)",
+    titleEn:
+      "Travel support from Tateisi Science and Technology Foundation to CSCW 2025 (Bergen)",
+    link: "",
+    date: "2025/10",
+  },
+  {
     title: "北海道大学 EXEX博士人材フェローシップ",
     titleEn: "Hokkaido University EXEX Doctoral Fellowship ",
     link: "https://sites.google.com/eis.hokudai.ac.jp/exexphd-fellow/",

@@ -23,6 +23,19 @@ type ProjectType = {
 };
 
 const projects = [
+  // {
+  //   id: "ProjectGuideline",
+  //   title: "ProjectGuideline",
+  //   where: [
+  //     {
+  //       link: "./projects/Guidelineworkshop",
+  //       description: "Sapporo Workshop",
+  //       descriptionEn: "Sapporo Workshop",
+  //     },
+  //   ],
+  //   thumnail: "./visionbot.main.png",
+  //   projectLink: "./projects/Guidelineworkshop",
+  // },
   {
     id: "OMEME",
     title: "OMEME",

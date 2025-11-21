@@ -2,6 +2,12 @@ import { CMSItem } from "../Components/CMSListItem";
 
 export const talks: CMSItem[] = [
   {
+    title: "WISS2025 国際学会招待発表",
+    titleEn: "WISS2025, Top Conference Session",
+    link: "https://www.wiss.org/WISS2025/program.html",
+    date: "2025/12/04",
+  },
+  {
     title: "FIT2025 情報科学技術フォーラム トップコンファレンスセッション",
     titleEn:
       "FIT2025 Information Science and Technology Forum Top Conference Session",

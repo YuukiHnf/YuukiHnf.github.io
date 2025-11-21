@@ -99,15 +99,16 @@ const Menus = ({
         </Button>
         <Button
           startIcon={<TranslateIcon />}
-          sx={{ color: "gray", fontWeight: "bold" }}
-          // sx={{
-          //   color: "white",
-          //   bgcolor: "#B3B3B3",
-          //   ":hover": {
-          //     bgcolor: theme.palette.text.disabled,
-          //     color: "white",
-          //   },
-          // }}
+          sx={{
+            color: "gray",
+            fontWeight: "bold",
+            bgcolor: [null, null, "#e7e7e7ff"],
+            ":hover": {
+              bgcolor: theme.palette.text.disabled,
+              color: "white",
+            },
+            border: [null, null, "0.5px solid #e1e1e1ff"],
+          }}
           variant="text"
           onClick={() => {
             if (isEnglish) {

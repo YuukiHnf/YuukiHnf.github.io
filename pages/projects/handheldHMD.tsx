@@ -487,7 +487,11 @@ const RunSight = () => {
                   ))}
               </ol>
               <ButtonBase
-                onClick={() => router.push(materialURL + "paper.pdf")}
+                onClick={() =>
+                  router.push(
+                    "https://dl.acm.org/doi/pdf/10.1145/3706598.3713874"
+                  )
+                }
               >
                 <img
                   src={materialURL + "paper.png"}

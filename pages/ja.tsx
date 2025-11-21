@@ -76,21 +76,6 @@ const Index = () => {
                   Interaction
                   (HCI)で，特に，視覚障がい者のアシスト技術や複数人が協力しやすくなるAR/VR技術の研究開発に取り組んでいます．学振
                   特別研究員（DC2）．未踏IT 22年度スーパークリエータ．
-                  {/* <br /> */}
-                  {/* 2024年9月から2025年3月までは，シンガポールの
-                  <Link
-                    href={"https://smuhci.com/"}
-                    sx={{
-                      color: theme.palette.text.secondary,
-                      textDecorationColor: theme.palette.text.secondary,
-                    }}
-                  >
-                    SMU HCI Research
-                  </Link>
-                  にて研究活動を行っていました． */}
-                  {/* ユーザとそのコミュニティで共に生活しながら，彼らに「これを使いたい」と思ってもらえる価値や体験を設計し，そのプロトタイプの作成から定量・定性的な評価まで一貫して行うことを得意としています． */}
-                  {/* 株式会社 temaneki 取締役． */}
-                  {/* 一般社団法人 新雪 メンター． */}
                 </Typography>
                 <Typography
                   variant="body1"

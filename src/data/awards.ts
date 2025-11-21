@@ -3,7 +3,7 @@ import { CMSItem } from "../Components/CMSListItem";
 export const awards: CMSItem[] = [
   {
     title:
-      "ACM CHI 2025 優秀論文賞（Honorable Mention Award; top 5%）．対象論文：10.1145/3706598.3714284",
+      "ACM CHI 2025 優秀論文賞（Honorable Mention Award）．対象論文：10.1145/3706598.3714284",
     titleEn:
       "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3714284",
     link: "https://programs.sigchi.org/chi/2025/program/content/189122",
@@ -11,7 +11,7 @@ export const awards: CMSItem[] = [
   },
   {
     title:
-      "ACM CHI 2025 優秀論文賞（Honorable Mention Award; top 5%）．対象論文：10.1145/3706598.3713874",
+      "ACM CHI 2025 優秀論文賞（Honorable Mention Award）．対象論文：10.1145/3706598.3713874",
     titleEn:
       "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3713874",
     link: "https://programs.sigchi.org/chi/2025/program/content/189044",

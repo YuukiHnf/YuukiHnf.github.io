@@ -447,20 +447,22 @@ const AuditoryCommentDisplay = () => {
                     </li>
                   ))}
               </ol>
-              {/* <ButtonBase
-                onClick={() => router.push(materialURL + "paper.pdf")}
-              > */}
-              <img
-                src={materialURL + "paper.png"}
-                style={{
-                  borderRadius: "8px",
-                  maxHeight: "100%",
-                  objectFit: "contain",
-                  width: "100%",
-                }}
-                alt="The image of the paper PDF"
-              />
-              {/* </ButtonBase> */}
+              <ButtonBase
+                onClick={() =>
+                  router.push("https://dl.acm.org/doi/pdf/10.1145/3711004")
+                }
+              >
+                <img
+                  src={materialURL + "paper.png"}
+                  style={{
+                    borderRadius: "8px",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                    width: "100%",
+                  }}
+                  alt="The image of the paper PDF"
+                />
+              </ButtonBase>
               <Box sx={{ height: "40px" }} />
               <img
                 src={materialURL + "footer.png"}

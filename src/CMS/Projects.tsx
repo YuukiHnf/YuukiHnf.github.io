@@ -58,7 +58,7 @@ const projects = [
         description: "CSCW ’25",
       },
     ],
-    thumnail: "./V9cscw106.jpg",
+    thumnail: "./V9cscw106.png",
     projectLink: "./projects/acd",
   },
   {

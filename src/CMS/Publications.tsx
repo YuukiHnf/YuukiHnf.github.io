@@ -132,6 +132,18 @@ export const conference_publications: PublicationsType[] = [
     award: "Honorable Mention Award",
   },
   {
+    id: "iwai_25WISS",
+    title:
+      "効率的な遠距離オブジェクトの回転操作を可能とするトラックボール型VRコントローラ",
+    authors: "岩井 望, 阿部 優樹, 坂本 大介",
+    year: 2025,
+    where: "WISS2025",
+    whereDetail:
+      "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
+    doi: "",
+    invisibleInEn: true,
+  },
+  {
     id: "ronbunnshi22",
     title:
       "ストリームライブチャット入力を想定した半透明ダブルフリックキーボードの入力性能の実験的検証",
@@ -156,18 +168,6 @@ export const demo_publications: PublicationsType[] = [
     poster: "/poster/chi25_lbw_177.pdf",
   },
   {
-    id: "HCI209-SpeechAccomodation",
-    title:
-      "音声・動画コンテンツ内のナレーションを高齢者が聞き取りやすい話し方に変換するAIパイプラインの開発",
-    authors: "宮下 拓磨，阿部 優樹，坂本 大介，小野 哲雄",
-    year: 2024,
-    where: "HCI研究会",
-    whereDetail: "第 209回 ヒューマンコンピュータインタラクション研究会",
-    doi: "http://id.nii.ac.jp/1001/00237205/",
-    invisibleInEn: true,
-    award: "学生奨励賞",
-  },
-  {
     id: "Temaneki24",
     title:
       "Temaneki: Map-Based Collaboration Tool for Consensus-Building in Student-Run Festival Management Teams",
@@ -178,6 +178,42 @@ export const demo_publications: PublicationsType[] = [
     whereDetail: "ACM, New York, NY, USA, 8 pages",
     doi: "https://doi.org/10.1145/3613905.3651013",
     poster: "/poster/chiea24-541-poster.pdf",
+  },
+  {
+    id: "Kan-WISS2025",
+    title:
+      "BeMyARm：カメラエイミングを補助する視覚障がい者のための物体探索システムの提案",
+    authors: "日下部 完，阿部 優樹，坂本 大介",
+    year: 2025,
+    where: "WISS 2025",
+    whereDetail:
+      "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
+    doi: "https://www.wiss.org/WISS2025Proceedings/data/1-C04.pdf",
+    invisibleInEn: true,
+  },
+  {
+    id: "Keisuke-WISS2025",
+    title:
+      "音楽コンサート動画における観客の掛け声のタイミングに合わせた音声絵文字インタフェースの開発",
+    authors: "松島 圭佑，阿部 優樹，坂本 大介，小野 哲雄",
+    year: 2023,
+    where: "WISS 2025",
+    whereDetail:
+      "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
+    doi: "https://www.wiss.org/WISS2025Proceedings/data/2-B05.pdf",
+    invisibleInEn: true,
+  },
+  {
+    id: "HCI209-SpeechAccomodation",
+    title:
+      "音声・動画コンテンツ内のナレーションを高齢者が聞き取りやすい話し方に変換するAIパイプラインの開発",
+    authors: "宮下 拓磨，阿部 優樹，坂本 大介，小野 哲雄",
+    year: 2024,
+    where: "HCI研究会",
+    whereDetail: "第 209回 ヒューマンコンピュータインタラクション研究会",
+    doi: "http://id.nii.ac.jp/1001/00237205/",
+    invisibleInEn: true,
+    award: "学生奨励賞",
   },
   {
     id: "WISS-OMEME",
