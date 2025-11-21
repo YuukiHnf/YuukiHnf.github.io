@@ -2,7 +2,7 @@ import { CMSItem } from "../Components/CMSListItem";
 
 export const grants: CMSItem[] = [
   {
-    title: "独立行政法人日本学術振興会 特別研究員-DC2",
+    title: "独立行政法人日本学術振興会 特別研究員 DC2",
     titleEn:
       "Research Fellow of the Japan Society for the Promotion of Science (DC2)",
     link: "https://www.jsps.go.jp/file/storage/j-pd/data/list_of_recruits/R7_DC2_saiyou.pdf",
@@ -15,10 +15,10 @@ export const grants: CMSItem[] = [
     date: "2024/04-2027/03",
   },
   {
-    title: "立石科学技術振興財団 (C)",
+    title: "立石科学技術振興財団 2025年度 後期国際交流助成",
     titleEn:
       "Travel support from Tateisi Science and Technology Foundation to CSCW 2025 (Bergen)",
-    link: "",
+    link: "https://www.tateisi-f.org/news/2025-03-31",
     date: "2025/10",
   },
   {
