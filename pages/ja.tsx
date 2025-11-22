@@ -16,6 +16,8 @@ import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 import Work from "src/CMS/Work";
+import Education from "src/CMS/Education";
+import Article from "src/CMS/Articles";
 const Index = () => {
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
@@ -50,8 +52,6 @@ const Index = () => {
                 contactElementRef={contactElementRef}
               />
               <Box
-                ref={aboutElementRef}
-                id="About"
                 // minHeight={{ xs: "136px", sm: "160px" }}
                 minHeight={{ xs: "136px", sm: "100px" }}
                 mb={0.5}
@@ -95,20 +95,26 @@ const Index = () => {
                 <SubTitle title={"論文"} isEnglish={false} />
               </Box>
               <Publications />
-              <Box>
-                <SubTitle title={"職歴"} />
-              </Box>
-              <Work />
               <Box ref={awardElementRef}>
                 <SubTitle title={"受賞"} isEnglish={false} />
               </Box>
               <Award />
+              <Box ref={aboutElementRef} id="About">
+                <SubTitle title={"職歴"} />
+              </Box>
+              <Work />
+              <Box>
+                <SubTitle title={"学歴"} isEnglish={false} />
+              </Box>
+              <Education />
               <Box>
                 <SubTitle title={"研究助成等"} isEnglish={false} />
               </Box>
               <Grant />
               <SubTitle title={"講演等"} />
               <Talk />
+              <SubTitle title={"記事"} isEnglish={false} />
+              <Article />
               <Box>
                 <SubTitle title={"その他"} isEnglish={false} />
               </Box>

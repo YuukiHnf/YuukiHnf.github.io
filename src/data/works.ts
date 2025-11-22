@@ -14,9 +14,9 @@ export const works: CMSItem[] = [
   // },
   {
     title:
-      "博士課程 客員研究員, Singapore Management University, アドバイザー：Prof. Kotaro Hara",
+      "Singapore Management University 博士課程 客員研究員、 アドバイザー：Prof. Kotaro Hara",
     titleEn:
-      "Visiting Ph.D. Research Student, SMU HCI Research, Singapore Management University, Advisor: Prof. Kotaro Hara",
+      "Visiting Ph.D. Research Student, Singapore Management University, Advisor: Prof. Kotaro Hara",
     date: "2024/09-2025/03",
   },
   {
@@ -27,11 +27,11 @@ export const works: CMSItem[] = [
   {
     title: "temaneki株式会社 取締役",
     titleEn: "CTO, temaneki Inc.",
-    date: "2023/03-2025/01",
+    date: "2024/03-2025/01",
   },
-  // {
-  //   title: "フリーランスエンジニア",
-  //   titleEn: "Freelance Engineer",
-  //   date: "2022/06-2025/03",
-  // },
+  {
+    title: "未踏IT人材発掘・育成事業 クリエイター",
+    titleEn: "Creator, IPA Exploratory IT Human Resources Project, Japan ",
+    date: "2022/06-2023/02",
+  },
 ];

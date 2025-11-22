@@ -59,14 +59,6 @@ const Menus = ({
         }}
       >
         <Button
-          startIcon={<InfoOutlinedIcon />}
-          sx={{ color: "gray" }}
-          // onClick={() => router.push("#About")}
-          onClick={() => scrollToMyElement(aboutElementRef)}
-        >
-          {isEnglish ? "About" : "自己紹介"}
-        </Button>
-        <Button
           startIcon={<AttachFileOutlinedIcon />}
           sx={{ color: "gray" }}
           // onClick={() => router.push("#Projects")}
@@ -90,6 +82,15 @@ const Menus = ({
         >
           {isEnglish ? "Awards" : "受賞等"}
         </Button>
+
+        <Button
+          startIcon={<InfoOutlinedIcon />}
+          sx={{ color: "gray" }}
+          // onClick={() => router.push("#About")}
+          onClick={() => scrollToMyElement(aboutElementRef)}
+        >
+          {isEnglish ? "Work" : "職歴"}
+        </Button>
         <Button
           startIcon={<PictureAsPdfOutlinedIcon />}
           sx={{ color: "gray" }}
@@ -103,10 +104,10 @@ const Menus = ({
             color: "gray",
             fontWeight: "bold",
             bgcolor: [null, null, "#e7e7e7ff"],
-            ":hover": {
-              bgcolor: theme.palette.text.disabled,
-              color: "white",
-            },
+            // ":hover": {
+            //   bgcolor: theme.palette.text.disabled,
+            //   color: "white",
+            // },
             border: [null, null, "0.5px solid #e1e1e1ff"],
           }}
           variant="text"

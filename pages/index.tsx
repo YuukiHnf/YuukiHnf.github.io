@@ -18,6 +18,8 @@ import { HeaderTwo } from "src/Fixed/Header";
 import Menus from "src/Fixed/Menus";
 import Profile from "src/Views/Profile";
 import Work from "src/CMS/Work";
+import Education from "src/CMS/Education";
+import Article from "src/CMS/Articles";
 const Index = () => {
   const isEnglish = true;
   const topRef = useRef<HTMLElement>(null);
@@ -53,8 +55,6 @@ const Index = () => {
                 contactElementRef={contactElementRef}
               />
               <Box
-                ref={aboutElementRef}
-                id="About"
                 // minHeight={{ xs: "136px", sm: "160px" }}
                 minHeight={{ xs: "136px", sm: "100px" }}
                 mb={0.5}
@@ -146,20 +146,26 @@ const Index = () => {
                 <SubTitle title={"Publications"} />
               </Box>
               <Publications En />
-              <Box>
-                <SubTitle title={"Work Experience"} />
-              </Box>
-              <Work En />
               <Box ref={awardElementRef}>
                 <SubTitle title={"Awards"} />
               </Box>
               <Award En />
+              <Box ref={aboutElementRef} id="About">
+                <SubTitle title={"Work"} />
+              </Box>
+              <Work En />
+              <Box>
+                <SubTitle title={"Education"} />
+              </Box>
+              <Education En />
               <Box>
                 <SubTitle title={"Grants"} />
               </Box>
               <Grant En />
               <SubTitle title={"Talk"} />
               <Talk En />
+              <SubTitle title={"Articles"} />
+              <Article En />
               <SubTitle title={"Academic Service"} />
               <Servise />
               <Box>

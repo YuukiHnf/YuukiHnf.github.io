@@ -4,16 +4,14 @@ export const awards: CMSItem[] = [
   {
     title:
       "ACM CHI 2025 優秀論文賞（Honorable Mention Award）．対象論文：10.1145/3706598.3714284",
-    titleEn:
-      "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3714284",
+    titleEn: "Honorable Mention Award, ACM CHI 2025 [10.1145/3706598.3714284]",
     link: "https://programs.sigchi.org/chi/2025/program/content/189122",
     date: "2025/03/27",
   },
   {
     title:
       "ACM CHI 2025 優秀論文賞（Honorable Mention Award）．対象論文：10.1145/3706598.3713874",
-    titleEn:
-      "Honorable Mention Award at ACM CHI 2025 for 10.1145/3706598.3713874",
+    titleEn: "Honorable Mention Award, ACM CHI 2025 [10.1145/3706598.3713874]",
     link: "https://programs.sigchi.org/chi/2025/program/content/189044",
     date: "2025/03/27",
   },
@@ -26,19 +24,20 @@ export const awards: CMSItem[] = [
   },
   {
     title: "北海道大学 令和5年 えるむ賞",
-    titleEn: "Hokkaido University ELM AWARD",
+    titleEn: "ELM AWARD student, Hokkaido University",
     link: "https://www.hokudai.ac.jp/gakusei/campus-life/campus/commendation.html",
     date: "2024/03/19",
   },
   {
     title: "WISS 2023 対話発表賞（一般投票）",
-    titleEn: "WISS 2023 Demonstration Award (People Chose)",
+    titleEn: "Demonstration Award (People Chose), WISS 2023",
     link: "https://www.wiss.org/WISS2023/",
     date: "2023/12/01",
   },
   {
     title: "2022年度 未踏IT人材発掘・育成事業 「スーパークリエータ」認定",
-    titleEn: "MITOU PROGRAM 2022 Super Creator",
+    titleEn:
+      "Super Creator Certification, IPA Exploratory IT Human Resources Project, Japan",
     link: "https://www.meti.go.jp/press/2023/05/20230526002/20230526002.html",
     date: "2023/05/26",
   },
