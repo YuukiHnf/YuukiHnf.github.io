@@ -3,8 +3,10 @@ import exp from "constants";
 import React, { use, useEffect, useState } from "react";
 // export const titleFontSize = { xs: "1.4rem", sm: "1.563em" };
 export const titleFontSize = { xs: "1.4rem", sm: "1.68em" };
+// const text =
+//   "hi 👋, i’m yuki—  PhD student, tech dev🧑‍💻/running🏃/One Piece🏴‍☠️ lover, and MATSURI🏮 enthusiast.";
 const text =
-  "hi 👋, i’m yuki—  PhD student, tech dev🧑‍💻/running🏃/One Piece🏴‍☠️ lover, and MATSURI🏮 enthusiast.";
+  "hi 👋, i'm yuki— PhD student, tech lover🧑‍💻, guide runner for visually impaired runners🏃, and MATSURI lover🏮.";
 const speed = 100;
 const commaPause = 1000;
 

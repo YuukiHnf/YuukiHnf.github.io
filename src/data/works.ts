@@ -16,8 +16,8 @@ export const works: CMSItem[] = [
     title:
       "Singapore Management University 博士課程 客員研究員、 アドバイザー：Prof. Kotaro Hara",
     titleEn:
-      "Visiting Ph.D. Research Student, Singapore Management University, Advisor: Prof. Kotaro Hara",
-    date: "2024/09-2025/03",
+      "Visiting Ph.D. Student, Singapore Management University, Advisor: Prof. Kotaro Hara",
+    date: "2024/09-2025/04",
   },
   {
     title: "北海道大学 EXEX博士人材フェローシップ生",

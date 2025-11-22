@@ -72,10 +72,8 @@ const Index = () => {
                   >
                     北海道大学 ヒューマンコンピュータインタラクション研究室
                   </Link>
-                  に所属する博士2年生です．研究分野は情報科学の一領域であるHuman-Computer
-                  Interaction
-                  (HCI)で，特に，視覚障がい者のアシスト技術や複数人が協力しやすくなるAR/VR技術の研究開発に取り組んでいます．学振
-                  特別研究員（DC2）．未踏IT 22年度スーパークリエータ．
+                  に所属する博士2年生です。専門は情報科学の一領域であるヒューマンコンピュータインタラクション分野で、特に、視覚障がい者のアシスト技術や複数人が協力しやすくなる情報技術の研究開発に取り組んでいます。学振特別研究員（DC2）。未踏IT
+                  スーパークリエータ。
                 </Typography>
                 <Typography
                   variant="body1"
@@ -83,14 +81,14 @@ const Index = () => {
                   color={"#347DA8"}
                   fontWeight={"bold"}
                 >
-                  2027年3月に博士課程修了見込みです．修了後の研究職やエンジニア職を探し始めています．機会がございましたら，ご連絡ください．
+                  2027年3月に博士課程修了見込みです。修了後の研究職やエンジニア職を探し始めています。機会がございましたら、ご連絡ください。
                 </Typography>
               </Box>
               <NewsUnified isEnglish={false} />
               <Box ref={projectsElementRef} pb={1}>
                 <SubTitle title={"プロジェクト"} isEnglish={false} />
               </Box>
-              <Projects />
+              <Projects isEnglish={false} />
               <Box ref={publicationsElementRef}>
                 <SubTitle title={"論文"} isEnglish={false} />
               </Box>
@@ -116,9 +114,9 @@ const Index = () => {
               <SubTitle title={"記事"} isEnglish={false} />
               <Article />
               <Box>
-                <SubTitle title={"その他"} isEnglish={false} />
+                <SubTitle title={"趣味"} isEnglish={false} />
               </Box>
-              <Hobby />
+              <Hobby isEnglish={false} />
               <Typography
                 sx={{
                   color: theme.palette.text.secondary,

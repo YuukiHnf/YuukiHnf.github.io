@@ -67,7 +67,7 @@ const AuditoryCommentDisplay = () => {
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       filter: "blur(8px)",
-                      opacity: 0.7,
+                      opacity: 1,
                     },
                   }}
                 >
@@ -81,7 +81,7 @@ const AuditoryCommentDisplay = () => {
                       flexDirection: "column",
                       padding: "30px",
                       color: "white",
-                      backgroundColor: "rgba(0, 0, 0, 0.4)",
+                      backgroundColor: "rgba(0, 0, 0, 0.75)",
                     }}
                   >
                     {/* Logo */}

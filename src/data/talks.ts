@@ -10,7 +10,7 @@ export const talks: CMSItem[] = [
   {
     title: "FIT2025 情報科学技術フォーラム トップコンファレンスセッション",
     titleEn: "Top Conference Session, FIT2025",
-    link: "https://www.gakkai-web.net/fit/program_web/data/html/event/TCS6-1.html",
+    link: "https://www.ipsj.or.jp/event/fit/fit2025/abstract/data/html/event/TCS6-1.html",
     date: "2025/09/08",
   },
   {

@@ -14,6 +14,7 @@ import React from "react";
 type ProjectType = {
   id: string;
   title: string;
+  titleEn?: string;
   where: {
     link: string;
     description: string;
@@ -26,12 +27,13 @@ type ProjectType = {
 const projects = [
   {
     id: "runsight",
-    title:
-      "RunSight: AR-based assistive system for low-vision nighttime running",
+    title: "RunSight: 弱視ランナーが夜も安全に走れるARメガネ",
+    titleEn:
+      "RunSight: AR assistive technology for low-vision runners at night",
     where: [
       {
         link: "https://programs.sigchi.org/chi/2025/program/content/189122",
-        description: "CHI ’25",
+        description: "CHI 2025",
       },
     ],
     thumnail: "./RunSight.png",
@@ -39,11 +41,12 @@ const projects = [
   },
   {
     id: "handheld",
-    title: "VR interface with handheld-style HMD for onsite exhibition",
+    title: "展示会・イベント参加者が一緒に楽しみやすい手軽なXRインタフェース",
+    titleEn: "VR interfaces with a handheld-style HMD for onsite exhibitions",
     where: [
       {
         link: "https://programs.sigchi.org/chi/2025/program/content/189044",
-        description: "CHI ’25",
+        description: "CHI 2025",
       },
     ],
     thumnail: "./handheldHMD.jpg",
@@ -51,11 +54,16 @@ const projects = [
   },
   {
     id: "acd",
-    title: "Auditory comment display for eyes-free social-viewing experience",
+    title: "見えなくても一緒に聴いて楽しめる音楽ライブ向け副音声インタフェース",
+    titleEn: "Auditory comment display for eyes-free social-viewing experience",
     where: [
       {
+        link: "https://dl.acm.org/doi/10.1145/3711004",
+        description: "PACMHCI",
+      },
+      {
         link: "https://programs.sigchi.org/cscw/2025/program/content/213167",
-        description: "CSCW ’25",
+        description: "CSCW 2025",
       },
     ],
     thumnail: "./V9cscw106.png",
@@ -63,20 +71,21 @@ const projects = [
   },
   {
     id: "temaneki",
-    title: "Temaneki: A collaborative tool for MATSURI communities",
+    title: "Temaneki: みんなで一緒につくる市民参加型祭りのための情報システム",
+    titleEn: "Temaneki: A collaborative tool for MATSURI communities",
     where: [
       {
         link: "https://doi.org/10.1145/3613905.3651013",
-        description: "CHI EA ’24",
+        description: "CHI EA 2024",
       },
       {
         link: "https://www.ipa.go.jp/jinzai/mitou/it/2022/gaiyou_sd-3.html",
-        description: "未踏 ’22",
-        descriptionEn: "Mitou Program",
+        description: "未踏 2022",
+        descriptionEn: "Mitou Temaneki Project",
       },
     ],
-    thumnail: "./temaneki.svg",
-    projectLink: "https://temaneki.jp",
+    thumnail: "./temaneki_thu.png",
+    projectLink: "./projects/temaneki",
   },
   // {
   //   id: "OMEME",
@@ -117,13 +126,15 @@ const projects = [
   //   projectLink: "https://hci-lab.jp/research/streamchatkeyboard/",
   // },
 ];
-
-const Projects = () => {
+type Props = {
+  isEnglish?: boolean;
+};
+const Projects = ({ isEnglish = true }: Props) => {
   return (
     <Stack spacing={0}>
       {projects.map((project) => (
         <React.Fragment key={project.id}>
-          <AProject {...project} />
+          <AProject project={project} en={isEnglish} />
         </React.Fragment>
       ))}
       <Card
@@ -141,7 +152,13 @@ const Projects = () => {
 
 export default Projects;
 
-const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
+type PropsAProject = {
+  project: ProjectType;
+  en?: boolean;
+};
+
+const AProject = ({ project, en = true }: PropsAProject) => {
+  const { id, title, where, thumnail, projectLink } = project;
   const router = useRouter();
   // pathに/en/が含まれているかどうかで日本語か英語かを切り替える
   const path = router.asPath;
@@ -215,7 +232,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             mt={{ xs: "0px", sm: undefined }}
             // fontSize={{ xs: titleFontSize.xs, sm: undefined }}
           >
-            {title}
+            {en ? project.titleEn ?? project.title : project.title}
           </Link>
           {/* <Typography
             variant="subtitle1"

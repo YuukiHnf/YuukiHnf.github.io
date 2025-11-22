@@ -96,7 +96,7 @@ const Menus = ({
           sx={{ color: "gray" }}
           onClick={() => router.push("/CV.pdf")}
         >
-          {isEnglish ? "CV/Resume" : "レジュメ"}
+          {isEnglish ? "CV/Resume" : "履歴書"}
         </Button>
         <Button
           startIcon={<TranslateIcon />}

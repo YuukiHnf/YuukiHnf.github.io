@@ -13,6 +13,7 @@ import React from "react";
 type ProjectType = {
   id: string;
   title: string;
+  titleEn?: string;
   where: {
     link: string;
     description: string;
@@ -23,22 +24,43 @@ type ProjectType = {
 };
 
 const projects = [
-  // {
-  //   id: "ProjectGuideline",
-  //   title: "ProjectGuideline",
-  //   where: [
-  //     {
-  //       link: "./projects/Guidelineworkshop",
-  //       description: "Sapporo Workshop",
-  //       descriptionEn: "Sapporo Workshop",
-  //     },
-  //   ],
-  //   thumnail: "./visionbot.main.png",
-  //   projectLink: "./projects/Guidelineworkshop",
-  // },
+  {
+    id: "Guiderunner",
+    title: "視覚障がい者のガイドランナー",
+    titleEn: "Guide runner for visually impaired runners 🏃‍♂️👟",
+    where: [
+      {
+        link: "",
+        description: "伴走フレンドリー札幌支部ガイドランナー",
+        descriptionEn: "Guide runner at Sapporo Hokkaido Japan",
+      },
+      {
+        link: "",
+        description: "Google Project Guidelineの札幌試走会の主催",
+        descriptionEn: "Google Project Guideline Workshop in Sapporo",
+      },
+    ],
+    thumnail: "./guiderunning.png",
+    projectLink: "",
+  },
+  {
+    id: "OMATSURI",
+    title: "お祭りハッカー：「お祭り」とみんなをてまねく情報技術",
+    titleEn: "MATSURI Hacker 🏮🇯🇵🧑‍💻",
+    where: [
+      {
+        link: "https://www.temaneki.jp/",
+        description: "temaneki",
+        descriptionEn: "temaneki",
+      },
+    ],
+    thumnail: "./omatsuri.jpg",
+    projectLink: "https://www.temaneki.jp/",
+  },
   {
     id: "OMEME",
-    title: "OMEME",
+    title: "OMEME: 使ってないヘッドセットはロボットにしよう",
+    titleEn: "OMEME: A Robot from Your Headset 🤖🥽",
     where: [
       {
         link: "https://www.wiss.org/WISS2023/",
@@ -51,7 +73,8 @@ const projects = [
   },
   {
     id: "telecocha",
-    title: "Tele-Cocha",
+    title: "Tele-Cocha: Toio駆動型テレプレゼンスシステム",
+    titleEn: "Tele-Cocha: Toio-powered Movable Online System 🤖🧊",
     where: [
       {
         link: "https://protopedia.net/prototype/2558",
@@ -63,13 +86,15 @@ const projects = [
   },
 ];
 
-const Hobby = () => {
+type Props = { isEnglish: boolean };
+
+const Hobby = ({ isEnglish }: Props) => {
   return (
     <>
       <Stack spacing={1}>
         {projects.map((project) => (
           <React.Fragment key={project.id}>
-            <AProject {...project} />
+            <AProject project={project} isEnglish={isEnglish} />
           </React.Fragment>
         ))}
         <Card
@@ -88,7 +113,14 @@ const Hobby = () => {
 
 export default Hobby;
 
-const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
+const AProject = ({
+  project,
+  isEnglish,
+}: {
+  project: ProjectType;
+  isEnglish: boolean;
+}) => {
+  const { id, title, titleEn, where, thumnail, projectLink } = project;
   const router = useRouter();
   // pathに/en/が含まれているかどうかで日本語か英語かを切り替える
   const path = router.asPath;
@@ -146,7 +178,7 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
             // textの改行の幅を小さくする
             lineHeight={"1.2em"}
           >
-            {title}
+            {isEnglish ? titleEn ?? title : title}
           </Typography>
           <Typography variant="body1">
             {where.map((value) => (
@@ -154,22 +186,16 @@ const AProject = ({ id, title, where, thumnail, projectLink }: ProjectType) => {
                 <Link
                   sx={{ color: "GrayText", textDecorationColor: "transparent" }}
                   key={value.link + value.description}
-                  href={value.link}
-                >{`${isEn ? value.description : value.description}`}</Link>
+                  href={value.link == "" ? undefined : value.link}
+                >{`${
+                  isEnglish
+                    ? value.descriptionEn ?? value.description
+                    : value.description
+                }`}</Link>
                 <span>, </span>
               </>
             ))}
           </Typography>
-          {/* {projectLink && (
-            <Typography variant="body2">
-              <Link
-                sx={{ color: "GrayText", textDecorationColor: "transparent" }}
-                href={projectLink}
-              >
-                Project Page
-              </Link>
-            </Typography>
-          )} */}
         </Grid>
       </Grid>
     </Card>

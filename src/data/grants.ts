@@ -10,7 +10,6 @@ export const grants: CMSItem[] = [
   },
   {
     title: "立石科学技術振興財団 研究助成(C)",
-    // titleEn: "Tateisi Science and Technology Foundation (C)",
     titleEn: "Research Grant, Tateisi Science and Technology Foundation (C)",
     link: "https://www.tateisi-f.org/news/2024-04-24",
     date: "2024/04-2027/03",
@@ -18,7 +17,7 @@ export const grants: CMSItem[] = [
   {
     title: "立石科学技術振興財団 2025年度 後期国際交流助成",
     titleEn:
-      "Travel support, Tateisi Science and Technology Foundation, CSCW 2025 (Bergen)",
+      "Travel support, Tateisi Science and Technology Foundation, CSCW 2025",
     link: "https://www.tateisi-f.org/news/2025-03-31",
     date: "2025/10",
   },

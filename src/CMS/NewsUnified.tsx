@@ -22,15 +22,15 @@ const newsJa: NewsItem[] = [
   },
   {
     title:
-      "CHI2025で発表する2本のFull PaperがHonorable Mentionに選ばれました。",
+      "CHI2025で発表する2本の論文がHonorable Mention Awardに選ばれました。",
     titleEn:
-      "Two papers have been selected for Honorable Mention Awards at CHI 2025!",
+      "Two papers were selected for Honorable Mention Awards at CHI 2025!",
     date: "2025/03/27",
     link: "",
   },
   {
-    title: "CHI2025にFull Paperが2本とLBWが1本採択されました。",
-    titleEn: "Two papers and one LBW have been accepted to CHI2025!",
+    title: "CHI2025に2本の論文と1本のLBWが採択されました。",
+    titleEn: "Two papers and one LBW were accepted to CHI2025!",
     date: "2025/03/05",
     link: "",
   },
@@ -168,7 +168,7 @@ const NewsUnified = ({
 
   return (
     <Box display={"flex"} flexDirection={"column"}>
-      {showTitle && <SubTitle title={"News"} />}
+      {showTitle && <SubTitle title={isEnglish ? "News" : "News"} />}
       <Stack spacing={1}>
         {displayNews.map((item) => (
           <div key={item.date + item.title}>

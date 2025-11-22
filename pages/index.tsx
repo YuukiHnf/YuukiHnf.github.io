@@ -88,13 +88,29 @@ const Index = () => {
                   </Link>
                   . My research lies in the field of Human-Computer Interaction
                   (HCI). I design, develop, and evaluate assistive technology
-                  that supports the daily activities and exercises of people
-                  with visual impairments.{" "}
-                  {/* I also like designing user interface
-                  and interactive system that fosters communication and
-                  collaboration.  */}
-                  From September 2024 to March 2025, I was a visiting student at
-                  the{" "}
+                  for visually impaired people's daily activities and exercises.
+                  I was a visiting student at{" "}
+                  <Link
+                    href={"https://smuhci.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    SMU HCI Research
+                  </Link>
+                  , and I also work with{" "}
+                  <Link
+                    href={"https://kotarohara.com/"}
+                    sx={{
+                      color: theme.palette.text.secondary,
+                      textDecorationColor: theme.palette.text.secondary,
+                    }}
+                  >
+                    Prof. Kotaro Hara
+                  </Link>
+                  {/* From September 2024 to March 2025, I was a
+                  visiting student at the{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -113,8 +129,8 @@ const Index = () => {
                     }}
                   >
                     Prof. Kotaro Hara
-                  </Link>
-                  . Please refer to my{" "}
+                  </Link> */}
+                  . Please see my{" "}
                   <Link
                     href={"./CV.pdf"}
                     sx={{
@@ -124,7 +140,7 @@ const Index = () => {
                   >
                     CV
                   </Link>{" "}
-                  if you are interested!
+                  for more!
                 </Typography>
                 <Typography
                   variant="body1"
@@ -169,9 +185,9 @@ const Index = () => {
               <SubTitle title={"Academic Service"} />
               <Servise />
               <Box>
-                <SubTitle title={"Others"} />
+                <SubTitle title={"Hobby"} />
               </Box>
-              <Hobby />
+              <Hobby isEnglish />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
