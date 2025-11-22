@@ -30,12 +30,12 @@ const projects = [
     titleEn: "Guide runner for visually impaired runners 🏃‍♂️👟",
     where: [
       {
-        link: "",
+        link: "https://www.facebook.com/banfure/?locale=ja_JP",
         description: "伴走フレンドリー札幌支部ガイドランナー",
         descriptionEn: "Guide runner at Sapporo Hokkaido Japan",
       },
       {
-        link: "",
+        link: "https://projectguidelinejp.withgoogle.com/",
         description: "Google Project Guidelineの札幌試走会の主催",
         descriptionEn: "Google Project Guideline Workshop in Sapporo",
       },
@@ -45,13 +45,44 @@ const projects = [
   },
   {
     id: "OMATSURI",
-    title: "お祭りハッカー：「お祭り」とみんなをてまねく情報技術",
-    titleEn: "MATSURI Hacker 🏮🇯🇵🧑‍💻",
+    title: "お祭りとみんなをてまねく情報技術",
+    titleEn: "MATSURI hacker 🏮🇯🇵🧑‍💻",
     where: [
       {
         link: "https://www.temaneki.jp/",
         description: "temaneki",
         descriptionEn: "temaneki",
+      },
+      {
+        link: "https://www.ipa.go.jp/jinzai/mitou/mitoukaigi/2023/",
+        description: "未踏会議",
+        descriptionEn: "Mitou Conference",
+      },
+
+      {
+        link: "https://www.ipa.go.jp/jinzai/mitou/mitoukaigi/2023/",
+        description: "情報処理学会・学会誌 マガジン",
+        descriptionEn: "IPSJ Magazine",
+      },
+      {
+        link: "https://www.hokkaido-np.co.jp/article/769908",
+        description: "北海道新聞",
+        descriptionEn: "Hokkaido Shimbun Press",
+      },
+      {
+        link: "https://hu-jagajaga.com/club/12779/",
+        description: "北大新聞 JaGaJaGa",
+        descriptionEn: "News media JaGaJaGa",
+      },
+      {
+        link: "https://no-maps.jp/dreampitch2022/",
+        description: "NoMaps 2022",
+        descriptionEn: "NoMaps 2022",
+      },
+      {
+        link: "https://costep.open-ed.hokudai.ac.jp/like_hokudai/article/26259",
+        description: "いいね！Hokudai",
+        descriptionEn: "Hokkaido University Website",
       },
     ],
     thumnail: "./omatsuri.jpg",
@@ -60,12 +91,17 @@ const projects = [
   {
     id: "OMEME",
     title: "OMEME: 使ってないヘッドセットはロボットにしよう",
-    titleEn: "OMEME: A Robot from Your Headset 🤖🥽",
+    titleEn: "OMEME: A robot from your headset 🤖🥽",
     where: [
       {
         link: "https://www.wiss.org/WISS2023/",
         description: "WISS'23",
         descriptionEn: "WISS'23",
+      },
+      {
+        link: "https://protopedia.net/prototype/4851",
+        description: "Protopedia",
+        descriptionEn: "Protopedia",
       },
     ],
     thumnail: "./visionbot.main.png",
@@ -73,8 +109,8 @@ const projects = [
   },
   {
     id: "telecocha",
-    title: "Tele-Cocha: Toio駆動型テレプレゼンスシステム",
-    titleEn: "Tele-Cocha: Toio-powered Movable Online System 🤖🧊",
+    title: "テレこちゃ: Toio駆動型テレプレゼンスシステム",
+    titleEn: "Tele-Cocha: Toio-powered video conference 🤖🧊",
     where: [
       {
         link: "https://protopedia.net/prototype/2558",

@@ -2,7 +2,7 @@ import { CMSItem } from "../Components/CMSListItem";
 
 export const grants: CMSItem[] = [
   {
-    title: "独立行政法人日本学術振興会 特別研究員 DC2",
+    title: "日本学術振興会 特別研究員 DC2",
     titleEn:
       "Research Fellow, Japan Society for the Promotion of Science (DC2)",
     link: "https://www.jsps.go.jp/file/storage/j-pd/data/list_of_recruits/R7_DC2_saiyou.pdf",

@@ -27,9 +27,9 @@ type ProjectType = {
 const projects = [
   {
     id: "runsight",
-    title: "RunSight: 弱視ランナーが夜も安全に走れるARメガネ",
+    title: "RunSight: 弱視ランナーが夜も走れるようになるARメガネ",
     titleEn:
-      "RunSight: AR assistive technology for low-vision runners at night",
+      "RunSight: AR assistive technology enabling low-vision runners to run at night",
     where: [
       {
         link: "https://programs.sigchi.org/chi/2025/program/content/189122",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: "handheld",
-    title: "展示会・イベント参加者が一緒に楽しみやすい手軽なXRインタフェース",
+    title: "展示会やイベントで参加者が一緒に楽しみやすいXRインタフェース",
     titleEn: "VR interfaces with a handheld-style HMD for onsite exhibitions",
     where: [
       {
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     id: "acd",
-    title: "見えなくても一緒に聴いて楽しめる音楽ライブ向け副音声インタフェース",
+    title: "見えなくても一緒に楽しめる音楽ライブ向け副音声インタフェース",
     titleEn: "Auditory comment display for eyes-free social-viewing experience",
     where: [
       {
@@ -71,8 +71,8 @@ const projects = [
   },
   {
     id: "temaneki",
-    title: "Temaneki: みんなで一緒につくる市民参加型祭りのための情報システム",
-    titleEn: "Temaneki: A collaborative tool for MATSURI communities",
+    title: "temaneki: みんなで一緒につくる市民参加型祭りのための情報システム",
+    titleEn: "temaneki: A collaborative tool for MATSURI communities",
     where: [
       {
         link: "https://doi.org/10.1145/3613905.3651013",

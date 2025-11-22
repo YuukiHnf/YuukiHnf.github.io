@@ -88,8 +88,8 @@ const Index = () => {
                   </Link>
                   . My research lies in the field of Human-Computer Interaction
                   (HCI). I design, develop, and evaluate assistive technology
-                  for visually impaired people's daily activities and exercises.
-                  I was a visiting student at{" "}
+                  for visually impaired people&apos;s daily activities and
+                  exercises. I was a visiting student at{" "}
                   <Link
                     href={"https://smuhci.com/"}
                     sx={{
@@ -182,8 +182,8 @@ const Index = () => {
               <Talk En />
               <SubTitle title={"Articles"} />
               <Article En />
-              <SubTitle title={"Academic Service"} />
-              <Servise />
+              <SubTitle title={"Service"} />
+              <Servise isEnglish />
               <Box>
                 <SubTitle title={"Hobby"} />
               </Box>

@@ -30,7 +30,7 @@ const newsJa: NewsItem[] = [
   },
   {
     title: "CHI2025に2本の論文と1本のLBWが採択されました。",
-    titleEn: "Two papers and one LBW were accepted to CHI2025!",
+    titleEn: "Two papers and one LBW were accepted to CHI 2025!",
     date: "2025/03/05",
     link: "",
   },

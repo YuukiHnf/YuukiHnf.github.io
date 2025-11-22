@@ -18,6 +18,7 @@ import Profile from "src/Views/Profile";
 import Work from "src/CMS/Work";
 import Education from "src/CMS/Education";
 import Article from "src/CMS/Articles";
+import Servise from "src/CMS/Servise";
 const Index = () => {
   const topRef = useRef<HTMLElement>(null);
   const aboutElementRef = useRef<HTMLElement>(null);
@@ -113,6 +114,8 @@ const Index = () => {
               <Talk />
               <SubTitle title={"記事"} isEnglish={false} />
               <Article />
+              <SubTitle title={"ボランティア・活動"} />
+              <Servise isEnglish={false} />
               <Box>
                 <SubTitle title={"趣味"} isEnglish={false} />
               </Box>

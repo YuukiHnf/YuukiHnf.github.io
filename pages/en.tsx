@@ -204,7 +204,6 @@ const Index = () => {
               <Box>
                 <SubTitle title={"Others"} />
               </Box>
-              <Hobby />
               <Box ref={contactElementRef}>
                 <SubTitle title={"Contact"} />
               </Box>
