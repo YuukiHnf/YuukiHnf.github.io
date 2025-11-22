@@ -8,6 +8,12 @@ export const talks: CMSItem[] = [
     date: "2025/12/04",
   },
   {
+    title: "HCI Research Gathering@NYCU, 台湾",
+    titleEn: "HCI Research Gathering@NYCU, Taiwan",
+    link: "",
+    date: "2025/11/27",
+  },
+  {
     title: "FIT2025 情報科学技術フォーラム トップコンファレンスセッション",
     titleEn: "Top Conference Session, FIT2025",
     link: "https://www.ipsj.or.jp/event/fit/fit2025/abstract/data/html/event/TCS6-1.html",
