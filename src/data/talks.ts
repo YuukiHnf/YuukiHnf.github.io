@@ -9,9 +9,15 @@ export const talks: CMSItem[] = [
   },
   {
     title: "HCI Research Gathering@NYCU, 台湾",
-    titleEn: "HCI Research Gathering@NYCU, Taiwan",
+    titleEn: "Research Presentation, HCI Research Gathering@NYCU, Taiwan",
     link: "",
     date: "2025/11/27",
+  },
+  {
+    title: "北海道情報大学 研究紹介",
+    titleEn: "Research Presentation, Hokkaido Information University",
+    link: "",
+    date: "2025/11/14",
   },
   {
     title: "FIT2025 情報科学技術フォーラム トップコンファレンスセッション",

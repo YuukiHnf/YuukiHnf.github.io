@@ -84,7 +84,7 @@ const projects = [
         descriptionEn: "Mitou Temaneki Project",
       },
     ],
-    thumnail: "./temaneki_thu.png",
+    thumnail: "./temaneki_thu2.png",
     projectLink: "./projects/temaneki",
   },
   // {
