@@ -8,8 +8,8 @@ export const talks: CMSItem[] = [
     date: "2025/12/04",
   },
   {
-    title: "HCI Research Gathering@NYCU, 台湾",
-    titleEn: "Research Presentation, HCI Research Gathering@NYCU, Taiwan",
+    title: "HCI Research Gathering, NYCU, 台湾",
+    titleEn: "Research Presentation, HCI Research Gathering, NYCU, Taiwan",
     link: "",
     date: "2025/11/27",
   },
