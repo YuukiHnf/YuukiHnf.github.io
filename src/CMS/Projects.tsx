@@ -57,7 +57,8 @@ const projects = [
   },
   {
     id: "acd",
-    title: "見えなくても一緒に楽しめる音楽ライブ向け副音声インタフェース",
+    title:
+      "オンラインの人と一緒に聞いて楽しむための音楽ライブ向け副音声インタフェース",
     titleEn: "Auditory comment display for eyes-free social-viewing experience",
     where: [
       {
