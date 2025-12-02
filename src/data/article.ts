@@ -16,6 +16,13 @@ export const articles: CMSItem[] = [
     date: "2025/10/03",
   },
   {
+    title: "テレビ番組 EXITのハッケン北海道！",
+    titleEn: "TV Program EXIT no Hakken Hokkaido!",
+    link: "https://tver.jp/episodes/ep75uxsx11",
+    date: "2025/08/23",
+    invisibleInEn: true,
+  },
+  {
     title: "SMUはいいぞ！, HCI Advent Calendar 2024",
     link: "https://note.com/yuki_abe6/n/n6a0bad1a46af",
     date: "2024/12/21",

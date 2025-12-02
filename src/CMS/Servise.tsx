@@ -23,9 +23,15 @@ const awards: ServiseType[] = [
     date: "2024-",
   },
   {
+    title: "WISS 2025 北大エクスカーション 運営",
+    titleEn: "Organizer Member of WISS 2025 Hokudai Excursion",
+    date: "2025",
+    url: "https://hci-lab.jp/wiss2025-excursion/",
+  },
+  {
     title: "CHI勉強会 幹事団/学生ボランティア",
     titleEn:
-      "Organizer/Student Volunteer of SIGCHI Japan CHI Study Group 2023, 2024, 2025",
+      "Organizer Member of SIGCHI Japan CHI Study Group 2023, 2024, 2025",
     date: "2023-",
     url: "https://sigchi.jp/seminar/chi2025/",
   },

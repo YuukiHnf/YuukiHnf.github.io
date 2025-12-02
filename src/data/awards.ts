@@ -24,7 +24,7 @@ export const awards: CMSItem[] = [
   },
   {
     title: "北海道大学 令和5年 えるむ賞",
-    titleEn: "ELM AWARD student, Hokkaido University",
+    titleEn: "ELM Award, Hokkaido University",
     link: "https://www.hokudai.ac.jp/gakusei/campus-life/campus/commendation.html",
     date: "2024/03/19",
   },

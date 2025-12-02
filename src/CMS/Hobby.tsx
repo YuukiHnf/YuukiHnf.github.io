@@ -18,6 +18,7 @@ type ProjectType = {
     link: string;
     description: string;
     descriptionEn?: string;
+    awarded?: string | undefined;
   }[];
   thumnail: string;
   projectLink: string;
@@ -97,6 +98,7 @@ const projects = [
         link: "https://www.wiss.org/WISS2023/",
         description: "WISS'23",
         descriptionEn: "WISS'23",
+        awarded: "silver",
       },
       {
         link: "https://protopedia.net/prototype/4851",
@@ -115,6 +117,7 @@ const projects = [
       {
         link: "https://protopedia.net/prototype/2558",
         description: "Protopedia",
+        awarded: "silver",
       },
     ],
     thumnail: "./telecocha.jpg",
@@ -223,11 +226,26 @@ const AProject = ({
                   sx={{ color: "GrayText", textDecorationColor: "transparent" }}
                   key={value.link + value.description}
                   href={value.link == "" ? undefined : value.link}
-                >{`${
-                  isEnglish
+                >
+                  {isEn
                     ? value.descriptionEn ?? value.description
-                    : value.description
-                }`}</Link>
+                    : value.description}
+                  {value.awarded != undefined ? (
+                    value.awarded == "silver" ? (
+                      <img
+                        src={"./silver.png"}
+                        alt="silver award"
+                        style={{ width: "16px", verticalAlign: "middle" }}
+                      />
+                    ) : value.awarded == "gold" ? (
+                      <img
+                        src={"./gold.png"}
+                        alt="gold award"
+                        style={{ width: "16px", verticalAlign: "middle" }}
+                      />
+                    ) : null
+                  ) : null}
+                </Link>
                 <span>, </span>
               </>
             ))}

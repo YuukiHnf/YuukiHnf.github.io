@@ -19,6 +19,7 @@ type ProjectType = {
     link: string;
     description: string;
     descriptionEn?: string;
+    awarded?: string | undefined;
   }[];
   thumnail: string;
   projectLink: string;
@@ -34,6 +35,7 @@ const projects = [
       {
         link: "https://programs.sigchi.org/chi/2025/program/content/189122",
         description: "CHI 2025",
+        awarded: "silver",
       },
     ],
     thumnail: "./RunSight.png",
@@ -47,6 +49,7 @@ const projects = [
       {
         link: "https://programs.sigchi.org/chi/2025/program/content/189044",
         description: "CHI 2025",
+        awarded: "silver",
       },
     ],
     thumnail: "./handheldHMD.jpg",
@@ -260,11 +263,29 @@ const AProject = ({ project, en = true }: PropsAProject) => {
                   }}
                   key={value.link + value.description}
                   href={value.link}
-                >{`${
-                  isEn
-                    ? value.descriptionEn ?? value.description
-                    : value.description
-                }`}</Link>
+                >
+                  {/* sliverところに絵文字の代わりにiconの./sliver.pngを入れる */}
+                  <>
+                    {isEn
+                      ? value.descriptionEn ?? value.description
+                      : value.description}
+                    {value.awarded != undefined ? (
+                      value.awarded == "silver" ? (
+                        <img
+                          src={"./silver.png"}
+                          alt="silver award"
+                          style={{ width: "16px", verticalAlign: "middle" }}
+                        />
+                      ) : value.awarded == "gold" ? (
+                        <img
+                          src={"./gold.png"}
+                          alt="gold award"
+                          style={{ width: "16px", verticalAlign: "middle" }}
+                        />
+                      ) : null
+                    ) : null}
+                  </>
+                </Link>
               </>
             ))}
           </Typography>

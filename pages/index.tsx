@@ -44,7 +44,10 @@ const Index = () => {
             <Profile isEnglish />
           </Grid>
           <Grid item xs={9} width={"100%"}>
-            <BackButton anchorRef={aboutElementRef} contentRef={topRef} />
+            <BackButton
+              anchorRef={publicationsElementRef}
+              contentRef={topRef}
+            />
             <Box>
               <Menus
                 isEnglish={true}
