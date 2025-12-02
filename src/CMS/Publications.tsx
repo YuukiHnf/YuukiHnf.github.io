@@ -140,7 +140,7 @@ export const conference_publications: PublicationsType[] = [
     where: "WISS2025",
     whereDetail:
       "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
-    doi: "",
+    doi: "https://www.wiss.org/WISS2025Proceedings/data/paper/16.pdf",
     invisibleInEn: true,
   },
   {
@@ -188,7 +188,7 @@ export const demo_publications: PublicationsType[] = [
     where: "WISS 2025",
     whereDetail:
       "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
-    doi: "https://www.wiss.org/WISS2025Proceedings/data/1-C04.pdf",
+    doi: "https://www.wiss.org/WISS2025Proceedings/data/demo/1-C04.pdf",
     invisibleInEn: true,
   },
   {
@@ -200,7 +200,7 @@ export const demo_publications: PublicationsType[] = [
     where: "WISS 2025",
     whereDetail:
       "第33回インタラクティブシステムとソフトウェアに関するワークショップ",
-    doi: "https://www.wiss.org/WISS2025Proceedings/data/2-B05.pdf",
+    doi: "https://www.wiss.org/WISS2025Proceedings/data/demo/2-B05.pdf",
     invisibleInEn: true,
   },
   {
